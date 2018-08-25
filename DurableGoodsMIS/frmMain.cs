@@ -19,6 +19,8 @@ namespace DurableGoodsMIS
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbType' table. You can move, or remove it, as needed.
+            this.tbTypeTableAdapter.Fill(this.durableGoodsMISDataSet.tbType);
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbStatus' table. You can move, or remove it, as needed.
             this.tbStatusTableAdapter.Fill(this.durableGoodsMISDataSet.tbStatus);
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbAcquisition' table. You can move, or remove it, as needed.
