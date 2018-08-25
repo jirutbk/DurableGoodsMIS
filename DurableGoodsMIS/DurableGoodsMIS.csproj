@@ -46,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DurableGoodsMISDataSet.cs">
-      <DependentUpon>DurableGoodsMISDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DurableGoodsMISDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
