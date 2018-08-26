@@ -29,12 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmdDelete = new System.Windows.Forms.Button();
+            this.cmdEdit = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.tbDescriptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label29 = new System.Windows.Forms.Label();
@@ -88,6 +96,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmdAdd = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -104,15 +113,35 @@
             this.tbBudgetTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbBudgetTableAdapter();
             this.tbAcquisitionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbAcquisitionTableAdapter();
             this.tbDescriptionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDescriptionTableAdapter();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.เพมรายการครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.เพมกลมประเภทToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.เพมแกไขคณลกษณะToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.ออกจากโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.รายงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.แบบสำรวจครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.แบบรายการครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.บญชครภณฑแยกตามประเภทToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.เกยวกบโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.ตงคาหนวยงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.เกยวกบโปรแกรมToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDescriptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).BeginInit();
@@ -121,11 +150,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -136,16 +161,24 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.goodsIDDataGridViewTextBoxColumn,
             this.specDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tbGoodsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 140);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 155);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 15;
-            this.dataGridView1.Size = new System.Drawing.Size(369, 317);
+            this.dataGridView1.Size = new System.Drawing.Size(369, 419);
             this.dataGridView1.TabIndex = 0;
             // 
             // goodsIDDataGridViewTextBoxColumn
@@ -179,6 +212,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cmdDelete);
+            this.groupBox1.Controls.Add(this.cmdEdit);
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.comboBox7);
             this.groupBox1.Controls.Add(this.label29);
@@ -228,12 +263,90 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.groupBox1.Location = new System.Drawing.Point(387, 12);
+            this.groupBox1.Location = new System.Drawing.Point(387, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(749, 445);
+            this.groupBox1.Size = new System.Drawing.Size(720, 547);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "รายละเอียดครุภัณฑ์";
+            // 
+            // cmdDelete
+            // 
+            this.cmdDelete.Enabled = false;
+            this.cmdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cmdDelete.Location = new System.Drawing.Point(631, 300);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(76, 28);
+            this.cmdDelete.TabIndex = 54;
+            this.cmdDelete.Text = "ลบ";
+            this.cmdDelete.UseVisualStyleBackColor = true;
+            // 
+            // cmdEdit
+            // 
+            this.cmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cmdEdit.Location = new System.Drawing.Point(545, 300);
+            this.cmdEdit.Name = "cmdEdit";
+            this.cmdEdit.Size = new System.Drawing.Size(76, 28);
+            this.cmdEdit.TabIndex = 53;
+            this.cmdEdit.Text = "แก้ไข";
+            this.cmdEdit.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.tabControl1.Location = new System.Drawing.Point(6, 324);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(708, 217);
+            this.tabControl1.TabIndex = 52;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(700, 188);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "ค่าเสื่อมราคา";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(694, 182);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dataGridView3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(700, 188);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "บันทึกการซ่อม";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(694, 182);
+            this.dataGridView3.TabIndex = 0;
             // 
             // comboBox7
             // 
@@ -246,7 +359,7 @@
             this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.comboBox7.ForeColor = System.Drawing.Color.Blue;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(94, 58);
+            this.comboBox7.Location = new System.Drawing.Point(94, 55);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(395, 26);
             this.comboBox7.TabIndex = 51;
@@ -263,7 +376,7 @@
             this.label29.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "price", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label29.ForeColor = System.Drawing.Color.Blue;
-            this.label29.Location = new System.Drawing.Point(442, 209);
+            this.label29.Location = new System.Drawing.Point(419, 209);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(13, 18);
             this.label29.TabIndex = 50;
@@ -275,7 +388,7 @@
             this.label42.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "own", true));
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label42.ForeColor = System.Drawing.Color.Blue;
-            this.label42.Location = new System.Drawing.Point(586, 264);
+            this.label42.Location = new System.Drawing.Point(564, 264);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(13, 18);
             this.label42.TabIndex = 49;
@@ -287,7 +400,7 @@
             this.label41.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "document", true));
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label41.ForeColor = System.Drawing.Color.Blue;
-            this.label41.Location = new System.Drawing.Point(113, 264);
+            this.label41.Location = new System.Drawing.Point(101, 264);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(13, 18);
             this.label41.TabIndex = 48;
@@ -299,7 +412,7 @@
             this.label40.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "acquisitionDate", true));
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label40.ForeColor = System.Drawing.Color.Blue;
-            this.label40.Location = new System.Drawing.Point(421, 264);
+            this.label40.Location = new System.Drawing.Point(399, 264);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(13, 18);
             this.label40.TabIndex = 47;
@@ -309,7 +422,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label39.Location = new System.Drawing.Point(507, 264);
+            this.label39.Location = new System.Drawing.Point(485, 264);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(73, 18);
             this.label39.TabIndex = 46;
@@ -329,7 +442,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label37.Location = new System.Drawing.Point(355, 264);
+            this.label37.Location = new System.Drawing.Point(333, 264);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(63, 18);
             this.label37.TabIndex = 44;
@@ -341,7 +454,7 @@
             this.label36.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "lastPrice", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label36.ForeColor = System.Drawing.Color.Blue;
-            this.label36.Location = new System.Drawing.Point(626, 237);
+            this.label36.Location = new System.Drawing.Point(600, 237);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(13, 18);
             this.label36.TabIndex = 43;
@@ -353,7 +466,7 @@
             this.label35.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "depreciationSum", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label35.ForeColor = System.Drawing.Color.Blue;
-            this.label35.Location = new System.Drawing.Point(444, 237);
+            this.label35.Location = new System.Drawing.Point(419, 237);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(13, 18);
             this.label35.TabIndex = 42;
@@ -365,7 +478,7 @@
             this.label34.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "depreciationRate", true));
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label34.ForeColor = System.Drawing.Color.Blue;
-            this.label34.Location = new System.Drawing.Point(302, 237);
+            this.label34.Location = new System.Drawing.Point(291, 237);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(13, 18);
             this.label34.TabIndex = 41;
@@ -377,7 +490,7 @@
             this.label33.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "usefulLife", true));
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label33.ForeColor = System.Drawing.Color.Blue;
-            this.label33.Location = new System.Drawing.Point(126, 237);
+            this.label33.Location = new System.Drawing.Point(123, 237);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(13, 18);
             this.label33.TabIndex = 40;
@@ -387,7 +500,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label32.Location = new System.Drawing.Point(529, 237);
+            this.label32.Location = new System.Drawing.Point(507, 237);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(32, 18);
             this.label32.TabIndex = 39;
@@ -397,7 +510,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label31.Location = new System.Drawing.Point(708, 237);
+            this.label31.Location = new System.Drawing.Point(675, 237);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(32, 18);
             this.label31.TabIndex = 38;
@@ -407,7 +520,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label30.Location = new System.Drawing.Point(545, 209);
+            this.label30.Location = new System.Drawing.Point(523, 209);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(32, 18);
             this.label30.TabIndex = 37;
@@ -419,7 +532,7 @@
             this.label28.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "sellerAddress", true));
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label28.ForeColor = System.Drawing.Color.Blue;
-            this.label28.Location = new System.Drawing.Point(123, 209);
+            this.label28.Location = new System.Drawing.Point(119, 209);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(13, 18);
             this.label28.TabIndex = 35;
@@ -431,7 +544,7 @@
             this.label27.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "sellerPhone", true));
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label27.ForeColor = System.Drawing.Color.Blue;
-            this.label27.Location = new System.Drawing.Point(525, 182);
+            this.label27.Location = new System.Drawing.Point(492, 182);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(13, 18);
             this.label27.TabIndex = 34;
@@ -443,7 +556,7 @@
             this.label26.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "seller", true));
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label26.ForeColor = System.Drawing.Color.Blue;
-            this.label26.Location = new System.Drawing.Point(123, 182);
+            this.label26.Location = new System.Drawing.Point(115, 182);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(13, 18);
             this.label26.TabIndex = 33;
@@ -453,7 +566,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label25.Location = new System.Drawing.Point(559, 237);
+            this.label25.Location = new System.Drawing.Point(537, 237);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(63, 18);
             this.label25.TabIndex = 32;
@@ -463,7 +576,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label24.Location = new System.Drawing.Point(355, 237);
+            this.label24.Location = new System.Drawing.Point(333, 237);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(83, 18);
             this.label24.TabIndex = 31;
@@ -493,7 +606,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label21.Location = new System.Drawing.Point(355, 209);
+            this.label21.Location = new System.Drawing.Point(333, 209);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(81, 18);
             this.label21.TabIndex = 28;
@@ -513,7 +626,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label19.Location = new System.Drawing.Point(355, 182);
+            this.label19.Location = new System.Drawing.Point(333, 182);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(153, 18);
             this.label19.TabIndex = 26;
@@ -538,9 +651,9 @@
             this.comboBox5.Enabled = false;
             this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(555, 58);
+            this.comboBox5.Location = new System.Drawing.Point(555, 55);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(180, 26);
+            this.comboBox5.Size = new System.Drawing.Size(152, 26);
             this.comboBox5.TabIndex = 24;
             this.comboBox5.ValueMember = "statusID";
             // 
@@ -568,7 +681,7 @@
             this.comboBox4.Enabled = false;
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(435, 148);
+            this.comboBox4.Location = new System.Drawing.Point(413, 148);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(180, 26);
             this.comboBox4.TabIndex = 22;
@@ -623,7 +736,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label17.Location = new System.Drawing.Point(355, 150);
+            this.label17.Location = new System.Drawing.Point(333, 150);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(74, 18);
             this.label17.TabIndex = 17;
@@ -645,7 +758,7 @@
             this.label15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "serial", true));
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label15.ForeColor = System.Drawing.Color.Blue;
-            this.label15.Location = new System.Drawing.Point(503, 90);
+            this.label15.Location = new System.Drawing.Point(471, 90);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(13, 18);
             this.label15.TabIndex = 15;
@@ -655,7 +768,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(355, 90);
+            this.label14.Location = new System.Drawing.Point(333, 90);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 18);
             this.label14.TabIndex = 14;
@@ -667,7 +780,7 @@
             this.label13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "where", true));
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label13.ForeColor = System.Drawing.Color.Blue;
-            this.label13.Location = new System.Drawing.Point(451, 120);
+            this.label13.Location = new System.Drawing.Point(429, 120);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(13, 18);
             this.label13.TabIndex = 13;
@@ -679,7 +792,7 @@
             this.label11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "Spec", true));
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label11.ForeColor = System.Drawing.Color.Blue;
-            this.label11.Location = new System.Drawing.Point(77, 90);
+            this.label11.Location = new System.Drawing.Point(75, 90);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 18);
             this.label11.TabIndex = 11;
@@ -691,7 +804,7 @@
             this.label10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "numberYear", true));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label10.ForeColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(407, 31);
+            this.label10.Location = new System.Drawing.Point(385, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 18);
             this.label10.TabIndex = 9;
@@ -701,7 +814,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label9.Location = new System.Drawing.Point(355, 30);
+            this.label9.Location = new System.Drawing.Point(333, 30);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 18);
             this.label9.TabIndex = 8;
@@ -713,7 +826,7 @@
             this.lbGF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "GFMIS", true));
             this.lbGF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbGF.ForeColor = System.Drawing.Color.Blue;
-            this.lbGF.Location = new System.Drawing.Point(560, 30);
+            this.lbGF.Location = new System.Drawing.Point(534, 30);
             this.lbGF.Name = "lbGF";
             this.lbGF.Size = new System.Drawing.Size(13, 18);
             this.lbGF.TabIndex = 7;
@@ -735,7 +848,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label7.Location = new System.Drawing.Point(355, 120);
+            this.label7.Location = new System.Drawing.Point(333, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 18);
             this.label7.TabIndex = 5;
@@ -775,7 +888,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(471, 30);
+            this.label3.Location = new System.Drawing.Point(449, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 1;
@@ -793,6 +906,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmdAdd);
             this.groupBox2.Controls.Add(this.label44);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label43);
@@ -800,12 +914,22 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(369, 122);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ค้นหาครุภัณฑ์";
+            this.groupBox2.Text = "ครุภัณฑ์";
+            // 
+            // cmdAdd
+            // 
+            this.cmdAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cmdAdd.Location = new System.Drawing.Point(311, 84);
+            this.cmdAdd.Name = "cmdAdd";
+            this.cmdAdd.Size = new System.Drawing.Size(42, 27);
+            this.cmdAdd.TabIndex = 12;
+            this.cmdAdd.Text = "เพิ่ม";
+            this.cmdAdd.UseVisualStyleBackColor = true;
             // 
             // label44
             // 
@@ -832,20 +956,20 @@
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label43.Location = new System.Drawing.Point(6, 54);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(81, 18);
+            this.label43.Size = new System.Drawing.Size(82, 18);
             this.label43.TabIndex = 9;
-            this.label43.Text = "กลุ่ม ประเภท";
+            this.label43.Text = "ประเภท ชนิด";
             // 
             // comboBox6
             // 
             this.comboBox6.DataSource = this.tbTypeBindingSource;
             this.comboBox6.DisplayMember = "typeTitle";
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(100, 52);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(253, 26);
+            this.comboBox6.Size = new System.Drawing.Size(253, 24);
             this.comboBox6.TabIndex = 8;
             this.comboBox6.ValueMember = "typeID";
             this.comboBox6.SelectionChangeCommitted += new System.EventHandler(this.comboBox6_SelectionChangeCommitted);
@@ -870,11 +994,11 @@
             this.comboBox1.DataSource = this.tbGoodsTypeBindingSource;
             this.comboBox1.DisplayMember = "goodsType";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(100, 19);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(253, 26);
+            this.comboBox1.Size = new System.Drawing.Size(253, 24);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.ValueMember = "goodsTypeID";
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
@@ -916,71 +1040,163 @@
             // 
             this.tbDescriptionTableAdapter.ClearBeforeFill = true;
             // 
-            // tabControl1
+            // menuStrip1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 293);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(749, 152);
-            this.tabControl1.TabIndex = 52;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ครภณฑToolStripMenuItem,
+            this.รายงานToolStripMenuItem,
+            this.เกยวกบโปรแกรมToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1119, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // tabPage1
+            // ครภณฑToolStripMenuItem
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(741, 121);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "ค่าเสื่อมราคา";
+            this.ครภณฑToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.เพมรายการครภณฑToolStripMenuItem,
+            this.เพมกลมประเภทToolStripMenuItem,
+            this.เพมแกไขคณลกษณะToolStripMenuItem,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem3,
+            this.ออกจากโปรแกรมToolStripMenuItem});
+            this.ครภณฑToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.ครภณฑToolStripMenuItem.Name = "ครภณฑToolStripMenuItem";
+            this.ครภณฑToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.ครภณฑToolStripMenuItem.Text = "ครุภัณฑ์";
             // 
-            // tabPage2
+            // เพมรายการครภณฑToolStripMenuItem
             // 
-            this.tabPage2.Controls.Add(this.dataGridView3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(741, 121);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "บันทึกการซ่อม";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.เพมรายการครภณฑToolStripMenuItem.Name = "เพมรายการครภณฑToolStripMenuItem";
+            this.เพมรายการครภณฑToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.เพมรายการครภณฑToolStripMenuItem.Text = "เพิ่มรายการครุภัณฑ์";
             // 
-            // dataGridView2
+            // เพมกลมประเภทToolStripMenuItem
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(735, 115);
-            this.dataGridView2.TabIndex = 0;
+            this.เพมกลมประเภทToolStripMenuItem.Name = "เพมกลมประเภทToolStripMenuItem";
+            this.เพมกลมประเภทToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.เพมกลมประเภทToolStripMenuItem.Text = "เพิ่ม/แก้ไขกลุ่ม ประเภท ชนิด";
             // 
-            // dataGridView3
+            // เพมแกไขคณลกษณะToolStripMenuItem
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(735, 115);
-            this.dataGridView3.TabIndex = 0;
+            this.เพมแกไขคณลกษณะToolStripMenuItem.Name = "เพมแกไขคณลกษณะToolStripMenuItem";
+            this.เพมแกไขคณลกษณะToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.เพมแกไขคณลกษณะToolStripMenuItem.Text = "เพิ่ม/แก้ไขคุณลักษณะ";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(202, 6);
+            // 
+            // ออกจากโปรแกรมToolStripMenuItem
+            // 
+            this.ออกจากโปรแกรมToolStripMenuItem.Name = "ออกจากโปรแกรมToolStripMenuItem";
+            this.ออกจากโปรแกรมToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.ออกจากโปรแกรมToolStripMenuItem.Text = "ออกจากโปรแกรม";
+            this.ออกจากโปรแกรมToolStripMenuItem.Click += new System.EventHandler(this.ออกจากโปรแกรมToolStripMenuItem_Click);
+            // 
+            // รายงานToolStripMenuItem
+            // 
+            this.รายงานToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.แบบสำรวจครภณฑToolStripMenuItem,
+            this.แบบรายการครภณฑToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.บญชครภณฑแยกตามประเภทToolStripMenuItem,
+            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem});
+            this.รายงานToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem";
+            this.รายงานToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.รายงานToolStripMenuItem.Text = "รายงาน/แบบฟอร์ม";
+            // 
+            // แบบสำรวจครภณฑToolStripMenuItem
+            // 
+            this.แบบสำรวจครภณฑToolStripMenuItem.Name = "แบบสำรวจครภณฑToolStripMenuItem";
+            this.แบบสำรวจครภณฑToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.แบบสำรวจครภณฑToolStripMenuItem.Text = "ทะเบียนครุภัณฑ์";
+            // 
+            // แบบรายการครภณฑToolStripMenuItem
+            // 
+            this.แบบรายการครภณฑToolStripMenuItem.Name = "แบบรายการครภณฑToolStripMenuItem";
+            this.แบบรายการครภณฑToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.แบบรายการครภณฑToolStripMenuItem.Text = "บัญชีค่าเสื่อมราคา";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 6);
+            // 
+            // บญชครภณฑแยกตามประเภทToolStripMenuItem
+            // 
+            this.บญชครภณฑแยกตามประเภทToolStripMenuItem.Name = "บญชครภณฑแยกตามประเภทToolStripMenuItem";
+            this.บญชครภณฑแยกตามประเภทToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.บญชครภณฑแยกตามประเภทToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามประเภท";
+            // 
+            // บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem
+            // 
+            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem.Name = "บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem";
+            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามหน่วยงานรับผิดชอบ";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(262, 6);
+            // 
+            // รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem
+            // 
+            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem.Name = "รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem";
+            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem.Text = "รายการครุภัณฑ์หมดอายุ ชำรุด";
+            // 
+            // เกยวกบโปรแกรมToolStripMenuItem
+            // 
+            this.เกยวกบโปรแกรมToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ตงคาหนวยงานToolStripMenuItem,
+            this.เกยวกบโปรแกรมToolStripMenuItem1});
+            this.เกยวกบโปรแกรมToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.เกยวกบโปรแกรมToolStripMenuItem.Name = "เกยวกบโปรแกรมToolStripMenuItem";
+            this.เกยวกบโปรแกรมToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.เกยวกบโปรแกรมToolStripMenuItem.Text = "อื่นๆ";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(205, 22);
+            this.toolStripMenuItem4.Text = "คำนวนณค่าเสื่อมราคา";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(202, 6);
+            // 
+            // ตงคาหนวยงานToolStripMenuItem
+            // 
+            this.ตงคาหนวยงานToolStripMenuItem.Name = "ตงคาหนวยงานToolStripMenuItem";
+            this.ตงคาหนวยงานToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.ตงคาหนวยงานToolStripMenuItem.Text = "ตั้งค่าหน่วยงาน";
+            // 
+            // เกยวกบโปรแกรมToolStripMenuItem1
+            // 
+            this.เกยวกบโปรแกรมToolStripMenuItem1.Name = "เกยวกบโปรแกรมToolStripMenuItem1";
+            this.เกยวกบโปรแกรมToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.เกยวกบโปรแกรมToolStripMenuItem1.Text = "เกี่ยวกับโปรแกรม";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 469);
+            this.ClientSize = new System.Drawing.Size(1119, 586);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ระบบบริหารจัดการครุภัณฑ์ - DurableGoodsMIS By Tanunnas BK";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -988,6 +1204,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDescriptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).EndInit();
@@ -997,12 +1218,10 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1087,6 +1306,29 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button cmdDelete;
+        private System.Windows.Forms.Button cmdEdit;
+        private System.Windows.Forms.Button cmdAdd;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ครภณฑToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem รายงานToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem เกยวกบโปรแกรมToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem เพมรายการครภณฑToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem เพมกลมประเภทToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem เพมแกไขคณลกษณะToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem แบบสำรวจครภณฑToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem แบบรายการครภณฑToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem บญชครภณฑแยกตามประเภทToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem ออกจากโปรแกรมToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem ตงคาหนวยงานToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem เกยวกบโปรแกรมToolStripMenuItem1;
     }
 }
 

@@ -63,5 +63,10 @@ namespace DurableGoodsMIS
             comboBox1.SelectedIndex = -1;
             comboBox6.SelectedIndex = -1;
         }
+
+        private void ออกจากโปรแกรมToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
