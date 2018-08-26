@@ -29,21 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tbDepreciationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.fixDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fixDetailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbFixBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.goodsIDDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subGoodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pieceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbSubGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbDescriptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label29 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -96,6 +111,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAddSubGoods = new System.Windows.Forms.ToolStripButton();
+            this.btnAddFix = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmdAdd = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -105,19 +137,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tbGoodsTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbGoodsTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTypeTableAdapter();
-            this.tbTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbTypeTableAdapter();
-            this.tbGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter();
-            this.tbSectionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbSectionTableAdapter();
-            this.tbStatusTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbStatusTableAdapter();
-            this.tbBudgetTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbBudgetTableAdapter();
-            this.tbAcquisitionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbAcquisitionTableAdapter();
-            this.tbDescriptionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDescriptionTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เพมรายการครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เพมกลมประเภทToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เพมแกไขคณลกษณะToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.ออกจากโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.รายงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,83 +155,55 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.ตงคาหนวยงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบโปรแกรมToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
+            this.tbGoodsTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTypeTableAdapter();
+            this.tbTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbTypeTableAdapter();
+            this.tbGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter();
+            this.tbSectionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbSectionTableAdapter();
+            this.tbStatusTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbStatusTableAdapter();
+            this.tbBudgetTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbBudgetTableAdapter();
+            this.tbAcquisitionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbAcquisitionTableAdapter();
+            this.tbDescriptionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDescriptionTableAdapter();
+            this.tbFixTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbFixTableAdapter();
+            this.tbSubGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbSubGoodsTableAdapter();
+            this.tbDepreciationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tbDepreciationTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDepreciationTableAdapter();
+            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeRangeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depreciationPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depreciationSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFixBindingSource)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbSubGoodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDescriptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBudgetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSectionBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.goodsIDDataGridViewTextBoxColumn,
-            this.specDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tbGoodsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 15;
-            this.dataGridView1.Size = new System.Drawing.Size(369, 419);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // goodsIDDataGridViewTextBoxColumn
-            // 
-            this.goodsIDDataGridViewTextBoxColumn.DataPropertyName = "goodsID";
-            this.goodsIDDataGridViewTextBoxColumn.HeaderText = "รหัสครุภัณฑ์";
-            this.goodsIDDataGridViewTextBoxColumn.Name = "goodsIDDataGridViewTextBoxColumn";
-            this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodsIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // specDataGridViewTextBoxColumn
-            // 
-            this.specDataGridViewTextBoxColumn.DataPropertyName = "Spec";
-            this.specDataGridViewTextBoxColumn.HeaderText = "รายการครุภัณฑ์";
-            this.specDataGridViewTextBoxColumn.Name = "specDataGridViewTextBoxColumn";
-            this.specDataGridViewTextBoxColumn.ReadOnly = true;
-            this.specDataGridViewTextBoxColumn.Width = 225;
-            // 
-            // tbGoodsBindingSource
-            // 
-            this.tbGoodsBindingSource.DataMember = "tbGoods";
-            this.tbGoodsBindingSource.DataSource = this.durableGoodsMISDataSet;
-            // 
-            // durableGoodsMISDataSet
-            // 
-            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
-            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -274,6 +272,7 @@
             // 
             this.cmdDelete.Enabled = false;
             this.cmdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cmdDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdDelete.Location = new System.Drawing.Point(631, 300);
             this.cmdDelete.Name = "cmdDelete";
             this.cmdDelete.Size = new System.Drawing.Size(76, 28);
@@ -298,6 +297,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.tabControl1.Location = new System.Drawing.Point(6, 324);
             this.tabControl1.Name = "tabControl1";
@@ -319,13 +319,34 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numYearDataGridViewTextBoxColumn,
+            this.Year,
+            this.timeRangeDataGridViewTextBoxColumn,
+            this.depreciationPriceDataGridViewTextBoxColumn,
+            this.depreciationSumDataGridViewTextBoxColumn,
+            this.lastPriceDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.tbDepreciationBindingSource1;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Size = new System.Drawing.Size(694, 182);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // tbDepreciationBindingSource
+            // 
+            this.tbDepreciationBindingSource.DataMember = "tbDepreciation";
+            this.tbDepreciationBindingSource.DataSource = this.durableGoodsMISDataSet;
+            // 
+            // durableGoodsMISDataSet
+            // 
+            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
+            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage2
             // 
@@ -340,13 +361,123 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fixDateDataGridViewTextBoxColumn,
+            this.documentDataGridViewTextBoxColumn,
+            this.fixDetailDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn,
+            this.commentDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.tbFixBindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(694, 182);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // fixDateDataGridViewTextBoxColumn
+            // 
+            this.fixDateDataGridViewTextBoxColumn.DataPropertyName = "fixDate";
+            this.fixDateDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.fixDateDataGridViewTextBoxColumn.Name = "fixDateDataGridViewTextBoxColumn";
+            this.fixDateDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // documentDataGridViewTextBoxColumn
+            // 
+            this.documentDataGridViewTextBoxColumn.DataPropertyName = "document";
+            this.documentDataGridViewTextBoxColumn.HeaderText = "เลขเอกสาร";
+            this.documentDataGridViewTextBoxColumn.Name = "documentDataGridViewTextBoxColumn";
+            this.documentDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // fixDetailDataGridViewTextBoxColumn
+            // 
+            this.fixDetailDataGridViewTextBoxColumn.DataPropertyName = "fixDetail";
+            this.fixDetailDataGridViewTextBoxColumn.HeaderText = "รายการซ่อม";
+            this.fixDetailDataGridViewTextBoxColumn.Name = "fixDetailDataGridViewTextBoxColumn";
+            this.fixDetailDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "ราคา";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "หมายเหตุ";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.Width = 160;
+            // 
+            // tbFixBindingSource
+            // 
+            this.tbFixBindingSource.DataMember = "tbFix";
+            this.tbFixBindingSource.DataSource = this.durableGoodsMISDataSet;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.Controls.Add(this.dataGridView4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(700, 188);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "รายการครุภัณฑ์ย่อย";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.goodsIDDataGridViewTextBoxColumn3,
+            this.subGoodsDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.pieceDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.tbSubGoodsBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(694, 182);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // goodsIDDataGridViewTextBoxColumn3
+            // 
+            this.goodsIDDataGridViewTextBoxColumn3.DataPropertyName = "goodsID";
+            this.goodsIDDataGridViewTextBoxColumn3.HeaderText = "รหัสครุภัณฑ์";
+            this.goodsIDDataGridViewTextBoxColumn3.Name = "goodsIDDataGridViewTextBoxColumn3";
+            this.goodsIDDataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // subGoodsDataGridViewTextBoxColumn
+            // 
+            this.subGoodsDataGridViewTextBoxColumn.DataPropertyName = "subGoods";
+            this.subGoodsDataGridViewTextBoxColumn.HeaderText = "รายการครุภัณฑ์ย่อย";
+            this.subGoodsDataGridViewTextBoxColumn.Name = "subGoodsDataGridViewTextBoxColumn";
+            this.subGoodsDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "ราคา";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // pieceDataGridViewTextBoxColumn
+            // 
+            this.pieceDataGridViewTextBoxColumn.DataPropertyName = "piece";
+            this.pieceDataGridViewTextBoxColumn.HeaderText = "จำนวน/ชิ้น";
+            this.pieceDataGridViewTextBoxColumn.Name = "pieceDataGridViewTextBoxColumn";
+            this.pieceDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // tbSubGoodsBindingSource
+            // 
+            this.tbSubGoodsBindingSource.DataMember = "tbSubGoods";
+            this.tbSubGoodsBindingSource.DataSource = this.durableGoodsMISDataSet;
             // 
             // comboBox7
             // 
@@ -364,6 +495,11 @@
             this.comboBox7.Size = new System.Drawing.Size(395, 26);
             this.comboBox7.TabIndex = 51;
             this.comboBox7.ValueMember = "descID";
+            // 
+            // tbGoodsBindingSource
+            // 
+            this.tbGoodsBindingSource.DataMember = "tbGoods";
+            this.tbGoodsBindingSource.DataSource = this.durableGoodsMISDataSet;
             // 
             // tbDescriptionBindingSource
             // 
@@ -906,6 +1042,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.bindingNavigator1);
+            this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.cmdAdd);
             this.groupBox2.Controls.Add(this.label44);
             this.groupBox2.Controls.Add(this.textBox1);
@@ -916,10 +1056,201 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.groupBox2.Location = new System.Drawing.Point(12, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(369, 122);
+            this.groupBox2.Size = new System.Drawing.Size(369, 547);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ครุภัณฑ์";
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.tbGoodsBindingSource;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigator1.CountItemFormat = "ของ {0}";
+            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.btnAddSubGoods,
+            this.btnAddFix,
+            this.toolStripSeparator1,
+            this.btnEdit,
+            this.bindingNavigatorDeleteItem});
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 519);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigator1.Size = new System.Drawing.Size(363, 25);
+            this.bindingNavigator1.TabIndex = 14;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "เพิ่มครุภัณฑ์";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(42, 22);
+            this.bindingNavigatorCountItem.Text = "ของ {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "จำนวนครุภัณฑ์ทั้งหมด";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Enabled = false;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "ลบครุภัณฑ์";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "ไปรายการแรก";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "รายการก่อนหน้า";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "รายการถัดไป";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "ไปรายการสุดท้าย";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnAddSubGoods
+            // 
+            this.btnAddSubGoods.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAddSubGoods.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSubGoods.Image")));
+            this.btnAddSubGoods.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddSubGoods.Name = "btnAddSubGoods";
+            this.btnAddSubGoods.Size = new System.Drawing.Size(23, 22);
+            this.btnAddSubGoods.Text = "บันทึกครุภัณฑ์ย่อย";
+            // 
+            // btnAddFix
+            // 
+            this.btnAddFix.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAddFix.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFix.Image")));
+            this.btnAddFix.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddFix.Name = "btnAddFix";
+            this.btnAddFix.Size = new System.Drawing.Size(23, 22);
+            this.btnAddFix.Text = "บันทึกการซ่อม";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(23, 22);
+            this.btnEdit.Text = "แก้ไขรายการครุภัณฑ์";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.goodsIDDataGridViewTextBoxColumn,
+            this.specDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tbGoodsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 120);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersWidth = 15;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Size = new System.Drawing.Size(369, 396);
+            this.dataGridView1.TabIndex = 13;
             // 
             // cmdAdd
             // 
@@ -1008,38 +1339,6 @@
             this.tbGoodsTypeBindingSource.DataMember = "tbGoodsType";
             this.tbGoodsTypeBindingSource.DataSource = this.durableGoodsMISDataSet;
             // 
-            // tbGoodsTypeTableAdapter
-            // 
-            this.tbGoodsTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbTypeTableAdapter
-            // 
-            this.tbTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbGoodsTableAdapter
-            // 
-            this.tbGoodsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbSectionTableAdapter
-            // 
-            this.tbSectionTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbStatusTableAdapter
-            // 
-            this.tbStatusTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbBudgetTableAdapter
-            // 
-            this.tbBudgetTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbAcquisitionTableAdapter
-            // 
-            this.tbAcquisitionTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbDescriptionTableAdapter
-            // 
-            this.tbDescriptionTableAdapter.ClearBeforeFill = true;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1084,6 +1383,17 @@
             this.เพมแกไขคณลกษณะToolStripMenuItem.Name = "เพมแกไขคณลกษณะToolStripMenuItem";
             this.เพมแกไขคณลกษณะToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.เพมแกไขคณลกษณะToolStripMenuItem.Text = "เพิ่ม/แก้ไขคุณลักษณะ";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(202, 6);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(205, 22);
+            this.toolStripMenuItem4.Text = "คำนวนณค่าเสื่อมราคา";
             // 
             // toolStripMenuItem3
             // 
@@ -1162,17 +1472,6 @@
             this.เกยวกบโปรแกรมToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.เกยวกบโปรแกรมToolStripMenuItem.Text = "อื่นๆ";
             // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(205, 22);
-            this.toolStripMenuItem4.Text = "คำนวนณค่าเสื่อมราคา";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(202, 6);
-            // 
             // ตงคาหนวยงานToolStripMenuItem
             // 
             this.ตงคาหนวยงานToolStripMenuItem.Name = "ตงคาหนวยงานToolStripMenuItem";
@@ -1185,6 +1484,110 @@
             this.เกยวกบโปรแกรมToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.เกยวกบโปรแกรมToolStripMenuItem1.Text = "เกี่ยวกับโปรแกรม";
             // 
+            // tbGoodsTypeTableAdapter
+            // 
+            this.tbGoodsTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbTypeTableAdapter
+            // 
+            this.tbTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbGoodsTableAdapter
+            // 
+            this.tbGoodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbSectionTableAdapter
+            // 
+            this.tbSectionTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbStatusTableAdapter
+            // 
+            this.tbStatusTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbBudgetTableAdapter
+            // 
+            this.tbBudgetTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbAcquisitionTableAdapter
+            // 
+            this.tbAcquisitionTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbDescriptionTableAdapter
+            // 
+            this.tbDescriptionTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbFixTableAdapter
+            // 
+            this.tbFixTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbSubGoodsTableAdapter
+            // 
+            this.tbSubGoodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbDepreciationBindingSource1
+            // 
+            this.tbDepreciationBindingSource1.DataMember = "tbDepreciation";
+            this.tbDepreciationBindingSource1.DataSource = this.durableGoodsMISDataSet;
+            // 
+            // tbDepreciationTableAdapter
+            // 
+            this.tbDepreciationTableAdapter.ClearBeforeFill = true;
+            // 
+            // goodsIDDataGridViewTextBoxColumn
+            // 
+            this.goodsIDDataGridViewTextBoxColumn.DataPropertyName = "goodsID";
+            this.goodsIDDataGridViewTextBoxColumn.HeaderText = "รหัสครุภัณฑ์";
+            this.goodsIDDataGridViewTextBoxColumn.Name = "goodsIDDataGridViewTextBoxColumn";
+            this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodsIDDataGridViewTextBoxColumn.Width = 145;
+            // 
+            // specDataGridViewTextBoxColumn
+            // 
+            this.specDataGridViewTextBoxColumn.DataPropertyName = "Spec";
+            this.specDataGridViewTextBoxColumn.HeaderText = "รายการครุภัณฑ์";
+            this.specDataGridViewTextBoxColumn.Name = "specDataGridViewTextBoxColumn";
+            this.specDataGridViewTextBoxColumn.ReadOnly = true;
+            this.specDataGridViewTextBoxColumn.Width = 205;
+            // 
+            // numYearDataGridViewTextBoxColumn
+            // 
+            this.numYearDataGridViewTextBoxColumn.DataPropertyName = "numYear";
+            this.numYearDataGridViewTextBoxColumn.HeaderText = "ปีที่";
+            this.numYearDataGridViewTextBoxColumn.Name = "numYearDataGridViewTextBoxColumn";
+            this.numYearDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // Year
+            // 
+            this.Year.DataPropertyName = "Year";
+            this.Year.HeaderText = "พ.ศ.";
+            this.Year.Name = "Year";
+            this.Year.Width = 80;
+            // 
+            // timeRangeDataGridViewTextBoxColumn
+            // 
+            this.timeRangeDataGridViewTextBoxColumn.DataPropertyName = "timeRange";
+            this.timeRangeDataGridViewTextBoxColumn.HeaderText = "ระยะเวลา";
+            this.timeRangeDataGridViewTextBoxColumn.Name = "timeRangeDataGridViewTextBoxColumn";
+            // 
+            // depreciationPriceDataGridViewTextBoxColumn
+            // 
+            this.depreciationPriceDataGridViewTextBoxColumn.DataPropertyName = "depreciationPrice";
+            this.depreciationPriceDataGridViewTextBoxColumn.HeaderText = "ค่าเสื่อมราคา";
+            this.depreciationPriceDataGridViewTextBoxColumn.Name = "depreciationPriceDataGridViewTextBoxColumn";
+            // 
+            // depreciationSumDataGridViewTextBoxColumn
+            // 
+            this.depreciationSumDataGridViewTextBoxColumn.DataPropertyName = "depreciationSum";
+            this.depreciationSumDataGridViewTextBoxColumn.HeaderText = "ค่าเสื่อมราคาสะสม";
+            this.depreciationSumDataGridViewTextBoxColumn.Name = "depreciationSumDataGridViewTextBoxColumn";
+            this.depreciationSumDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // lastPriceDataGridViewTextBoxColumn
+            // 
+            this.lastPriceDataGridViewTextBoxColumn.DataPropertyName = "lastPrice";
+            this.lastPriceDataGridViewTextBoxColumn.HeaderText = "มูลค่าสุทธิ";
+            this.lastPriceDataGridViewTextBoxColumn.Name = "lastPriceDataGridViewTextBoxColumn";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1192,23 +1595,26 @@
             this.ClientSize = new System.Drawing.Size(1119, 586);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ระบบบริหารจัดการครุภัณฑ์ - DurableGoodsMIS By Tanunnas BK";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFixBindingSource)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbSubGoodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDescriptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).EndInit();
@@ -1216,17 +1622,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbSectionBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -1287,8 +1697,6 @@
         private DurableGoodsMISDataSetTableAdapters.tbTypeTableAdapter tbTypeTableAdapter;
         private System.Windows.Forms.BindingSource tbGoodsBindingSource;
         private DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter tbGoodsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource tbSectionBindingSource;
         private DurableGoodsMISDataSetTableAdapters.tbSectionTableAdapter tbSectionTableAdapter;
         private System.Windows.Forms.Label label29;
@@ -1329,6 +1737,51 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem ตงคาหนวยงานToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem เกยวกบโปรแกรมToolStripMenuItem1;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripButton btnAddSubGoods;
+        private System.Windows.Forms.ToolStripButton btnAddFix;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnEdit;
+        private System.Windows.Forms.BindingSource tbDepreciationBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caldateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tbFixBindingSource;
+        private DurableGoodsMISDataSetTableAdapters.tbFixTableAdapter tbFixTableAdapter;
+        private System.Windows.Forms.BindingSource tbSubGoodsBindingSource;
+        private DurableGoodsMISDataSetTableAdapters.tbSubGoodsTableAdapter tbSubGoodsTableAdapter;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fixDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fixDetailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subGoodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pieceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tbDepreciationBindingSource1;
+        private DurableGoodsMISDataSetTableAdapters.tbDepreciationTableAdapter tbDepreciationTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numYearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeRangeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depreciationPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depreciationSumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastPriceDataGridViewTextBoxColumn;
     }
 }
 
