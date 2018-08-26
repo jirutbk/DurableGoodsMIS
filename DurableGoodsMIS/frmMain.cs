@@ -49,6 +49,15 @@ namespace DurableGoodsMIS
             comboBox3.SelectedIndex = -1;
             comboBox6.SelectedIndex = -1;
             comboBox7.SelectedIndex = -1;
+
+            dataGridView2.Columns[3].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
+            dataGridView2.Columns[4].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
+            dataGridView2.Columns[5].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
+
+            dataGridView3.Columns[3].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
+            dataGridView4.Columns[2].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
+
+
         }
               
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)

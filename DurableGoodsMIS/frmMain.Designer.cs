@@ -32,23 +32,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tbDepreciationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.numYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeRangeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depreciationPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depreciationSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbDepreciationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.fixDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fixDetailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbFixBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -110,6 +109,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbDepreciationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -128,6 +128,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmdAdd = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -167,21 +169,17 @@
             this.tbDescriptionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDescriptionTableAdapter();
             this.tbFixTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbFixTableAdapter();
             this.tbSubGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbSubGoodsTableAdapter();
-            this.tbDepreciationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tbDepreciationTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDepreciationTableAdapter();
-            this.goodsIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeRangeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depreciationPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depreciationSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fixDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fixDetailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -195,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBudgetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -202,7 +201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -333,15 +331,55 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 30;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Size = new System.Drawing.Size(694, 182);
             this.dataGridView2.TabIndex = 0;
             // 
-            // tbDepreciationBindingSource
+            // numYearDataGridViewTextBoxColumn
             // 
-            this.tbDepreciationBindingSource.DataMember = "tbDepreciation";
-            this.tbDepreciationBindingSource.DataSource = this.durableGoodsMISDataSet;
+            this.numYearDataGridViewTextBoxColumn.DataPropertyName = "numYear";
+            this.numYearDataGridViewTextBoxColumn.HeaderText = "ปีที่";
+            this.numYearDataGridViewTextBoxColumn.Name = "numYearDataGridViewTextBoxColumn";
+            this.numYearDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // Year
+            // 
+            this.Year.DataPropertyName = "Year";
+            this.Year.HeaderText = "พ.ศ.";
+            this.Year.Name = "Year";
+            this.Year.Width = 80;
+            // 
+            // timeRangeDataGridViewTextBoxColumn
+            // 
+            this.timeRangeDataGridViewTextBoxColumn.DataPropertyName = "timeRange";
+            this.timeRangeDataGridViewTextBoxColumn.HeaderText = "ระยะเวลา";
+            this.timeRangeDataGridViewTextBoxColumn.Name = "timeRangeDataGridViewTextBoxColumn";
+            // 
+            // depreciationPriceDataGridViewTextBoxColumn
+            // 
+            this.depreciationPriceDataGridViewTextBoxColumn.DataPropertyName = "depreciationPrice";
+            this.depreciationPriceDataGridViewTextBoxColumn.HeaderText = "ค่าเสื่อมราคา";
+            this.depreciationPriceDataGridViewTextBoxColumn.Name = "depreciationPriceDataGridViewTextBoxColumn";
+            // 
+            // depreciationSumDataGridViewTextBoxColumn
+            // 
+            this.depreciationSumDataGridViewTextBoxColumn.DataPropertyName = "depreciationSum";
+            this.depreciationSumDataGridViewTextBoxColumn.HeaderText = "ค่าเสื่อมราคาสะสม";
+            this.depreciationSumDataGridViewTextBoxColumn.Name = "depreciationSumDataGridViewTextBoxColumn";
+            this.depreciationSumDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // lastPriceDataGridViewTextBoxColumn
+            // 
+            this.lastPriceDataGridViewTextBoxColumn.DataPropertyName = "lastPrice";
+            this.lastPriceDataGridViewTextBoxColumn.HeaderText = "มูลค่าสุทธิ";
+            this.lastPriceDataGridViewTextBoxColumn.Name = "lastPriceDataGridViewTextBoxColumn";
+            // 
+            // tbDepreciationBindingSource1
+            // 
+            this.tbDepreciationBindingSource1.DataMember = "tbDepreciation";
+            this.tbDepreciationBindingSource1.DataSource = this.durableGoodsMISDataSet;
             // 
             // durableGoodsMISDataSet
             // 
@@ -374,43 +412,9 @@
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 30;
             this.dataGridView3.Size = new System.Drawing.Size(694, 182);
             this.dataGridView3.TabIndex = 0;
-            // 
-            // fixDateDataGridViewTextBoxColumn
-            // 
-            this.fixDateDataGridViewTextBoxColumn.DataPropertyName = "fixDate";
-            this.fixDateDataGridViewTextBoxColumn.HeaderText = "วันที่";
-            this.fixDateDataGridViewTextBoxColumn.Name = "fixDateDataGridViewTextBoxColumn";
-            this.fixDateDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // documentDataGridViewTextBoxColumn
-            // 
-            this.documentDataGridViewTextBoxColumn.DataPropertyName = "document";
-            this.documentDataGridViewTextBoxColumn.HeaderText = "เลขเอกสาร";
-            this.documentDataGridViewTextBoxColumn.Name = "documentDataGridViewTextBoxColumn";
-            this.documentDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // fixDetailDataGridViewTextBoxColumn
-            // 
-            this.fixDetailDataGridViewTextBoxColumn.DataPropertyName = "fixDetail";
-            this.fixDetailDataGridViewTextBoxColumn.HeaderText = "รายการซ่อม";
-            this.fixDetailDataGridViewTextBoxColumn.Name = "fixDetailDataGridViewTextBoxColumn";
-            this.fixDetailDataGridViewTextBoxColumn.Width = 220;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "ราคา";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "หมายเหตุ";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.Width = 160;
             // 
             // tbFixBindingSource
             // 
@@ -443,6 +447,7 @@
             this.dataGridView4.DataSource = this.tbSubGoodsBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(3, 3);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 30;
             this.dataGridView4.Size = new System.Drawing.Size(694, 182);
             this.dataGridView4.TabIndex = 0;
             // 
@@ -524,7 +529,7 @@
             this.label42.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "own", true));
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label42.ForeColor = System.Drawing.Color.Blue;
-            this.label42.Location = new System.Drawing.Point(564, 264);
+            this.label42.Location = new System.Drawing.Point(559, 264);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(13, 18);
             this.label42.TabIndex = 49;
@@ -726,7 +731,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(134, 18);
             this.label23.TabIndex = 30;
-            this.label23.Text = "อัตราค่าเสื่อม ร้อยละ/ปี";
+            this.label23.Text = "อัตราค่าเสื่อม ร้อยละ:ปี";
             // 
             // label22
             // 
@@ -1040,6 +1045,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "รหัสครุภัณฑ์";
             // 
+            // tbDepreciationBindingSource
+            // 
+            this.tbDepreciationBindingSource.DataMember = "tbDepreciation";
+            this.tbDepreciationBindingSource.DataSource = this.durableGoodsMISDataSet;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1222,14 +1232,6 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.goodsIDDataGridViewTextBoxColumn,
@@ -1238,19 +1240,27 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 120);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 15;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(369, 396);
             this.dataGridView1.TabIndex = 13;
+            // 
+            // goodsIDDataGridViewTextBoxColumn
+            // 
+            this.goodsIDDataGridViewTextBoxColumn.DataPropertyName = "goodsID";
+            this.goodsIDDataGridViewTextBoxColumn.HeaderText = "รหัสครุภัณฑ์";
+            this.goodsIDDataGridViewTextBoxColumn.Name = "goodsIDDataGridViewTextBoxColumn";
+            this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.goodsIDDataGridViewTextBoxColumn.Width = 145;
+            // 
+            // specDataGridViewTextBoxColumn
+            // 
+            this.specDataGridViewTextBoxColumn.DataPropertyName = "Spec";
+            this.specDataGridViewTextBoxColumn.HeaderText = "รายการครุภัณฑ์";
+            this.specDataGridViewTextBoxColumn.Name = "specDataGridViewTextBoxColumn";
+            this.specDataGridViewTextBoxColumn.ReadOnly = true;
+            this.specDataGridViewTextBoxColumn.Width = 205;
             // 
             // cmdAdd
             // 
@@ -1524,69 +1534,44 @@
             // 
             this.tbSubGoodsTableAdapter.ClearBeforeFill = true;
             // 
-            // tbDepreciationBindingSource1
-            // 
-            this.tbDepreciationBindingSource1.DataMember = "tbDepreciation";
-            this.tbDepreciationBindingSource1.DataSource = this.durableGoodsMISDataSet;
-            // 
             // tbDepreciationTableAdapter
             // 
             this.tbDepreciationTableAdapter.ClearBeforeFill = true;
             // 
-            // goodsIDDataGridViewTextBoxColumn
+            // fixDateDataGridViewTextBoxColumn
             // 
-            this.goodsIDDataGridViewTextBoxColumn.DataPropertyName = "goodsID";
-            this.goodsIDDataGridViewTextBoxColumn.HeaderText = "รหัสครุภัณฑ์";
-            this.goodsIDDataGridViewTextBoxColumn.Name = "goodsIDDataGridViewTextBoxColumn";
-            this.goodsIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.goodsIDDataGridViewTextBoxColumn.Width = 145;
+            this.fixDateDataGridViewTextBoxColumn.DataPropertyName = "fixDate";
+            this.fixDateDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.fixDateDataGridViewTextBoxColumn.Name = "fixDateDataGridViewTextBoxColumn";
+            this.fixDateDataGridViewTextBoxColumn.Width = 70;
             // 
-            // specDataGridViewTextBoxColumn
+            // documentDataGridViewTextBoxColumn
             // 
-            this.specDataGridViewTextBoxColumn.DataPropertyName = "Spec";
-            this.specDataGridViewTextBoxColumn.HeaderText = "รายการครุภัณฑ์";
-            this.specDataGridViewTextBoxColumn.Name = "specDataGridViewTextBoxColumn";
-            this.specDataGridViewTextBoxColumn.ReadOnly = true;
-            this.specDataGridViewTextBoxColumn.Width = 205;
+            this.documentDataGridViewTextBoxColumn.DataPropertyName = "document";
+            this.documentDataGridViewTextBoxColumn.HeaderText = "เลขเอกสาร";
+            this.documentDataGridViewTextBoxColumn.Name = "documentDataGridViewTextBoxColumn";
+            this.documentDataGridViewTextBoxColumn.Width = 130;
             // 
-            // numYearDataGridViewTextBoxColumn
+            // fixDetailDataGridViewTextBoxColumn
             // 
-            this.numYearDataGridViewTextBoxColumn.DataPropertyName = "numYear";
-            this.numYearDataGridViewTextBoxColumn.HeaderText = "ปีที่";
-            this.numYearDataGridViewTextBoxColumn.Name = "numYearDataGridViewTextBoxColumn";
-            this.numYearDataGridViewTextBoxColumn.Width = 40;
+            this.fixDetailDataGridViewTextBoxColumn.DataPropertyName = "fixDetail";
+            this.fixDetailDataGridViewTextBoxColumn.HeaderText = "รายการซ่อม";
+            this.fixDetailDataGridViewTextBoxColumn.Name = "fixDetailDataGridViewTextBoxColumn";
+            this.fixDetailDataGridViewTextBoxColumn.Width = 220;
             // 
-            // Year
+            // costDataGridViewTextBoxColumn
             // 
-            this.Year.DataPropertyName = "Year";
-            this.Year.HeaderText = "พ.ศ.";
-            this.Year.Name = "Year";
-            this.Year.Width = 80;
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "ราคา";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.Width = 82;
             // 
-            // timeRangeDataGridViewTextBoxColumn
+            // commentDataGridViewTextBoxColumn
             // 
-            this.timeRangeDataGridViewTextBoxColumn.DataPropertyName = "timeRange";
-            this.timeRangeDataGridViewTextBoxColumn.HeaderText = "ระยะเวลา";
-            this.timeRangeDataGridViewTextBoxColumn.Name = "timeRangeDataGridViewTextBoxColumn";
-            // 
-            // depreciationPriceDataGridViewTextBoxColumn
-            // 
-            this.depreciationPriceDataGridViewTextBoxColumn.DataPropertyName = "depreciationPrice";
-            this.depreciationPriceDataGridViewTextBoxColumn.HeaderText = "ค่าเสื่อมราคา";
-            this.depreciationPriceDataGridViewTextBoxColumn.Name = "depreciationPriceDataGridViewTextBoxColumn";
-            // 
-            // depreciationSumDataGridViewTextBoxColumn
-            // 
-            this.depreciationSumDataGridViewTextBoxColumn.DataPropertyName = "depreciationSum";
-            this.depreciationSumDataGridViewTextBoxColumn.HeaderText = "ค่าเสื่อมราคาสะสม";
-            this.depreciationSumDataGridViewTextBoxColumn.Name = "depreciationSumDataGridViewTextBoxColumn";
-            this.depreciationSumDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // lastPriceDataGridViewTextBoxColumn
-            // 
-            this.lastPriceDataGridViewTextBoxColumn.DataPropertyName = "lastPrice";
-            this.lastPriceDataGridViewTextBoxColumn.HeaderText = "มูลค่าสุทธิ";
-            this.lastPriceDataGridViewTextBoxColumn.Name = "lastPriceDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "หมายเหตุ";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.Width = 160;
             // 
             // frmMain
             // 
@@ -1606,7 +1591,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -1620,6 +1605,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBudgetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
@@ -1630,7 +1616,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDepreciationBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1763,11 +1748,6 @@
         private DurableGoodsMISDataSetTableAdapters.tbSubGoodsTableAdapter tbSubGoodsTableAdapter;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fixDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fixDetailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn subGoodsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
@@ -1782,6 +1762,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn depreciationPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn depreciationSumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fixDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn documentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fixDetailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
     }
 }
 
