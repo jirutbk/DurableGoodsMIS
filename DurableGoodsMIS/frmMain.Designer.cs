@@ -154,13 +154,13 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.แบบรายการครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.report01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.report02ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.บญชครภณฑแยกตามประเภทToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.report03ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.report04ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.report06ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ตงคาหนวยงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบโปรแกรมToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -1455,58 +1455,59 @@
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem,
-            this.แบบรายการครภณฑToolStripMenuItem,
+            this.report01ToolStripMenuItem,
+            this.report02ToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.บญชครภณฑแยกตามประเภทToolStripMenuItem,
-            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem,
+            this.report03ToolStripMenuItem,
+            this.report04ToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem});
+            this.report06ToolStripMenuItem});
             this.reportToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.reportToolStripMenuItem.Text = "รายงาน/แบบฟอร์ม";
             // 
-            // ToolStripMenuItem
+            // report01ToolStripMenuItem
             // 
-            this.ToolStripMenuItem.Name = "ToolStripMenuItem";
-            this.ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.ToolStripMenuItem.Text = "ทะเบียนครุภัณฑ์";
-            this.ToolStripMenuItem.Click += new System.EventHandler(this.report01ToolStripMenuItem_Click);
+            this.report01ToolStripMenuItem.Name = "report01ToolStripMenuItem";
+            this.report01ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report01ToolStripMenuItem.Text = "ทะเบียนครุภัณฑ์";
+            this.report01ToolStripMenuItem.Click += new System.EventHandler(this.report01ToolStripMenuItem_Click);
             // 
-            // แบบรายการครภณฑToolStripMenuItem
+            // report02ToolStripMenuItem
             // 
-            this.แบบรายการครภณฑToolStripMenuItem.Name = "แบบรายการครภณฑToolStripMenuItem";
-            this.แบบรายการครภณฑToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.แบบรายการครภณฑToolStripMenuItem.Text = "บัญชีค่าเสื่อมราคา";
+            this.report02ToolStripMenuItem.Name = "report02ToolStripMenuItem";
+            this.report02ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report02ToolStripMenuItem.Text = "บัญชีค่าเสื่อมราคา";
+            this.report02ToolStripMenuItem.Click += new System.EventHandler(this.report02ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 6);
             // 
-            // บญชครภณฑแยกตามประเภทToolStripMenuItem
+            // report03ToolStripMenuItem
             // 
-            this.บญชครภณฑแยกตามประเภทToolStripMenuItem.Name = "บญชครภณฑแยกตามประเภทToolStripMenuItem";
-            this.บญชครภณฑแยกตามประเภทToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.บญชครภณฑแยกตามประเภทToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามประเภท";
+            this.report03ToolStripMenuItem.Name = "report03ToolStripMenuItem";
+            this.report03ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report03ToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามประเภท";
             // 
-            // บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem
+            // report04ToolStripMenuItem
             // 
-            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem.Name = "บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem";
-            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามหน่วยงานรับผิดชอบ";
+            this.report04ToolStripMenuItem.Name = "report04ToolStripMenuItem";
+            this.report04ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report04ToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามหน่วยงานรับผิดชอบ";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(262, 6);
             // 
-            // รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem
+            // report06ToolStripMenuItem
             // 
-            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem.Name = "รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem";
-            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem.Text = "รายการครุภัณฑ์หมดอายุ ชำรุด";
+            this.report06ToolStripMenuItem.Name = "report06ToolStripMenuItem";
+            this.report06ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report06ToolStripMenuItem.Text = "รายการครุภัณฑ์หมดอายุ ชำรุด";
             // 
             // เกยวกบโปรแกรมToolStripMenuItem
             // 
@@ -1710,13 +1711,13 @@
         private System.Windows.Forms.ToolStripMenuItem addGoodsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addDescToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem แบบรายการครภณฑToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem report01ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem report02ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem บญชครภณฑแยกตามประเภทToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem report03ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem report04ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem report06ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;

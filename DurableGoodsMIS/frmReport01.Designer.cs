@@ -28,20 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DurableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
+            this.tbGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DurableGoodsMISDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tbGoodsBindingSource
+            // 
+            this.tbGoodsBindingSource.DataMember = "tbGoods";
+            this.tbGoodsBindingSource.DataSource = this.DurableGoodsMISDataSet;
+            // 
+            // DurableGoodsMISDataSet
+            // 
+            this.DurableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
+            this.DurableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbGoodsTableAdapter
+            // 
+            this.tbGoodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.tbGoodsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DurableGoodsMIS.Report01.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(520, 379);
+            this.reportViewer1.TabIndex = 0;
             // 
             // frmReport01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 379);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "frmReport01";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "พิมพ์ทะเบียนครุภัณฑ์";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReport01_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DurableGoodsMISDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        private System.Windows.Forms.BindingSource tbGoodsBindingSource;
+        private DurableGoodsMISDataSet DurableGoodsMISDataSet;
+        private DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter tbGoodsTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
