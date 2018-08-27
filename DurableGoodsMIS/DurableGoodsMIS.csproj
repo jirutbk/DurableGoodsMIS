@@ -92,6 +92,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report01.rdlc" />
     <None Include="DurableGoodsMISDataSet.xsc">
       <DependentUpon>DurableGoodsMISDataSet.xsd</DependentUpon>
     </None>
