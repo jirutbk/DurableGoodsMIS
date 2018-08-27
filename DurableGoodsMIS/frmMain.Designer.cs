@@ -48,6 +48,11 @@
             this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.fixDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fixDetailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbFixBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -141,15 +146,15 @@
             this.tbGoodsTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.เพมรายการครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.เพมกลมประเภทToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.เพมแกไขคณลกษณะToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addGoodsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDescToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.ออกจากโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.รายงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.แบบสำรวจครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.แบบรายการครภณฑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.บญชครภณฑแยกตามประเภทToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,11 +175,6 @@
             this.tbFixTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbFixTableAdapter();
             this.tbSubGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbSubGoodsTableAdapter();
             this.tbDepreciationTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbDepreciationTableAdapter();
-            this.fixDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fixDetailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -415,6 +415,41 @@
             this.dataGridView3.RowHeadersWidth = 30;
             this.dataGridView3.Size = new System.Drawing.Size(694, 182);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // fixDateDataGridViewTextBoxColumn
+            // 
+            this.fixDateDataGridViewTextBoxColumn.DataPropertyName = "fixDate";
+            this.fixDateDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.fixDateDataGridViewTextBoxColumn.Name = "fixDateDataGridViewTextBoxColumn";
+            this.fixDateDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // documentDataGridViewTextBoxColumn
+            // 
+            this.documentDataGridViewTextBoxColumn.DataPropertyName = "document";
+            this.documentDataGridViewTextBoxColumn.HeaderText = "เลขเอกสาร";
+            this.documentDataGridViewTextBoxColumn.Name = "documentDataGridViewTextBoxColumn";
+            this.documentDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // fixDetailDataGridViewTextBoxColumn
+            // 
+            this.fixDetailDataGridViewTextBoxColumn.DataPropertyName = "fixDetail";
+            this.fixDetailDataGridViewTextBoxColumn.HeaderText = "รายการซ่อม";
+            this.fixDetailDataGridViewTextBoxColumn.Name = "fixDetailDataGridViewTextBoxColumn";
+            this.fixDetailDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "ราคา";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "หมายเหตุ";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.Width = 160;
             // 
             // tbFixBindingSource
             // 
@@ -1353,7 +1388,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ครภณฑToolStripMenuItem,
-            this.รายงานToolStripMenuItem,
+            this.reportToolStripMenuItem,
             this.เกยวกบโปรแกรมToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -1364,35 +1399,35 @@
             // ครภณฑToolStripMenuItem
             // 
             this.ครภณฑToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.เพมรายการครภณฑToolStripMenuItem,
-            this.เพมกลมประเภทToolStripMenuItem,
-            this.เพมแกไขคณลกษณะToolStripMenuItem,
+            this.addGoodsToolStripMenuItem,
+            this.addTypeToolStripMenuItem,
+            this.addDescToolStripMenuItem,
             this.toolStripMenuItem5,
             this.toolStripMenuItem4,
             this.toolStripMenuItem3,
-            this.ออกจากโปรแกรมToolStripMenuItem});
+            this.exitToolStripMenuItem});
             this.ครภณฑToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.ครภณฑToolStripMenuItem.Name = "ครภณฑToolStripMenuItem";
             this.ครภณฑToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.ครภณฑToolStripMenuItem.Text = "ครุภัณฑ์";
             // 
-            // เพมรายการครภณฑToolStripMenuItem
+            // addGoodsToolStripMenuItem
             // 
-            this.เพมรายการครภณฑToolStripMenuItem.Name = "เพมรายการครภณฑToolStripMenuItem";
-            this.เพมรายการครภณฑToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.เพมรายการครภณฑToolStripMenuItem.Text = "เพิ่มรายการครุภัณฑ์";
+            this.addGoodsToolStripMenuItem.Name = "addGoodsToolStripMenuItem";
+            this.addGoodsToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.addGoodsToolStripMenuItem.Text = "เพิ่มรายการครุภัณฑ์";
             // 
-            // เพมกลมประเภทToolStripMenuItem
+            // addTypeToolStripMenuItem
             // 
-            this.เพมกลมประเภทToolStripMenuItem.Name = "เพมกลมประเภทToolStripMenuItem";
-            this.เพมกลมประเภทToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.เพมกลมประเภทToolStripMenuItem.Text = "เพิ่ม/แก้ไขกลุ่ม ประเภท ชนิด";
+            this.addTypeToolStripMenuItem.Name = "addTypeToolStripMenuItem";
+            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.addTypeToolStripMenuItem.Text = "เพิ่ม/แก้ไขกลุ่ม ประเภท ชนิด";
             // 
-            // เพมแกไขคณลกษณะToolStripMenuItem
+            // addDescToolStripMenuItem
             // 
-            this.เพมแกไขคณลกษณะToolStripMenuItem.Name = "เพมแกไขคณลกษณะToolStripMenuItem";
-            this.เพมแกไขคณลกษณะToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.เพมแกไขคณลกษณะToolStripMenuItem.Text = "เพิ่ม/แก้ไขคุณลักษณะ";
+            this.addDescToolStripMenuItem.Name = "addDescToolStripMenuItem";
+            this.addDescToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.addDescToolStripMenuItem.Text = "เพิ่ม/แก้ไขคุณลักษณะ";
             // 
             // toolStripMenuItem5
             // 
@@ -1410,33 +1445,34 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(202, 6);
             // 
-            // ออกจากโปรแกรมToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            this.ออกจากโปรแกรมToolStripMenuItem.Name = "ออกจากโปรแกรมToolStripMenuItem";
-            this.ออกจากโปรแกรมToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.ออกจากโปรแกรมToolStripMenuItem.Text = "ออกจากโปรแกรม";
-            this.ออกจากโปรแกรมToolStripMenuItem.Click += new System.EventHandler(this.ออกจากโปรแกรมToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.exitToolStripMenuItem.Text = "ออกจากโปรแกรม";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // รายงานToolStripMenuItem
+            // reportToolStripMenuItem
             // 
-            this.รายงานToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.แบบสำรวจครภณฑToolStripMenuItem,
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem,
             this.แบบรายการครภณฑToolStripMenuItem,
             this.toolStripMenuItem1,
             this.บญชครภณฑแยกตามประเภทToolStripMenuItem,
             this.บญชครภณฑแยกตามหนวยงานรบผดชอบToolStripMenuItem,
             this.toolStripMenuItem2,
             this.รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem});
-            this.รายงานToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.รายงานToolStripMenuItem.Name = "รายงานToolStripMenuItem";
-            this.รายงานToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.รายงานToolStripMenuItem.Text = "รายงาน/แบบฟอร์ม";
+            this.reportToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.reportToolStripMenuItem.Text = "รายงาน/แบบฟอร์ม";
             // 
-            // แบบสำรวจครภณฑToolStripMenuItem
+            // ToolStripMenuItem
             // 
-            this.แบบสำรวจครภณฑToolStripMenuItem.Name = "แบบสำรวจครภณฑToolStripMenuItem";
-            this.แบบสำรวจครภณฑToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.แบบสำรวจครภณฑToolStripMenuItem.Text = "ทะเบียนครุภัณฑ์";
+            this.ToolStripMenuItem.Name = "ToolStripMenuItem";
+            this.ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.ToolStripMenuItem.Text = "ทะเบียนครุภัณฑ์";
+            this.ToolStripMenuItem.Click += new System.EventHandler(this.report01ToolStripMenuItem_Click);
             // 
             // แบบรายการครภณฑToolStripMenuItem
             // 
@@ -1537,41 +1573,6 @@
             // tbDepreciationTableAdapter
             // 
             this.tbDepreciationTableAdapter.ClearBeforeFill = true;
-            // 
-            // fixDateDataGridViewTextBoxColumn
-            // 
-            this.fixDateDataGridViewTextBoxColumn.DataPropertyName = "fixDate";
-            this.fixDateDataGridViewTextBoxColumn.HeaderText = "วันที่";
-            this.fixDateDataGridViewTextBoxColumn.Name = "fixDateDataGridViewTextBoxColumn";
-            this.fixDateDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // documentDataGridViewTextBoxColumn
-            // 
-            this.documentDataGridViewTextBoxColumn.DataPropertyName = "document";
-            this.documentDataGridViewTextBoxColumn.HeaderText = "เลขเอกสาร";
-            this.documentDataGridViewTextBoxColumn.Name = "documentDataGridViewTextBoxColumn";
-            this.documentDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // fixDetailDataGridViewTextBoxColumn
-            // 
-            this.fixDetailDataGridViewTextBoxColumn.DataPropertyName = "fixDetail";
-            this.fixDetailDataGridViewTextBoxColumn.HeaderText = "รายการซ่อม";
-            this.fixDetailDataGridViewTextBoxColumn.Name = "fixDetailDataGridViewTextBoxColumn";
-            this.fixDetailDataGridViewTextBoxColumn.Width = 220;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "ราคา";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "หมายเหตุ";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.Width = 160;
             // 
             // frmMain
             // 
@@ -1704,12 +1705,12 @@
         private System.Windows.Forms.Button cmdAdd;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ครภณฑToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem รายงานToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem เกยวกบโปรแกรมToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem เพมรายการครภณฑToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem เพมกลมประเภทToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem เพมแกไขคณลกษณะToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem แบบสำรวจครภณฑToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addGoodsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addDescToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem แบบรายการครภณฑToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem บญชครภณฑแยกตามประเภทToolStripMenuItem;
@@ -1717,7 +1718,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem รายงานครภณฑหมดอายใชการไมไดToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem ออกจากโปรแกรมToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem ตงคาหนวยงานToolStripMenuItem;
@@ -1739,9 +1740,7 @@
         private System.Windows.Forms.ToolStripButton btnAddFix;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnEdit;
-        private System.Windows.Forms.BindingSource tbDepreciationBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caldateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn detailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tbDepreciationBindingSource;     
         private System.Windows.Forms.BindingSource tbFixBindingSource;
         private DurableGoodsMISDataSetTableAdapters.tbFixTableAdapter tbFixTableAdapter;
         private System.Windows.Forms.BindingSource tbSubGoodsBindingSource;

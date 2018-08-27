@@ -81,9 +81,15 @@ namespace DurableGoodsMIS
             comboBox6.SelectedIndex = -1;
         }
 
-        private void ออกจากโปรแกรมToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void report01ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReport01 form2 = new frmReport01();
+            form2.Show();
         }
     }
 }
