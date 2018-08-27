@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReport011 = new DurableGoodsMIS.CrystalReport01();
+            this.CrystalReport021 = new DurableGoodsMIS.CrystalReport02();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,7 +40,7 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.CrystalReport011;
+            this.crystalReportViewer1.ReportSource = this.CrystalReport021;
             this.crystalReportViewer1.Size = new System.Drawing.Size(690, 384);
             this.crystalReportViewer1.TabIndex = 0;
             // 
@@ -60,6 +60,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private CrystalReport01 CrystalReport011;
+        private CrystalReport02 CrystalReport021;
     }
 }
