@@ -46,7 +46,11 @@ namespace DurableGoodsMIS
             cbGoodsType.SelectedIndex = -1;
             cbSection.SelectedIndex = -1;
             cbStatus.SelectedIndex = 1;
-
+            txtPrice.Text = "1";
+            txtLastPrice.Text = "1";
+            txtDepreciationSum.Text = "0";
+            txtDepreciationRate.Text = "0";
+            txtUseful.Text = "5";
             
         }
 
@@ -100,6 +104,8 @@ namespace DurableGoodsMIS
                    cbAcquisition.SelectedValue.ToString(), txtDocument.Text, dtpAcquisitionDate.Value, float.Parse(txtPrice.Text),
                    float.Parse(txtDepreciationRate.Text), float.Parse(txtDepreciationSum.Text), float.Parse(txtLastPrice.Text), byte.Parse(txtUseful.Text), cbStatus.SelectedValue.ToString(),
                    txtOwn.Text, txtComment.Text, int.Parse(cbType.SelectedValue.ToString()));
+
+                MessageBox.Show("บันทึกข้อมูลเรียบร้อย");
             }
             else MessageBox.Show("กรุณากรอกข้อมูลสำคัญให้ครบถ้วน!!");
 
