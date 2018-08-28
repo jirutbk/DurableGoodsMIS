@@ -249,7 +249,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(24, 312);
+            this.label11.Location = new System.Drawing.Point(25, 312);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 18);
             this.label11.TabIndex = 175;
@@ -270,26 +270,34 @@
             this.txtLastPrice.Location = new System.Drawing.Point(114, 249);
             this.txtLastPrice.MaxLength = 10;
             this.txtLastPrice.Name = "txtLastPrice";
-            this.txtLastPrice.Size = new System.Drawing.Size(91, 22);
+            this.txtLastPrice.Size = new System.Drawing.Size(100, 22);
             this.txtLastPrice.TabIndex = 27;
+            this.txtLastPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLastPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtLastPrice.Leave += new System.EventHandler(this.txtLastPrice_Leave);
             // 
             // txtDepreciationSum
             // 
             this.txtDepreciationSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtDepreciationSum.Location = new System.Drawing.Point(114, 215);
+            this.txtDepreciationSum.Location = new System.Drawing.Point(140, 215);
             this.txtDepreciationSum.MaxLength = 10;
             this.txtDepreciationSum.Name = "txtDepreciationSum";
-            this.txtDepreciationSum.Size = new System.Drawing.Size(91, 22);
+            this.txtDepreciationSum.Size = new System.Drawing.Size(74, 22);
             this.txtDepreciationSum.TabIndex = 26;
+            this.txtDepreciationSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDepreciationSum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtDepreciationSum.Leave += new System.EventHandler(this.txtDepreciationSum_Leave);
             // 
             // txtDepreciationRate
             // 
             this.txtDepreciationRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtDepreciationRate.Location = new System.Drawing.Point(151, 179);
+            this.txtDepreciationRate.Location = new System.Drawing.Point(168, 179);
             this.txtDepreciationRate.MaxLength = 5;
             this.txtDepreciationRate.Name = "txtDepreciationRate";
-            this.txtDepreciationRate.Size = new System.Drawing.Size(63, 22);
+            this.txtDepreciationRate.Size = new System.Drawing.Size(47, 22);
             this.txtDepreciationRate.TabIndex = 25;
+            this.txtDepreciationRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDepreciationRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label10
             // 
@@ -305,7 +313,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(220, 146);
+            this.label5.Location = new System.Drawing.Point(178, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 18);
             this.label5.TabIndex = 169;
@@ -317,8 +325,10 @@
             this.txtUseful.Location = new System.Drawing.Point(123, 145);
             this.txtUseful.MaxLength = 3;
             this.txtUseful.Name = "txtUseful";
-            this.txtUseful.Size = new System.Drawing.Size(91, 22);
+            this.txtUseful.Size = new System.Drawing.Size(45, 22);
             this.txtUseful.TabIndex = 24;
+            this.txtUseful.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUseful.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUseful_KeyPress);
             // 
             // txtPrice
             // 
@@ -328,6 +338,9 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(91, 22);
             this.txtPrice.TabIndex = 23;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
             // txtSellAddress
             // 
@@ -411,11 +424,11 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label23.Location = new System.Drawing.Point(24, 181);
+            this.label23.Location = new System.Drawing.Point(24, 180);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(121, 18);
+            this.label23.Size = new System.Drawing.Size(148, 18);
             this.label23.TabIndex = 142;
-            this.label23.Text = "อัตราค่าเสื่อม ร้อยละ";
+            this.label23.Text = "อัตราค่าเสื่อมราคา ร้อยละ";
             // 
             // label24
             // 
@@ -423,15 +436,15 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label24.Location = new System.Drawing.Point(24, 216);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(83, 18);
+            this.label24.Size = new System.Drawing.Size(110, 18);
             this.label24.TabIndex = 143;
-            this.label24.Text = "ค่าเสื่อมสะสม";
+            this.label24.Text = "ค่าเสื่อมราคาสะสม";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label25.Location = new System.Drawing.Point(24, 250);
+            this.label25.Location = new System.Drawing.Point(25, 250);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(63, 18);
             this.label25.TabIndex = 144;
@@ -441,7 +454,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label39.Location = new System.Drawing.Point(24, 280);
+            this.label39.Location = new System.Drawing.Point(25, 280);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(73, 18);
             this.label39.TabIndex = 157;
@@ -529,6 +542,7 @@
             this.txtNoYear.Name = "txtNoYear";
             this.txtNoYear.Size = new System.Drawing.Size(91, 22);
             this.txtNoYear.TabIndex = 11;
+            this.txtNoYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNoYear_KeyPress);
             // 
             // label38
             // 
@@ -729,6 +743,7 @@
             this.txtGoodsID.Name = "txtGoodsID";
             this.txtGoodsID.Size = new System.Drawing.Size(210, 22);
             this.txtGoodsID.TabIndex = 10;
+            this.txtGoodsID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGoodsID_KeyPress);
             // 
             // label44
             // 

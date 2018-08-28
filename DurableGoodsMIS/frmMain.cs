@@ -115,5 +115,12 @@ namespace DurableGoodsMIS
             frmAddGoods form2 = new frmAddGoods();
             form2.ShowDialog();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char chr = e.KeyChar;
+            if (!char.IsNumber(chr) && chr != 8 && chr != 45 && chr != 47)   //ตรวจสอบว่าเป็นตัวเลข กับ backSpace - และ /
+                e.Handled = true;
+        }
     }
 }

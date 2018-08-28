@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,14 @@ namespace DurableGoodsMIS
         {
             InitializeComponent();
         }
+/*
+        string strConn;
+        OleDbConnection Conn = new OleDbConnection();
+        //OleDbDataAdapter da;
+        DataSet ds = new DataSet();
+        //DataTable dt;
+        OleDbCommand comm = new OleDbCommand();
+*/
 
         private void frmAddGoods_Load(object sender, EventArgs e)
         {
@@ -30,10 +39,15 @@ namespace DurableGoodsMIS
            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbGoodsType' table. You can move, or remove it, as needed.
             this.tbGoodsTypeTableAdapter.Fill(this.durableGoodsMISDataSet.tbGoodsType);
 
+           // strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data source=DurableGoodsMIS.accdb";
+           
+
 
             cbGoodsType.SelectedIndex = -1;
             cbSection.SelectedIndex = -1;
             cbStatus.SelectedIndex = 1;
+
+            
         }
 
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
@@ -78,13 +92,64 @@ namespace DurableGoodsMIS
 
         private void cmdSave_Click(object sender, EventArgs e)
         {
-            tbGoodsTableAdapter1.Insert(txtGoodsID.Text, cbGoodsType.SelectedValue.ToString(), int.Parse(cbDesc.SelectedValue.ToString()), txtNoYear.Text, txtGFMIS.Text, txtSpec.Text,
-               txtSerail.Text, txtWhere.Text, cbSection.SelectedValue.ToString(), txtSellName.Text, txtSellPhone.Text, txtSellAddress.Text, cbBudget.SelectedValue.ToString(),
-               cbAcquisition.SelectedValue.ToString(), txtDocument.Text, dtpAcquisitionDate.Value, float.Parse(txtPrice.Text),
-               float.Parse(txtDepreciationRate.Text), float.Parse(txtDepreciationSum.Text), float.Parse(txtLastPrice.Text), byte.Parse(txtUseful.Text), cbStatus.SelectedValue.ToString(),
-               txtOwn.Text, txtComment.Text, int.Parse(cbType.SelectedValue.ToString()));
+            if ((txtGoodsID.Text != "") && (txtNoYear.Text != "") && (txtSpec.Text != "") && (txtUseful.Text != "") && (cbSection.SelectedIndex != -1))
+            {
 
-            tbGoodsTableAdapter1.Update(this.durableGoodsMISDataSet.tbGoods);
+                tbGoodsTableAdapter1.Insert(txtGoodsID.Text, cbGoodsType.SelectedValue.ToString(), int.Parse(cbDesc.SelectedValue.ToString()), txtNoYear.Text, txtGFMIS.Text, txtSpec.Text,
+                   txtSerail.Text, txtWhere.Text, cbSection.SelectedValue.ToString(), txtSellName.Text, txtSellPhone.Text, txtSellAddress.Text, cbBudget.SelectedValue.ToString(),
+                   cbAcquisition.SelectedValue.ToString(), txtDocument.Text, dtpAcquisitionDate.Value, float.Parse(txtPrice.Text),
+                   float.Parse(txtDepreciationRate.Text), float.Parse(txtDepreciationSum.Text), float.Parse(txtLastPrice.Text), byte.Parse(txtUseful.Text), cbStatus.SelectedValue.ToString(),
+                   txtOwn.Text, txtComment.Text, int.Parse(cbType.SelectedValue.ToString()));
+            }
+            else MessageBox.Show("กรุณากรอกข้อมูลสำคัญให้ครบถ้วน!!");
+
+            
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char chr = e.KeyChar;
+            if (!char.IsNumber(chr) && chr != 8 && chr != 46)   //ตรวจสอบว่าเป็นตัวเลข  backSpace กับ .
+                e.Handled = true;
+        }
+
+        private void txtUseful_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char chr = e.KeyChar;
+            if (!char.IsNumber(chr) && chr != 8)   //ตรวจสอบว่าเป็นตัวเลข กับ backSpace
+                e.Handled = true;
+        }
+
+        private void txtNoYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char chr = e.KeyChar;
+            if (!char.IsNumber(chr) && chr != 8 && chr != 45)   //ตรวจสอบว่าเป็นตัวเลข กับ backSpace และ -
+                e.Handled = true;
+        }
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            if (txtPrice.Text != "")
+                txtPrice.Text = string.Format("{0:n2}", Single.Parse(txtPrice.Text));   //แปลงเป็นตัวเลข ทศนิยม 2 ตำแหน่ง
+        }
+
+        private void txtDepreciationSum_Leave(object sender, EventArgs e)
+        {
+            if (txtDepreciationSum.Text != "")
+                txtDepreciationSum.Text = string.Format("{0:n2}", Single.Parse(txtDepreciationSum.Text));   //แปลงเป็นตัวเลข ทศนิยม 2 ตำแหน่ง
+        }
+
+        private void txtLastPrice_Leave(object sender, EventArgs e)
+        {
+            if(txtLastPrice.Text != "")
+                txtLastPrice.Text = string.Format("{0:n2}", Single.Parse(txtLastPrice.Text));   //แปลงเป็นตัวเลข ทศนิยม 2 ตำแหน่ง
+        }
+
+        private void txtGoodsID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char chr = e.KeyChar;
+            if (!char.IsNumber(chr) && chr != 8 && chr != 45 && chr != 47)   //ตรวจสอบว่าเป็นตัวเลข กับ backSpace - และ /
+                e.Handled = true;
         }
     }
 }
