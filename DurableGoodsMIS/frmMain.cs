@@ -103,5 +103,17 @@ namespace DurableGoodsMIS
             frmAddGoods form2 = new frmAddGoods();
             form2.ShowDialog();
         }
+
+        private void cmdAdd_Click(object sender, EventArgs e)
+        {
+            frmAddGoods form2 = new frmAddGoods();
+            form2.ShowDialog();
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            frmAddGoods form2 = new frmAddGoods();
+            form2.ShowDialog();
+        }
     }
 }

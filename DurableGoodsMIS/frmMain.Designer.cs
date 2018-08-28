@@ -1149,6 +1149,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "เพิ่มครุภัณฑ์";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -1231,7 +1232,7 @@
             // 
             this.btnAddSubGoods.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnAddSubGoods.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSubGoods.Image")));
-            this.btnAddSubGoods.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddSubGoods.ImageTransparentColor = System.Drawing.Color.White;
             this.btnAddSubGoods.Name = "btnAddSubGoods";
             this.btnAddSubGoods.Size = new System.Drawing.Size(23, 22);
             this.btnAddSubGoods.Text = "บันทึกครุภัณฑ์ย่อย";
@@ -1240,7 +1241,7 @@
             // 
             this.btnAddFix.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnAddFix.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFix.Image")));
-            this.btnAddFix.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAddFix.ImageTransparentColor = System.Drawing.Color.White;
             this.btnAddFix.Name = "btnAddFix";
             this.btnAddFix.Size = new System.Drawing.Size(23, 22);
             this.btnAddFix.Text = "บันทึกการซ่อม";
@@ -1254,7 +1255,7 @@
             // 
             this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.White;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(23, 22);
             this.btnEdit.Text = "แก้ไขรายการครุภัณฑ์";
@@ -1306,6 +1307,7 @@
             this.cmdAdd.TabIndex = 12;
             this.cmdAdd.Text = "เพิ่ม";
             this.cmdAdd.UseVisualStyleBackColor = true;
+            this.cmdAdd.Click += new System.EventHandler(this.cmdAdd_Click);
             // 
             // label44
             // 
