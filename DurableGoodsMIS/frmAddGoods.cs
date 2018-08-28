@@ -78,7 +78,13 @@ namespace DurableGoodsMIS
 
         private void cmdSave_Click(object sender, EventArgs e)
         {
-            //tbGoodsTableAdapter1.Insert();
+            tbGoodsTableAdapter1.Insert(txtGoodsID.Text, cbGoodsType.SelectedValue.ToString(), int.Parse(cbDesc.SelectedValue.ToString()), txtNoYear.Text, txtGFMIS.Text, txtSpec.Text,
+               txtSerail.Text, txtWhere.Text, cbSection.SelectedValue.ToString(), txtSellName.Text, txtSellPhone.Text, txtSellAddress.Text, cbBudget.SelectedValue.ToString(),
+               cbAcquisition.SelectedValue.ToString(), txtDocument.Text, dtpAcquisitionDate.Value, float.Parse(txtPrice.Text),
+               float.Parse(txtDepreciationRate.Text), float.Parse(txtDepreciationSum.Text), float.Parse(txtLastPrice.Text), byte.Parse(txtUseful.Text), cbStatus.SelectedValue.ToString(),
+               txtOwn.Text, txtComment.Text, int.Parse(cbType.SelectedValue.ToString()));
+
+            tbGoodsTableAdapter1.Update(this.durableGoodsMISDataSet.tbGoods);
         }
     }
 }

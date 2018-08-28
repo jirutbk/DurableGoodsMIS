@@ -723,7 +723,6 @@
             // 
             // txtGoodsID
             // 
-            this.txtGoodsID.Enabled = false;
             this.txtGoodsID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtGoodsID.Location = new System.Drawing.Point(118, 198);
             this.txtGoodsID.MaxLength = 25;
