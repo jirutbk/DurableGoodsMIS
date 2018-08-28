@@ -1416,6 +1416,7 @@
             this.addGoodsToolStripMenuItem.Name = "addGoodsToolStripMenuItem";
             this.addGoodsToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.addGoodsToolStripMenuItem.Text = "เพิ่มรายการครุภัณฑ์";
+            this.addGoodsToolStripMenuItem.Click += new System.EventHandler(this.addGoodsToolStripMenuItem_Click);
             // 
             // addTypeToolStripMenuItem
             // 

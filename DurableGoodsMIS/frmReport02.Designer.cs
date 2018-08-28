@@ -51,7 +51,7 @@
             this.ClientSize = new System.Drawing.Size(690, 384);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "frmReport02";
-            this.Text = "พริ้นทะเบียนคุมครุภัณฑ์";
+            this.Text = "พิมพ์ทะเบียนคุมครุภัณฑ์";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 

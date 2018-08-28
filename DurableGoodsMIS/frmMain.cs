@@ -89,13 +89,19 @@ namespace DurableGoodsMIS
         private void report01ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReport01 form2 = new frmReport01();
-            form2.Show();
+            form2.ShowDialog();
         }
 
         private void report02ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReport02 form2 = new frmReport02();
-            form2.Show();
+            form2.ShowDialog();
+        }
+
+        private void addGoodsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddGoods form2 = new frmAddGoods();
+            form2.ShowDialog();
         }
     }
 }
