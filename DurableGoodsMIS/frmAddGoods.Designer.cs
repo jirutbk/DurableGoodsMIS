@@ -176,6 +176,7 @@
             this.cmdDescAdd.TabIndex = 7;
             this.cmdDescAdd.Text = "...";
             this.cmdDescAdd.UseVisualStyleBackColor = true;
+            this.cmdDescAdd.Click += new System.EventHandler(this.cmdDescAdd_Click);
             // 
             // cmdTypeAdd
             // 
@@ -880,6 +881,7 @@
             this.cmdCancle.TabIndex = 31;
             this.cmdCancle.Text = "ยกเลิก";
             this.cmdCancle.UseVisualStyleBackColor = true;
+            this.cmdCancle.Click += new System.EventHandler(this.cmdCancle_Click);
             // 
             // cmdSave
             // 

@@ -46,6 +46,7 @@ namespace DurableGoodsMIS
             cbGoodsType.SelectedIndex = -1;
             cbSection.SelectedIndex = -1;
             cbStatus.SelectedIndex = 1;
+            cbSection.SelectedIndex = 1;
             txtPrice.Text = "1";
             txtLastPrice.Text = "1";
             txtDepreciationSum.Text = "0";
@@ -156,6 +157,18 @@ namespace DurableGoodsMIS
             char chr = e.KeyChar;
             if (!char.IsNumber(chr) && chr != 8 && chr != 45 && chr != 47)   //ตรวจสอบว่าเป็นตัวเลข กับ backSpace - และ /
                 e.Handled = true;
+        }
+
+        private void cmdDescAdd_Click(object sender, EventArgs e)
+        {
+            frmAddDescription form = new DurableGoodsMIS.frmAddDescription();
+            form.ShowDialog();
+
+        }
+
+        private void cmdCancle_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

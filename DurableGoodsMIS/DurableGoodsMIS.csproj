@@ -97,6 +97,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DurableGoodsMISDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAddDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddDescription.Designer.cs">
+      <DependentUpon>frmAddDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddGoods.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="CrystalReport02.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport02.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddDescription.resx">
+      <DependentUpon>frmAddDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddGoods.resx">
       <DependentUpon>frmAddGoods.cs</DependentUpon>
