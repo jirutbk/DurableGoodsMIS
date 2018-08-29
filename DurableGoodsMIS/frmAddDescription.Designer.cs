@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cmdTypeAdd = new System.Windows.Forms.Button();
             this.cmdGroupClassAdd = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.cbType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbGoodsType = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,33 @@
             this.groupBox1.Size = new System.Drawing.Size(513, 230);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(415, 180);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 28);
+            this.button2.TabIndex = 130;
+            this.button2.Text = "ยกเลิก";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(329, 180);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 28);
+            this.button1.TabIndex = 129;
+            this.button1.Text = "บันทึก";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.textBox1.Location = new System.Drawing.Point(125, 132);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(361, 22);
+            this.textBox1.TabIndex = 128;
             // 
             // cmdTypeAdd
             // 
@@ -158,33 +185,6 @@
             this.cbGoodsType.TabIndex = 117;
             this.cbGoodsType.ValueMember = "goodsTypeID";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox1.Location = new System.Drawing.Point(125, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 22);
-            this.textBox1.TabIndex = 128;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(329, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 28);
-            this.button1.TabIndex = 129;
-            this.button1.Text = "บันทึก";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(415, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 28);
-            this.button2.TabIndex = 130;
-            this.button2.Text = "ยกเลิก";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // frmAddDescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +196,7 @@
             this.Name = "frmAddDescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "เพิ่มคุณลักษณะครุภัณฑ์";
+            this.Load += new System.EventHandler(this.frmAddDescription_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
