@@ -34,12 +34,8 @@ namespace DurableGoodsMIS
 
         private void frmAddDescription_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbType' table. You can move, or remove it, as needed.
-            this.tbTypeTableAdapter.Fill(this.durableGoodsMISDataSet.tbType);
-            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbGroup' table. You can move, or remove it, as needed.
-            this.tbGroupTableAdapter.Fill(this.durableGoodsMISDataSet.tbGroup);
-            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbGoodsType' table. You can move, or remove it, as needed.
             this.tbGoodsTypeTableAdapter.Fill(this.durableGoodsMISDataSet.tbGoodsType);
+
             strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data source=DurableGoodsMIS.accdb";
 
             string strSql = "select * from tbGoodsType";
@@ -81,6 +77,22 @@ namespace DurableGoodsMIS
             }
 
             MessageBox.Show("บันทึกข้อมูลเรียบร้อย.");
+        }
+
+        private void cbGoodsType_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbGroup' table. You can move, or remove it, as needed.
+            this.tbGroupTableAdapter.FillByGoodsType(this.durableGoodsMISDataSet.tbGroup,cbGoodsType.SelectedValue.ToString());
+            this.durableGoodsMISDataSet.tbType.Clear();
+            cbGroupClass.SelectedIndex = -1;
+        }
+
+        private void cbGroupClass_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbType' table. You can move, or remove it, as needed.
+            this.tbTypeTableAdapter.FillByGroupID(this.durableGoodsMISDataSet.tbType,cbGroupClass.SelectedValue.ToString());
+            cbType.SelectedIndex = -1;
+
         }
     }
 }

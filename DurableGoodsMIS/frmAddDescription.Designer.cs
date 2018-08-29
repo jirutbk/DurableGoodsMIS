@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDescNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDescTitle = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbGroupClass = new System.Windows.Forms.ComboBox();
+            this.tbGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.label43 = new System.Windows.Forms.Label();
             this.cbType = new System.Windows.Forms.ComboBox();
+            this.tbTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.cbGoodsType = new System.Windows.Forms.ComboBox();
-            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.tbGoodsTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbGoodsTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTypeTableAdapter();
-            this.tbGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbGroupTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGroupTableAdapter();
-            this.tbTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbTypeTableAdapter();
-            this.txtDescNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGroupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,6 +77,36 @@
             this.groupBox1.Size = new System.Drawing.Size(513, 279);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.Location = new System.Drawing.Point(196, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.TabIndex = 133;
+            this.label3.Text = "ตัวเลข 4 หลัก";
+            // 
+            // txtDescNo
+            // 
+            this.txtDescNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtDescNo.Location = new System.Drawing.Point(125, 134);
+            this.txtDescNo.MaxLength = 4;
+            this.txtDescNo.Name = "txtDescNo";
+            this.txtDescNo.Size = new System.Drawing.Size(65, 22);
+            this.txtDescNo.TabIndex = 132;
+            this.txtDescNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescNo_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(27, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.TabIndex = 131;
+            this.label2.Text = "กลุ่มรหัส";
             // 
             // button2
             // 
@@ -139,6 +169,17 @@
             this.cbGroupClass.Size = new System.Drawing.Size(361, 24);
             this.cbGroupClass.TabIndex = 118;
             this.cbGroupClass.ValueMember = "groupID";
+            this.cbGroupClass.SelectionChangeCommitted += new System.EventHandler(this.cbGroupClass_SelectionChangeCommitted);
+            // 
+            // tbGroupBindingSource
+            // 
+            this.tbGroupBindingSource.DataMember = "tbGroup";
+            this.tbGroupBindingSource.DataSource = this.durableGoodsMISDataSet;
+            // 
+            // durableGoodsMISDataSet
+            // 
+            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
+            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label43
             // 
@@ -163,6 +204,11 @@
             this.cbType.TabIndex = 120;
             this.cbType.ValueMember = "typeID";
             // 
+            // tbTypeBindingSource
+            // 
+            this.tbTypeBindingSource.DataMember = "tbType";
+            this.tbTypeBindingSource.DataSource = this.durableGoodsMISDataSet;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -185,11 +231,7 @@
             this.cbGoodsType.Size = new System.Drawing.Size(234, 24);
             this.cbGoodsType.TabIndex = 117;
             this.cbGoodsType.ValueMember = "goodsTypeID";
-            // 
-            // durableGoodsMISDataSet
-            // 
-            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
-            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cbGoodsType.SelectionChangeCommitted += new System.EventHandler(this.cbGoodsType_SelectionChangeCommitted);
             // 
             // tbGoodsTypeBindingSource
             // 
@@ -200,53 +242,13 @@
             // 
             this.tbGoodsTypeTableAdapter.ClearBeforeFill = true;
             // 
-            // tbGroupBindingSource
-            // 
-            this.tbGroupBindingSource.DataMember = "tbGroup";
-            this.tbGroupBindingSource.DataSource = this.durableGoodsMISDataSet;
-            // 
             // tbGroupTableAdapter
             // 
             this.tbGroupTableAdapter.ClearBeforeFill = true;
             // 
-            // tbTypeBindingSource
-            // 
-            this.tbTypeBindingSource.DataMember = "tbType";
-            this.tbTypeBindingSource.DataSource = this.durableGoodsMISDataSet;
-            // 
             // tbTypeTableAdapter
             // 
             this.tbTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtDescNo
-            // 
-            this.txtDescNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtDescNo.Location = new System.Drawing.Point(125, 134);
-            this.txtDescNo.MaxLength = 4;
-            this.txtDescNo.Name = "txtDescNo";
-            this.txtDescNo.Size = new System.Drawing.Size(65, 22);
-            this.txtDescNo.TabIndex = 132;
-            this.txtDescNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescNo_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(27, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
-            this.label2.TabIndex = 131;
-            this.label2.Text = "กลุ่มรหัส";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(196, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
-            this.label3.TabIndex = 133;
-            this.label3.Text = "ตัวเลข 4 หลัก";
             // 
             // frmAddDescription
             // 
@@ -262,10 +264,10 @@
             this.Load += new System.EventHandler(this.frmAddDescription_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbGroupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
