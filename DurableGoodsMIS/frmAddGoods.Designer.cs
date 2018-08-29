@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmdCancle = new System.Windows.Forms.Button();
+            this.cmdSave = new System.Windows.Forms.Button();
             this.cmdDescAdd = new System.Windows.Forms.Button();
             this.cmdTypeAdd = new System.Windows.Forms.Button();
             this.cmdGroupClassAdd = new System.Windows.Forms.Button();
@@ -100,8 +102,6 @@
             this.cbGoodsType = new System.Windows.Forms.ComboBox();
             this.tbGoodsTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.cmdCancle = new System.Windows.Forms.Button();
-            this.cmdSave = new System.Windows.Forms.Button();
             this.tbGoodsTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTypeTableAdapter();
             this.tbGroupTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGroupTableAdapter();
             this.tbTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbTypeTableAdapter();
@@ -126,6 +126,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmdCancle);
+            this.groupBox1.Controls.Add(this.cmdSave);
             this.groupBox1.Controls.Add(this.cmdDescAdd);
             this.groupBox1.Controls.Add(this.cmdTypeAdd);
             this.groupBox1.Controls.Add(this.cmdGroupClassAdd);
@@ -164,9 +166,29 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(907, 404);
+            this.groupBox1.Size = new System.Drawing.Size(907, 452);
             this.groupBox1.TabIndex = 108;
             this.groupBox1.TabStop = false;
+            // 
+            // cmdCancle
+            // 
+            this.cmdCancle.Location = new System.Drawing.Point(792, 404);
+            this.cmdCancle.Name = "cmdCancle";
+            this.cmdCancle.Size = new System.Drawing.Size(77, 30);
+            this.cmdCancle.TabIndex = 171;
+            this.cmdCancle.Text = "ยกเลิก";
+            this.cmdCancle.UseVisualStyleBackColor = true;
+            this.cmdCancle.Click += new System.EventHandler(this.cmdCancle_Click);
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Location = new System.Drawing.Point(693, 404);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(77, 30);
+            this.cmdSave.TabIndex = 170;
+            this.cmdSave.Text = "บันทึก";
+            this.cmdSave.UseVisualStyleBackColor = true;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // cmdDescAdd
             // 
@@ -873,26 +895,6 @@
             this.label2.TabIndex = 108;
             this.label2.Text = "รหัสครุภัณฑ์";
             // 
-            // cmdCancle
-            // 
-            this.cmdCancle.Location = new System.Drawing.Point(785, 432);
-            this.cmdCancle.Name = "cmdCancle";
-            this.cmdCancle.Size = new System.Drawing.Size(77, 30);
-            this.cmdCancle.TabIndex = 31;
-            this.cmdCancle.Text = "ยกเลิก";
-            this.cmdCancle.UseVisualStyleBackColor = true;
-            this.cmdCancle.Click += new System.EventHandler(this.cmdCancle_Click);
-            // 
-            // cmdSave
-            // 
-            this.cmdSave.Location = new System.Drawing.Point(686, 432);
-            this.cmdSave.Name = "cmdSave";
-            this.cmdSave.Size = new System.Drawing.Size(77, 30);
-            this.cmdSave.TabIndex = 30;
-            this.cmdSave.Text = "บันทึก";
-            this.cmdSave.UseVisualStyleBackColor = true;
-            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
-            // 
             // tbGoodsTypeTableAdapter
             // 
             this.tbGoodsTypeTableAdapter.ClearBeforeFill = true;
@@ -934,8 +936,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 476);
-            this.Controls.Add(this.cmdCancle);
-            this.Controls.Add(this.cmdSave);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -999,8 +999,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbGoodsType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button cmdCancle;
-        private System.Windows.Forms.Button cmdSave;
         private System.Windows.Forms.TextBox txtSerail;
         private System.Windows.Forms.DateTimePicker dtpAcquisitionDate;
         private System.Windows.Forms.TextBox txtGFMIS;
@@ -1044,5 +1042,7 @@
         private System.Windows.Forms.BindingSource tbAcquisitionBindingSource;
         private DurableGoodsMISDataSetTableAdapters.tbAcquisitionTableAdapter tbAcquisitionTableAdapter;
         private DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter tbGoodsTableAdapter1;
+        private System.Windows.Forms.Button cmdCancle;
+        private System.Windows.Forms.Button cmdSave;
     }
 }

@@ -122,5 +122,11 @@ namespace DurableGoodsMIS
             if (!char.IsNumber(chr) && chr != 8 && chr != 45 && chr != 47)   //ตรวจสอบว่าเป็นตัวเลข กับ backSpace - และ /
                 e.Handled = true;
         }
+
+        private void addDescToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddDescription form = new frmAddDescription();
+            form.ShowDialog();
+        }
     }
 }

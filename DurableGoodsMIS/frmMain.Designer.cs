@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdDelete = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
@@ -332,8 +332,8 @@
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 30;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.Size = new System.Drawing.Size(694, 182);
             this.dataGridView2.TabIndex = 0;
             // 
@@ -1277,8 +1277,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 15;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(369, 396);
             this.dataGridView1.TabIndex = 13;
             // 
@@ -1432,6 +1432,7 @@
             this.addDescToolStripMenuItem.Name = "addDescToolStripMenuItem";
             this.addDescToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.addDescToolStripMenuItem.Text = "เพิ่ม/แก้ไขคุณลักษณะ";
+            this.addDescToolStripMenuItem.Click += new System.EventHandler(this.addDescToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
@@ -1482,7 +1483,7 @@
             // 
             this.report02ToolStripMenuItem.Name = "report02ToolStripMenuItem";
             this.report02ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.report02ToolStripMenuItem.Text = "บัญชีค่าเสื่อมราคา";
+            this.report02ToolStripMenuItem.Text = "ทะเบียนคุมทรัพย์สิน";
             this.report02ToolStripMenuItem.Click += new System.EventHandler(this.report02ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
