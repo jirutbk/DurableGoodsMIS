@@ -23,7 +23,7 @@ namespace DurableGoodsMIS
         //OleDbDataAdapter da;
         DataSet ds = new DataSet();
         //DataTable dt;
-        DataRow dr;
+        //DataRow dr;
         OleDbDataReader dataReader;
         OleDbCommand comm = new OleDbCommand();
 
@@ -40,23 +40,7 @@ namespace DurableGoodsMIS
 
             strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data source=DurableGoodsMIS.accdb";
 
-            string strSql = "select * from tbGoodsType";
-
-            if (Conn.State == ConnectionState.Open)
-                Conn.Close();
-
-            Conn.ConnectionString = strConn;
-            Conn.Open();
-
-            comm.Connection = Conn;
-            comm.CommandText = strSql;
-
-            dataReader = comm.ExecuteReader();
-
-            dataReader.Read();
-
-            MessageBox.Show(dataReader.GetString(1));  //แสดงข้อมูล collum ที่ 2
-
+           
             cbGroupClass.SelectedIndex = -1;
             cbGoodsType.SelectedIndex = -1;
             cbType.SelectedIndex = -1;
@@ -77,8 +61,30 @@ namespace DurableGoodsMIS
                 MessageBox.Show("กรุณาป้อนข้อมูลให้ครบถ้วน!!");
                 return;
             }
+            
+            //ตรวจสอบว่าซ้ำหรือไม่
+            string strSql = "SELECT * FROM tbDescription WHERE(typeID = " + cbType.SelectedValue.ToString() + " and description ='" + txtDesc2.Text +"' )";
 
-            MessageBox.Show("บันทึกข้อมูลเรียบร้อย.");
+            if (Conn.State == ConnectionState.Open)
+                Conn.Close();
+
+            Conn.ConnectionString = strConn;
+            Conn.Open();
+
+            comm.Connection = Conn;
+            comm.CommandText = strSql;
+
+            dataReader = comm.ExecuteReader();
+
+            if (!dataReader.Read()) //ถ้าเจอข้อมูล แสดงว่าซ้ำ
+            {
+                tbDescriptionTableAdapter.InsertQuery(int.Parse(cbType.SelectedValue.ToString()), txtDesc2.Text, txtDescTitle.Text);
+
+                MessageBox.Show("บันทึกข้อมูลเรียบร้อย.");
+            }
+            else      MessageBox.Show("ผิดพลาด: กลุ่มรหัสคุณลักษณะซ้ำ!!");
+
+           
         }
 
         private void cbGoodsType_SelectionChangeCommitted(object sender, EventArgs e)

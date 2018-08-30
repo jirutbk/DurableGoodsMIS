@@ -17,14 +17,15 @@ namespace DurableGoodsMIS
         {
             InitializeComponent();
         }
-/*
+
         string strConn;
         OleDbConnection Conn = new OleDbConnection();
         //OleDbDataAdapter da;
         DataSet ds = new DataSet();
         //DataTable dt;
+        OleDbDataReader dataReader;
         OleDbCommand comm = new OleDbCommand();
-*/
+
 
         private void frmAddGoods_Load(object sender, EventArgs e)
         {
@@ -39,7 +40,7 @@ namespace DurableGoodsMIS
            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbGoodsType' table. You can move, or remove it, as needed.
             this.tbGoodsTypeTableAdapter.Fill(this.durableGoodsMISDataSet.tbGoodsType);
 
-           // strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data source=DurableGoodsMIS.accdb";
+            strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data source=DurableGoodsMIS.accdb";
            
 
 
@@ -86,7 +87,7 @@ namespace DurableGoodsMIS
             //this.tbDescriptionTableAdapter.readTemp(this.durableGoodsMISDataSet.tbTemp, cbType.SelectedValue.ToString());
             //this.durableGoodsMISDataSet.tbTemp.Rows[0][1].
 
-            txtGoodsID.Text = cbType.SelectedValue.ToString();
+            //txtGoodsID.Text = cbType.SelectedValue.ToString();
 
         }
 
@@ -99,14 +100,32 @@ namespace DurableGoodsMIS
         {
             if ((txtGoodsID.Text != "") && (txtNoYear.Text != "") && (txtSpec.Text != "") && (txtUseful.Text != "") && (cbSection.SelectedIndex != -1))
             {
+                //ตรวจสอบว่าซ้ำหรือไม่
+                string strSql = "SELECT goodsID FROM tbGoods WHERE(goodsID = '" + txtGoodsID.Text + "')";
 
-                tbGoodsTableAdapter1.Insert(txtGoodsID.Text, cbGoodsType.SelectedValue.ToString(), int.Parse(cbDesc.SelectedValue.ToString()), txtNoYear.Text, txtGFMIS.Text, txtSpec.Text,
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+
+                Conn.ConnectionString = strConn;
+                Conn.Open();
+
+                comm.Connection = Conn;
+                comm.CommandText = strSql;
+
+                dataReader = comm.ExecuteReader();
+
+                if (!dataReader.Read()) //ถ้าเจอข้อมูล แสดงว่าซ้ำ
+                {
+                    tbGoodsTableAdapter1.Insert(txtGoodsID.Text, cbGoodsType.SelectedValue.ToString(), int.Parse(cbDesc.SelectedValue.ToString()), txtNoYear.Text, txtGFMIS.Text, txtSpec.Text,
                    txtSerail.Text, txtWhere.Text, cbSection.SelectedValue.ToString(), txtSellName.Text, txtSellPhone.Text, txtSellAddress.Text, cbBudget.SelectedValue.ToString(),
-                   cbAcquisition.SelectedValue.ToString(), txtDocument.Text, dtpAcquisitionDate.Value, float.Parse(txtPrice.Text),
-                   float.Parse(txtDepreciationRate.Text), float.Parse(txtDepreciationSum.Text), float.Parse(txtLastPrice.Text), byte.Parse(txtUseful.Text), cbStatus.SelectedValue.ToString(),
-                   txtOwn.Text, txtComment.Text, int.Parse(cbType.SelectedValue.ToString()));
+                  cbAcquisition.SelectedValue.ToString(), txtDocument.Text, dtpAcquisitionDate.Value, float.Parse(txtPrice.Text),
+                  float.Parse(txtDepreciationRate.Text), float.Parse(txtDepreciationSum.Text), float.Parse(txtLastPrice.Text), byte.Parse(txtUseful.Text), cbStatus.SelectedValue.ToString(),
+                  txtOwn.Text, txtComment.Text, int.Parse(cbType.SelectedValue.ToString()));
 
-                MessageBox.Show("บันทึกข้อมูลเรียบร้อย");
+                    MessageBox.Show("บันทึกข้อมูลเรียบร้อย");
+                } else MessageBox.Show("ผิดพลาด: หมายเลขครุภัณฑ์ซ้ำ!!");
+
+
             }
             else MessageBox.Show("กรุณากรอกข้อมูลสำคัญให้ครบถ้วน!!");
 

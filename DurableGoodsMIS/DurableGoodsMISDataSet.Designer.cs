@@ -9005,7 +9005,7 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT descID, typeID, description, descriptionTitle FROM tbDescription";
@@ -9016,6 +9016,14 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
                 "scription\r\nWHERE        (typeID = @ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TypeID", global::System.Data.OleDb.OleDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO tbDescription\r\n                         (typeID, description, descrip" +
+                "tionTitle)\r\nVALUES        (?, ?, ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("typeID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "typeID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("description", global::System.Data.OleDb.OleDbType.WChar, 4, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("descriptionTitle", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "descriptionTitle", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9094,13 +9102,8 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_descID, global::System.Nullable<int> Original_typeID, string Original_description, string Original_descriptionTitle) {
-            if ((Original_descID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_descID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+        public virtual int Delete(int Original_descID, global::System.Nullable<int> Original_typeID, string Original_description, string Original_descriptionTitle) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_descID));
             if ((Original_typeID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_typeID.Value));
@@ -9118,7 +9121,8 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_description));
             }
             if ((Original_descriptionTitle == null)) {
-                throw new global::System.ArgumentNullException("Original_descriptionTitle");
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
@@ -9144,13 +9148,8 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> descID, global::System.Nullable<int> typeID, string description, string descriptionTitle) {
-            if ((descID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(descID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+        public virtual int Insert(int descID, global::System.Nullable<int> typeID, string description, string descriptionTitle) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(descID));
             if ((typeID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(typeID.Value));
             }
@@ -9164,7 +9163,7 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(description));
             }
             if ((descriptionTitle == null)) {
-                throw new global::System.ArgumentNullException("descriptionTitle");
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(descriptionTitle));
@@ -9189,13 +9188,8 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> descID, global::System.Nullable<int> typeID, string description, string descriptionTitle, global::System.Nullable<int> Original_descID, global::System.Nullable<int> Original_typeID, string Original_description, string Original_descriptionTitle) {
-            if ((descID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(descID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+        public virtual int Update(int descID, global::System.Nullable<int> typeID, string description, string descriptionTitle, int Original_descID, global::System.Nullable<int> Original_typeID, string Original_description, string Original_descriptionTitle) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(descID));
             if ((typeID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(typeID.Value));
             }
@@ -9209,17 +9203,12 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(description));
             }
             if ((descriptionTitle == null)) {
-                throw new global::System.ArgumentNullException("descriptionTitle");
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(descriptionTitle));
             }
-            if ((Original_descID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_descID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_descID));
             if ((Original_typeID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_typeID.Value));
@@ -9237,7 +9226,8 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_description));
             }
             if ((Original_descriptionTitle == null)) {
-                throw new global::System.ArgumentNullException("Original_descriptionTitle");
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
@@ -9263,8 +9253,49 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> typeID, string description, string descriptionTitle, global::System.Nullable<int> Original_descID, global::System.Nullable<int> Original_typeID, string Original_description, string Original_descriptionTitle) {
+        public virtual int Update(global::System.Nullable<int> typeID, string description, string descriptionTitle, int Original_descID, global::System.Nullable<int> Original_typeID, string Original_description, string Original_descriptionTitle) {
             return this.Update(Original_descID, typeID, description, descriptionTitle, Original_descID, Original_typeID, Original_description, Original_descriptionTitle);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(global::System.Nullable<int> typeID, string description, string descriptionTitle) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
+            if ((typeID.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(typeID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((description == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(description));
+            }
+            if ((descriptionTitle == null)) {
+                throw new global::System.ArgumentNullException("descriptionTitle");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(descriptionTitle));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

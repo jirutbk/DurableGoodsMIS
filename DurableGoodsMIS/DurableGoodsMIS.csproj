@@ -169,6 +169,7 @@
     <None Include="DurableGoodsMISDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>DurableGoodsMISDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="DurableGoodsMISDataSet.xss">
       <DependentUpon>DurableGoodsMISDataSet.xsd</DependentUpon>
