@@ -934,7 +934,7 @@
             this.label15.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "serial", true));
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label15.ForeColor = System.Drawing.Color.Blue;
-            this.label15.Location = new System.Drawing.Point(471, 90);
+            this.label15.Location = new System.Drawing.Point(583, 89);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(13, 18);
             this.label15.TabIndex = 15;
@@ -944,7 +944,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label14.Location = new System.Drawing.Point(333, 90);
+            this.label14.Location = new System.Drawing.Point(449, 90);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 18);
             this.label14.TabIndex = 14;
