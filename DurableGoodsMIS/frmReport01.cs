@@ -23,7 +23,7 @@ namespace DurableGoodsMIS
             // TODO: This line of code loads data into the 'DurableGoodsMISDataSet.tbGoods' table. You can move, or remove it, as needed.
             this.tbGoodsTableAdapter.Fill(this.DurableGoodsMISDataSet.tbGoods);
             
-           
+           /*
 
             System.Drawing.Printing.PageSettings pg = new System.Drawing.Printing.PageSettings();
             pg.Margins.Top = 15;
@@ -35,7 +35,7 @@ namespace DurableGoodsMIS
             pg.PaperSize = size;
             pg.Landscape = true;
             reportViewer1.SetPageSettings(pg);
-
+            */
             this.reportViewer1.RefreshReport();
         }
     }
