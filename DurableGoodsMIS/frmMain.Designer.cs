@@ -1475,43 +1475,43 @@
             // report01ToolStripMenuItem
             // 
             this.report01ToolStripMenuItem.Name = "report01ToolStripMenuItem";
-            this.report01ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report01ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.report01ToolStripMenuItem.Text = "ทะเบียนครุภัณฑ์";
             this.report01ToolStripMenuItem.Click += new System.EventHandler(this.report01ToolStripMenuItem_Click);
             // 
             // report02ToolStripMenuItem
             // 
             this.report02ToolStripMenuItem.Name = "report02ToolStripMenuItem";
-            this.report02ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report02ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.report02ToolStripMenuItem.Text = "ทะเบียนคุมทรัพย์สิน";
             this.report02ToolStripMenuItem.Click += new System.EventHandler(this.report02ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(262, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(253, 6);
             // 
             // report03ToolStripMenuItem
             // 
             this.report03ToolStripMenuItem.Name = "report03ToolStripMenuItem";
-            this.report03ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report03ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.report03ToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามประเภท";
             // 
             // report04ToolStripMenuItem
             // 
             this.report04ToolStripMenuItem.Name = "report04ToolStripMenuItem";
-            this.report04ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.report04ToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามหน่วยงานรับผิดชอบ";
+            this.report04ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.report04ToolStripMenuItem.Text = "แบบสำรวจครุภัณฑ์ (แยกตามหน่วยงาน)";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(262, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(253, 6);
             // 
             // report06ToolStripMenuItem
             // 
             this.report06ToolStripMenuItem.Name = "report06ToolStripMenuItem";
-            this.report06ToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.report06ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.report06ToolStripMenuItem.Text = "รายการครุภัณฑ์หมดอายุ ชำรุด";
             // 
             // เกยวกบโปรแกรมToolStripMenuItem

@@ -115,17 +115,17 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReport0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport0.Designer.cs">
+      <DependentUpon>frmReport0.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReport01.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReport01.Designer.cs">
       <DependentUpon>frmReport01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReport02.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReport02.Designer.cs">
-      <DependentUpon>frmReport02.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,11 +147,11 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReport0.resx">
+      <DependentUpon>frmReport0.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReport01.resx">
       <DependentUpon>frmReport01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReport02.resx">
-      <DependentUpon>frmReport02.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,25 +17,16 @@ namespace DurableGoodsMIS
             InitializeComponent();
         }
 
-        private void frmReport01_Load(object sender, EventArgs e)
+        private void frmReport02_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DurableGoodsMISDataSet.tbGoods' table. You can move, or remove it, as needed.
-            this.tbGoodsTableAdapter.Fill(this.DurableGoodsMISDataSet.tbGoods);
-            
-           /*
+            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.dataReport01' table. You can move, or remove it, as needed.
+            this.dataReport01TableAdapter.Fill(this.durableGoodsMISDataSet.dataReport01);
 
-            System.Drawing.Printing.PageSettings pg = new System.Drawing.Printing.PageSettings();
-            pg.Margins.Top = 15;
-            pg.Margins.Bottom = 15;
-            pg.Margins.Left = 15;
-            pg.Margins.Right = 15;
-            System.Drawing.Printing.PaperSize size = new PaperSize();
-            size.RawKind = (int)PaperKind.A4;
-            pg.PaperSize = size;
-            pg.Landscape = true;
-            reportViewer1.SetPageSettings(pg);
-            */
-            this.reportViewer1.RefreshReport();
+                                   
+            CrystalReport011.SetDataSource(durableGoodsMISDataSet); 
+            //crystalReportViewer1.RefreshReport();
+
+
         }
     }
 }

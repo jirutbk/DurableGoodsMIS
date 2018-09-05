@@ -94,7 +94,7 @@ namespace DurableGoodsMIS
 
         private void report02ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReport02 form2 = new frmReport02();
+            frmReport0 form2 = new frmReport0();
             form2.ShowDialog();
         }
 

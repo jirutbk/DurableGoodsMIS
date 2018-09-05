@@ -29,63 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DurableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
-            this.tbGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DurableGoodsMISDataSet)).BeginInit();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CrystalReport011 = new DurableGoodsMIS.CrystalReport01();
+            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataReport01TableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.dataReport01TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbGoodsBindingSource
+            // crystalReportViewer1
             // 
-            this.tbGoodsBindingSource.DataMember = "tbGoods";
-            this.tbGoodsBindingSource.DataSource = this.DurableGoodsMISDataSet;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.CrystalReport011;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(690, 384);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
-            // DurableGoodsMISDataSet
+            // durableGoodsMISDataSet
             // 
-            this.DurableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
-            this.DurableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
+            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tbGoodsTableAdapter
+            // bindingSource1
             // 
-            this.tbGoodsTableAdapter.ClearBeforeFill = true;
+            this.bindingSource1.DataMember = "dataReport01";
+            this.bindingSource1.DataSource = this.durableGoodsMISDataSet;
             // 
-            // reportViewer1
+            // dataReport01TableAdapter
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.tbGoodsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DurableGoodsMIS.Report01.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(520, 379);
-            this.reportViewer1.TabIndex = 0;
+            this.dataReport01TableAdapter.ClearBeforeFill = true;
             // 
-            // frmReport01
+            // frmReport02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 379);
-            this.Controls.Add(this.reportViewer1);
-            this.Name = "frmReport01";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "พิมพ์ทะเบียนครุภัณฑ์";
+            this.ClientSize = new System.Drawing.Size(690, 384);
+            this.Controls.Add(this.crystalReportViewer1);
+            this.Name = "frmReport02";
+            this.Text = "พิมพ์ทะเบียนคุมครุภัณฑ์";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmReport01_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DurableGoodsMISDataSet)).EndInit();
+            this.Load += new System.EventHandler(this.frmReport02_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource tbGoodsBindingSource;
-        private DurableGoodsMISDataSet DurableGoodsMISDataSet;
-        private DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter tbGoodsTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalReport01 CrystalReport011;
+        private DurableGoodsMISDataSet durableGoodsMISDataSet;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DurableGoodsMISDataSetTableAdapters.dataReport01TableAdapter dataReport01TableAdapter;
     }
 }
