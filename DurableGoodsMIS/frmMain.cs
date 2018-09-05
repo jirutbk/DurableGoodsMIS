@@ -128,5 +128,14 @@ namespace DurableGoodsMIS
             frmAddDescription form = new frmAddDescription();
             form.ShowDialog();
         }
+
+        private void tbGoodsBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (label40.Text != "-" && label40.Text != "")
+            {
+                var date = DateTime.Parse(label40.Text);
+                label40.Text = date.ToString("dd/MM/yyyy");
+            }
+        }
     }
 }

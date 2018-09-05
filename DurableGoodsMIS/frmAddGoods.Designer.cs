@@ -767,6 +767,7 @@
             this.txtGoodsID.Size = new System.Drawing.Size(210, 22);
             this.txtGoodsID.TabIndex = 10;
             this.txtGoodsID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGoodsID_KeyPress);
+            this.txtGoodsID.Leave += new System.EventHandler(this.txtGoodsID_Leave);
             // 
             // label44
             // 

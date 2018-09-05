@@ -540,6 +540,7 @@
             // 
             this.tbGoodsBindingSource.DataMember = "tbGoods";
             this.tbGoodsBindingSource.DataSource = this.durableGoodsMISDataSet;
+            this.tbGoodsBindingSource.CurrentChanged += new System.EventHandler(this.tbGoodsBindingSource_CurrentChanged);
             // 
             // tbDescriptionBindingSource
             // 
@@ -564,7 +565,7 @@
             this.label42.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbGoodsBindingSource, "own", true));
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label42.ForeColor = System.Drawing.Color.Blue;
-            this.label42.Location = new System.Drawing.Point(559, 264);
+            this.label42.Location = new System.Drawing.Point(580, 264);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(13, 18);
             this.label42.TabIndex = 49;
@@ -598,7 +599,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label39.Location = new System.Drawing.Point(485, 264);
+            this.label39.Location = new System.Drawing.Point(507, 264);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(73, 18);
             this.label39.TabIndex = 46;

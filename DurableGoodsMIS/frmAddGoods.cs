@@ -63,7 +63,8 @@ namespace DurableGoodsMIS
             this.tbGroupTableAdapter.FillByGoodsType(this.durableGoodsMISDataSet.tbGroup, cbGoodsType.SelectedValue.ToString());
             cbGroupClass.SelectedIndex = -1;
             cbType.SelectedIndex = -1;
-            cbDesc.SelectedIndex = -1;            
+            cbDesc.SelectedIndex = -1;
+            txtGoodsID.Clear();
             this.durableGoodsMISDataSet.tbType.Clear();
             this.durableGoodsMISDataSet.tbDescription.Clear();
         }
@@ -74,6 +75,7 @@ namespace DurableGoodsMIS
             this.tbTypeTableAdapter.FillByGroupID(this.durableGoodsMISDataSet.tbType,cbGroupClass.SelectedValue.ToString());
             cbType.SelectedIndex = -1;
             cbDesc.SelectedIndex = -1;
+            txtGoodsID.Clear();
             this.durableGoodsMISDataSet.tbDescription.Clear();
         }
 
@@ -82,18 +84,52 @@ namespace DurableGoodsMIS
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbDescription' table. You can move, or remove it, as needed.
             this.tbDescriptionTableAdapter.FillByTypeID(this.durableGoodsMISDataSet.tbDescription,cbType.SelectedValue.ToString());
             cbDesc.SelectedIndex = -1;
+            txtGoodsID.Clear();
 
             //อ่านค่ารหัสกลุ่มครุภัณฑ์
-            //this.tbDescriptionTableAdapter.readTemp(this.durableGoodsMISDataSet.tbTemp, cbType.SelectedValue.ToString());
-            //this.durableGoodsMISDataSet.tbTemp.Rows[0][1].
-
-            //txtGoodsID.Text = cbType.SelectedValue.ToString();
+           // txtGoodsID.Text = durableGoodsMISDataSet.tbType.Rows[0][2].ToString() + "-" + durableGoodsMISDataSet.tbType.Rows[0][3].ToString();
 
         }
 
         private void cbDesc_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            txtGoodsID.Text += cbType.SelectedValue.ToString();
+            txtNoYear.Clear();
+            txtSerail.Clear();
+            txtSpec.Clear();
+            txtGFMIS.Clear();
+            txtDocument.Clear();
+            txtSellName.Clear();
+            txtSellAddress.Clear();
+            txtSellPhone.Clear();
+            txtComment.Clear();
+            txtWhere.Clear();
+            txtOwn.Clear();
+            txtDepreciationSum.Text = "0";
+            txtPrice.Text = "1";
+            txtLastPrice.Text = "1";
+
+            txtGoodsID.Clear();
+
+            string strSql = "SELECT tbType.groupClass, tbType.type, tbDescription.description, tbDescription.descID FROM(tbDescription INNER JOIN tbType ON tbDescription.typeID = tbType.typeID)";
+                    strSql += " WHERE(tbDescription.descID = " + cbDesc.SelectedValue + ")";
+
+            if (Conn.State == ConnectionState.Open)
+                Conn.Close();
+
+            Conn.ConnectionString = strConn;
+            Conn.Open();
+
+            comm.Connection = Conn;
+            comm.CommandText = strSql;
+
+            dataReader = comm.ExecuteReader();
+
+            if (dataReader.Read()) 
+            {
+                txtGoodsID.Text += dataReader[0].ToString() + "-" + dataReader[1].ToString() + "-" + dataReader[2].ToString() + "/";
+            }           
+
+
         }
 
         private void cmdSave_Click(object sender, EventArgs e)
@@ -157,6 +193,8 @@ namespace DurableGoodsMIS
         {
             if (txtPrice.Text != "")
                 txtPrice.Text = string.Format("{0:n2}", Single.Parse(txtPrice.Text));   //แปลงเป็นตัวเลข ทศนิยม 2 ตำแหน่ง
+
+            txtLastPrice.Text = txtPrice.Text;
         }
 
         private void txtDepreciationSum_Leave(object sender, EventArgs e)
@@ -188,6 +226,12 @@ namespace DurableGoodsMIS
         private void cmdCancle_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtGoodsID_Leave(object sender, EventArgs e)
+        {
+            if(txtGoodsID.Text.Length > 15)
+                txtNoYear.Text = txtGoodsID.Text.Substring(15);
         }
     }
 }
