@@ -16,5 +16,14 @@ namespace DurableGoodsMIS
         {
             InitializeComponent();
         }
+
+        private void frmReport02_Load(object sender, EventArgs e)
+        {
+          
+            //this.crystalReportViewer1.ReportSource = crystalReport011;
+            this.crystalReportViewer1.Refresh();
+
+            
+        }
     }
 }

@@ -1092,6 +1092,40 @@ WHERE        (goodsType = @ID)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataReport01TableAdapter" GeneratorDataComponentClassName="dataReport01TableAdapter" Name="dataReport01" UserDataComponentName="dataReport01TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DurableGoodsMISConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tbGoods.acquisitionDate, tbGoods.goodsID, tbGoods.Spec, tbGoods.serial, tbGoods.price, tbAcquisition.acquisition, tbGoods.document, tbGoods.[where], tbOrganization.organization, tbOrganization.orgSector, tbType.type, 
+                         tbType.typeTitle, tbGroup.groupID, tbGroup.groupTitle
+FROM            (((tbGoods INNER JOIN
+                         tbType ON tbGoods.typeID = tbType.typeID) INNER JOIN
+                         tbAcquisition ON tbGoods.acquisition = tbAcquisition.acquisitionID) INNER JOIN
+                         tbGroup ON tbType.groupID = tbGroup.groupID), tbOrganization</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="acquisitionDate" DataSetColumn="acquisitionDate" />
+              <Mapping SourceColumn="goodsID" DataSetColumn="goodsID" />
+              <Mapping SourceColumn="Spec" DataSetColumn="Spec" />
+              <Mapping SourceColumn="serial" DataSetColumn="serial" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="acquisition" DataSetColumn="acquisition" />
+              <Mapping SourceColumn="document" DataSetColumn="document" />
+              <Mapping SourceColumn="where" DataSetColumn="where" />
+              <Mapping SourceColumn="organization" DataSetColumn="organization" />
+              <Mapping SourceColumn="orgSector" DataSetColumn="orgSector" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="typeTitle" DataSetColumn="typeTitle" />
+              <Mapping SourceColumn="groupID" DataSetColumn="groupID" />
+              <Mapping SourceColumn="groupTitle" DataSetColumn="groupTitle" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1100,7 +1134,7 @@ WHERE        (goodsType = @ID)</CommandText>
   <xs:element name="DurableGoodsMISDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DurableGoodsMISDataSet" msprop:Generator_UserDSName="DurableGoodsMISDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbAcquisition" msprop:Generator_TableClassName="tbAcquisitionDataTable" msprop:Generator_TableVarName="tabletbAcquisition" msprop:Generator_RowChangedName="tbAcquisitionRowChanged" msprop:Generator_TablePropName="tbAcquisition" msprop:Generator_RowDeletingName="tbAcquisitionRowDeleting" msprop:Generator_RowChangingName="tbAcquisitionRowChanging" msprop:Generator_RowEvHandlerName="tbAcquisitionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbAcquisitionRowDeleted" msprop:Generator_RowClassName="tbAcquisitionRow" msprop:Generator_UserTableName="tbAcquisition" msprop:Generator_RowEvArgName="tbAcquisitionRowChangeEvent">
+        <xs:element name="tbAcquisition" msprop:Generator_TableClassName="tbAcquisitionDataTable" msprop:Generator_TableVarName="tabletbAcquisition" msprop:Generator_TablePropName="tbAcquisition" msprop:Generator_RowDeletingName="tbAcquisitionRowDeleting" msprop:Generator_RowChangingName="tbAcquisitionRowChanging" msprop:Generator_RowEvHandlerName="tbAcquisitionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbAcquisitionRowDeleted" msprop:Generator_UserTableName="tbAcquisition" msprop:Generator_RowChangedName="tbAcquisitionRowChanged" msprop:Generator_RowEvArgName="tbAcquisitionRowChangeEvent" msprop:Generator_RowClassName="tbAcquisitionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="acquisitionID" msprop:Generator_ColumnVarNameInTable="columnacquisitionID" msprop:Generator_ColumnPropNameInRow="acquisitionID" msprop:Generator_ColumnPropNameInTable="acquisitionIDColumn" msprop:Generator_UserColumnName="acquisitionID">
@@ -1120,7 +1154,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbBudget" msprop:Generator_TableClassName="tbBudgetDataTable" msprop:Generator_TableVarName="tabletbBudget" msprop:Generator_RowChangedName="tbBudgetRowChanged" msprop:Generator_TablePropName="tbBudget" msprop:Generator_RowDeletingName="tbBudgetRowDeleting" msprop:Generator_RowChangingName="tbBudgetRowChanging" msprop:Generator_RowEvHandlerName="tbBudgetRowChangeEventHandler" msprop:Generator_RowDeletedName="tbBudgetRowDeleted" msprop:Generator_RowClassName="tbBudgetRow" msprop:Generator_UserTableName="tbBudget" msprop:Generator_RowEvArgName="tbBudgetRowChangeEvent">
+        <xs:element name="tbBudget" msprop:Generator_TableClassName="tbBudgetDataTable" msprop:Generator_TableVarName="tabletbBudget" msprop:Generator_TablePropName="tbBudget" msprop:Generator_RowDeletingName="tbBudgetRowDeleting" msprop:Generator_RowChangingName="tbBudgetRowChanging" msprop:Generator_RowEvHandlerName="tbBudgetRowChangeEventHandler" msprop:Generator_RowDeletedName="tbBudgetRowDeleted" msprop:Generator_UserTableName="tbBudget" msprop:Generator_RowChangedName="tbBudgetRowChanged" msprop:Generator_RowEvArgName="tbBudgetRowChangeEvent" msprop:Generator_RowClassName="tbBudgetRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="budgetID" msprop:Generator_ColumnVarNameInTable="columnbudgetID" msprop:Generator_ColumnPropNameInRow="budgetID" msprop:Generator_ColumnPropNameInTable="budgetIDColumn" msprop:Generator_UserColumnName="budgetID">
@@ -1140,7 +1174,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbDescription" msprop:Generator_TableClassName="tbDescriptionDataTable" msprop:Generator_TableVarName="tabletbDescription" msprop:Generator_RowChangedName="tbDescriptionRowChanged" msprop:Generator_TablePropName="tbDescription" msprop:Generator_RowDeletingName="tbDescriptionRowDeleting" msprop:Generator_RowChangingName="tbDescriptionRowChanging" msprop:Generator_RowEvHandlerName="tbDescriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbDescriptionRowDeleted" msprop:Generator_RowClassName="tbDescriptionRow" msprop:Generator_UserTableName="tbDescription" msprop:Generator_RowEvArgName="tbDescriptionRowChangeEvent">
+        <xs:element name="tbDescription" msprop:Generator_TableClassName="tbDescriptionDataTable" msprop:Generator_TableVarName="tabletbDescription" msprop:Generator_TablePropName="tbDescription" msprop:Generator_RowDeletingName="tbDescriptionRowDeleting" msprop:Generator_RowChangingName="tbDescriptionRowChanging" msprop:Generator_RowEvHandlerName="tbDescriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbDescriptionRowDeleted" msprop:Generator_UserTableName="tbDescription" msprop:Generator_RowChangedName="tbDescriptionRowChanged" msprop:Generator_RowEvArgName="tbDescriptionRowChangeEvent" msprop:Generator_RowClassName="tbDescriptionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="descID" msprop:Generator_ColumnVarNameInTable="columndescID" msprop:Generator_ColumnPropNameInRow="descID" msprop:Generator_ColumnPropNameInTable="descIDColumn" msprop:Generator_UserColumnName="descID" type="xs:int" />
@@ -1162,7 +1196,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbFix" msprop:Generator_TableClassName="tbFixDataTable" msprop:Generator_TableVarName="tabletbFix" msprop:Generator_RowChangedName="tbFixRowChanged" msprop:Generator_TablePropName="tbFix" msprop:Generator_RowDeletingName="tbFixRowDeleting" msprop:Generator_RowChangingName="tbFixRowChanging" msprop:Generator_RowEvHandlerName="tbFixRowChangeEventHandler" msprop:Generator_RowDeletedName="tbFixRowDeleted" msprop:Generator_RowClassName="tbFixRow" msprop:Generator_UserTableName="tbFix" msprop:Generator_RowEvArgName="tbFixRowChangeEvent">
+        <xs:element name="tbFix" msprop:Generator_TableClassName="tbFixDataTable" msprop:Generator_TableVarName="tabletbFix" msprop:Generator_TablePropName="tbFix" msprop:Generator_RowDeletingName="tbFixRowDeleting" msprop:Generator_RowChangingName="tbFixRowChanging" msprop:Generator_RowEvHandlerName="tbFixRowChangeEventHandler" msprop:Generator_RowDeletedName="tbFixRowDeleted" msprop:Generator_UserTableName="tbFix" msprop:Generator_RowChangedName="tbFixRowChanged" msprop:Generator_RowEvArgName="tbFixRowChangeEvent" msprop:Generator_RowClassName="tbFixRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="goodsID" msprop:Generator_ColumnVarNameInTable="columngoodsID" msprop:Generator_ColumnPropNameInRow="goodsID" msprop:Generator_ColumnPropNameInTable="goodsIDColumn" msprop:Generator_UserColumnName="goodsID">
@@ -1198,7 +1232,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbGoods" msprop:Generator_TableClassName="tbGoodsDataTable" msprop:Generator_TableVarName="tabletbGoods" msprop:Generator_RowChangedName="tbGoodsRowChanged" msprop:Generator_TablePropName="tbGoods" msprop:Generator_RowDeletingName="tbGoodsRowDeleting" msprop:Generator_RowChangingName="tbGoodsRowChanging" msprop:Generator_RowEvHandlerName="tbGoodsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbGoodsRowDeleted" msprop:Generator_RowClassName="tbGoodsRow" msprop:Generator_UserTableName="tbGoods" msprop:Generator_RowEvArgName="tbGoodsRowChangeEvent">
+        <xs:element name="tbGoods" msprop:Generator_TableClassName="tbGoodsDataTable" msprop:Generator_TableVarName="tabletbGoods" msprop:Generator_TablePropName="tbGoods" msprop:Generator_RowDeletingName="tbGoodsRowDeleting" msprop:Generator_RowChangingName="tbGoodsRowChanging" msprop:Generator_RowEvHandlerName="tbGoodsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbGoodsRowDeleted" msprop:Generator_UserTableName="tbGoods" msprop:Generator_RowChangedName="tbGoodsRowChanged" msprop:Generator_RowEvArgName="tbGoodsRowChangeEvent" msprop:Generator_RowClassName="tbGoodsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="goodsID" msprop:Generator_ColumnVarNameInTable="columngoodsID" msprop:Generator_ColumnPropNameInRow="goodsID" msprop:Generator_ColumnPropNameInTable="goodsIDColumn" msprop:Generator_UserColumnName="goodsID">
@@ -1331,7 +1365,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbGoodsType" msprop:Generator_TableClassName="tbGoodsTypeDataTable" msprop:Generator_TableVarName="tabletbGoodsType" msprop:Generator_RowChangedName="tbGoodsTypeRowChanged" msprop:Generator_TablePropName="tbGoodsType" msprop:Generator_RowDeletingName="tbGoodsTypeRowDeleting" msprop:Generator_RowChangingName="tbGoodsTypeRowChanging" msprop:Generator_RowEvHandlerName="tbGoodsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="tbGoodsTypeRowDeleted" msprop:Generator_RowClassName="tbGoodsTypeRow" msprop:Generator_UserTableName="tbGoodsType" msprop:Generator_RowEvArgName="tbGoodsTypeRowChangeEvent">
+        <xs:element name="tbGoodsType" msprop:Generator_TableClassName="tbGoodsTypeDataTable" msprop:Generator_TableVarName="tabletbGoodsType" msprop:Generator_TablePropName="tbGoodsType" msprop:Generator_RowDeletingName="tbGoodsTypeRowDeleting" msprop:Generator_RowChangingName="tbGoodsTypeRowChanging" msprop:Generator_RowEvHandlerName="tbGoodsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="tbGoodsTypeRowDeleted" msprop:Generator_UserTableName="tbGoodsType" msprop:Generator_RowChangedName="tbGoodsTypeRowChanged" msprop:Generator_RowEvArgName="tbGoodsTypeRowChangeEvent" msprop:Generator_RowClassName="tbGoodsTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="goodsTypeID" msprop:Generator_ColumnVarNameInTable="columngoodsTypeID" msprop:Generator_ColumnPropNameInRow="goodsTypeID" msprop:Generator_ColumnPropNameInTable="goodsTypeIDColumn" msprop:Generator_UserColumnName="goodsTypeID">
@@ -1355,7 +1389,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbParcel" msprop:Generator_TableClassName="tbParcelDataTable" msprop:Generator_TableVarName="tabletbParcel" msprop:Generator_RowChangedName="tbParcelRowChanged" msprop:Generator_TablePropName="tbParcel" msprop:Generator_RowDeletingName="tbParcelRowDeleting" msprop:Generator_RowChangingName="tbParcelRowChanging" msprop:Generator_RowEvHandlerName="tbParcelRowChangeEventHandler" msprop:Generator_RowDeletedName="tbParcelRowDeleted" msprop:Generator_RowClassName="tbParcelRow" msprop:Generator_UserTableName="tbParcel" msprop:Generator_RowEvArgName="tbParcelRowChangeEvent">
+        <xs:element name="tbParcel" msprop:Generator_TableClassName="tbParcelDataTable" msprop:Generator_TableVarName="tabletbParcel" msprop:Generator_TablePropName="tbParcel" msprop:Generator_RowDeletingName="tbParcelRowDeleting" msprop:Generator_RowChangingName="tbParcelRowChanging" msprop:Generator_RowEvHandlerName="tbParcelRowChangeEventHandler" msprop:Generator_RowDeletedName="tbParcelRowDeleted" msprop:Generator_UserTableName="tbParcel" msprop:Generator_RowChangedName="tbParcelRowChanged" msprop:Generator_RowEvArgName="tbParcelRowChangeEvent" msprop:Generator_RowClassName="tbParcelRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="parcelTypeID" msprop:Generator_ColumnVarNameInTable="columnparcelTypeID" msprop:Generator_ColumnPropNameInRow="parcelTypeID" msprop:Generator_ColumnPropNameInTable="parcelTypeIDColumn" msprop:Generator_UserColumnName="parcelTypeID">
@@ -1375,7 +1409,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbSection" msprop:Generator_TableClassName="tbSectionDataTable" msprop:Generator_TableVarName="tabletbSection" msprop:Generator_RowChangedName="tbSectionRowChanged" msprop:Generator_TablePropName="tbSection" msprop:Generator_RowDeletingName="tbSectionRowDeleting" msprop:Generator_RowChangingName="tbSectionRowChanging" msprop:Generator_RowEvHandlerName="tbSectionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbSectionRowDeleted" msprop:Generator_RowClassName="tbSectionRow" msprop:Generator_UserTableName="tbSection" msprop:Generator_RowEvArgName="tbSectionRowChangeEvent">
+        <xs:element name="tbSection" msprop:Generator_TableClassName="tbSectionDataTable" msprop:Generator_TableVarName="tabletbSection" msprop:Generator_TablePropName="tbSection" msprop:Generator_RowDeletingName="tbSectionRowDeleting" msprop:Generator_RowChangingName="tbSectionRowChanging" msprop:Generator_RowEvHandlerName="tbSectionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbSectionRowDeleted" msprop:Generator_UserTableName="tbSection" msprop:Generator_RowChangedName="tbSectionRowChanged" msprop:Generator_RowEvArgName="tbSectionRowChangeEvent" msprop:Generator_RowClassName="tbSectionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="sectionID" msprop:Generator_ColumnVarNameInTable="columnsectionID" msprop:Generator_ColumnPropNameInRow="sectionID" msprop:Generator_ColumnPropNameInTable="sectionIDColumn" msprop:Generator_UserColumnName="sectionID">
@@ -1395,7 +1429,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbStatus" msprop:Generator_TableClassName="tbStatusDataTable" msprop:Generator_TableVarName="tabletbStatus" msprop:Generator_RowChangedName="tbStatusRowChanged" msprop:Generator_TablePropName="tbStatus" msprop:Generator_RowDeletingName="tbStatusRowDeleting" msprop:Generator_RowChangingName="tbStatusRowChanging" msprop:Generator_RowEvHandlerName="tbStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="tbStatusRowDeleted" msprop:Generator_RowClassName="tbStatusRow" msprop:Generator_UserTableName="tbStatus" msprop:Generator_RowEvArgName="tbStatusRowChangeEvent">
+        <xs:element name="tbStatus" msprop:Generator_TableClassName="tbStatusDataTable" msprop:Generator_TableVarName="tabletbStatus" msprop:Generator_TablePropName="tbStatus" msprop:Generator_RowDeletingName="tbStatusRowDeleting" msprop:Generator_RowChangingName="tbStatusRowChanging" msprop:Generator_RowEvHandlerName="tbStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="tbStatusRowDeleted" msprop:Generator_UserTableName="tbStatus" msprop:Generator_RowChangedName="tbStatusRowChanged" msprop:Generator_RowEvArgName="tbStatusRowChangeEvent" msprop:Generator_RowClassName="tbStatusRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="statusID" msprop:Generator_ColumnVarNameInTable="columnstatusID" msprop:Generator_ColumnPropNameInRow="statusID" msprop:Generator_ColumnPropNameInTable="statusIDColumn" msprop:Generator_UserColumnName="statusID">
@@ -1415,7 +1449,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbType" msprop:Generator_TableClassName="tbTypeDataTable" msprop:Generator_TableVarName="tabletbType" msprop:Generator_RowChangedName="tbTypeRowChanged" msprop:Generator_TablePropName="tbType" msprop:Generator_RowDeletingName="tbTypeRowDeleting" msprop:Generator_RowChangingName="tbTypeRowChanging" msprop:Generator_RowEvHandlerName="tbTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="tbTypeRowDeleted" msprop:Generator_RowClassName="tbTypeRow" msprop:Generator_UserTableName="tbType" msprop:Generator_RowEvArgName="tbTypeRowChangeEvent">
+        <xs:element name="tbType" msprop:Generator_TableClassName="tbTypeDataTable" msprop:Generator_TableVarName="tabletbType" msprop:Generator_TablePropName="tbType" msprop:Generator_RowDeletingName="tbTypeRowDeleting" msprop:Generator_RowChangingName="tbTypeRowChanging" msprop:Generator_RowEvHandlerName="tbTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="tbTypeRowDeleted" msprop:Generator_UserTableName="tbType" msprop:Generator_RowChangedName="tbTypeRowChanged" msprop:Generator_RowEvArgName="tbTypeRowChangeEvent" msprop:Generator_RowClassName="tbTypeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="typeID" msprop:Generator_ColumnVarNameInTable="columntypeID" msprop:Generator_ColumnPropNameInRow="typeID" msprop:Generator_ColumnPropNameInTable="typeIDColumn" msprop:Generator_UserColumnName="typeID" type="xs:int" />
@@ -1457,7 +1491,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbUnit" msprop:Generator_TableClassName="tbUnitDataTable" msprop:Generator_TableVarName="tabletbUnit" msprop:Generator_RowChangedName="tbUnitRowChanged" msprop:Generator_TablePropName="tbUnit" msprop:Generator_RowDeletingName="tbUnitRowDeleting" msprop:Generator_RowChangingName="tbUnitRowChanging" msprop:Generator_RowEvHandlerName="tbUnitRowChangeEventHandler" msprop:Generator_RowDeletedName="tbUnitRowDeleted" msprop:Generator_RowClassName="tbUnitRow" msprop:Generator_UserTableName="tbUnit" msprop:Generator_RowEvArgName="tbUnitRowChangeEvent">
+        <xs:element name="tbUnit" msprop:Generator_TableClassName="tbUnitDataTable" msprop:Generator_TableVarName="tabletbUnit" msprop:Generator_TablePropName="tbUnit" msprop:Generator_RowDeletingName="tbUnitRowDeleting" msprop:Generator_RowChangingName="tbUnitRowChanging" msprop:Generator_RowEvHandlerName="tbUnitRowChangeEventHandler" msprop:Generator_RowDeletedName="tbUnitRowDeleted" msprop:Generator_UserTableName="tbUnit" msprop:Generator_RowChangedName="tbUnitRowChanged" msprop:Generator_RowEvArgName="tbUnitRowChangeEvent" msprop:Generator_RowClassName="tbUnitRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="unitID" msprop:Generator_ColumnVarNameInTable="columnunitID" msprop:Generator_ColumnPropNameInRow="unitID" msprop:Generator_ColumnPropNameInTable="unitIDColumn" msprop:Generator_UserColumnName="unitID">
@@ -1477,7 +1511,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbSubGoods" msprop:Generator_TableClassName="tbSubGoodsDataTable" msprop:Generator_TableVarName="tabletbSubGoods" msprop:Generator_TablePropName="tbSubGoods" msprop:Generator_RowDeletingName="tbSubGoodsRowDeleting" msprop:Generator_RowChangingName="tbSubGoodsRowChanging" msprop:Generator_RowEvHandlerName="tbSubGoodsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbSubGoodsRowDeleted" msprop:Generator_UserTableName="tbSubGoods" msprop:Generator_RowChangedName="tbSubGoodsRowChanged" msprop:Generator_RowEvArgName="tbSubGoodsRowChangeEvent" msprop:Generator_RowClassName="tbSubGoodsRow">
+        <xs:element name="tbSubGoods" msprop:Generator_TableClassName="tbSubGoodsDataTable" msprop:Generator_TableVarName="tabletbSubGoods" msprop:Generator_RowChangedName="tbSubGoodsRowChanged" msprop:Generator_TablePropName="tbSubGoods" msprop:Generator_RowDeletingName="tbSubGoodsRowDeleting" msprop:Generator_RowChangingName="tbSubGoodsRowChanging" msprop:Generator_RowEvHandlerName="tbSubGoodsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbSubGoodsRowDeleted" msprop:Generator_RowClassName="tbSubGoodsRow" msprop:Generator_UserTableName="tbSubGoods" msprop:Generator_RowEvArgName="tbSubGoodsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="goodsID" msprop:Generator_ColumnVarNameInTable="columngoodsID" msprop:Generator_ColumnPropNameInRow="goodsID" msprop:Generator_ColumnPropNameInTable="goodsIDColumn" msprop:Generator_UserColumnName="goodsID" minOccurs="0">
@@ -1506,7 +1540,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbDepreciation" msprop:Generator_TableClassName="tbDepreciationDataTable" msprop:Generator_TableVarName="tabletbDepreciation" msprop:Generator_RowChangedName="tbDepreciationRowChanged" msprop:Generator_TablePropName="tbDepreciation" msprop:Generator_RowDeletingName="tbDepreciationRowDeleting" msprop:Generator_RowChangingName="tbDepreciationRowChanging" msprop:Generator_RowEvHandlerName="tbDepreciationRowChangeEventHandler" msprop:Generator_RowDeletedName="tbDepreciationRowDeleted" msprop:Generator_RowClassName="tbDepreciationRow" msprop:Generator_UserTableName="tbDepreciation" msprop:Generator_RowEvArgName="tbDepreciationRowChangeEvent">
+        <xs:element name="tbDepreciation" msprop:Generator_TableClassName="tbDepreciationDataTable" msprop:Generator_TableVarName="tabletbDepreciation" msprop:Generator_TablePropName="tbDepreciation" msprop:Generator_RowDeletingName="tbDepreciationRowDeleting" msprop:Generator_RowChangingName="tbDepreciationRowChanging" msprop:Generator_RowEvHandlerName="tbDepreciationRowChangeEventHandler" msprop:Generator_RowDeletedName="tbDepreciationRowDeleted" msprop:Generator_UserTableName="tbDepreciation" msprop:Generator_RowChangedName="tbDepreciationRowChanged" msprop:Generator_RowEvArgName="tbDepreciationRowChangeEvent" msprop:Generator_RowClassName="tbDepreciationRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="goodsID" msprop:Generator_ColumnVarNameInTable="columngoodsID" msprop:Generator_ColumnPropNameInRow="goodsID" msprop:Generator_ColumnPropNameInTable="goodsIDColumn" msprop:Generator_UserColumnName="goodsID">
@@ -1537,7 +1571,7 @@ WHERE        (goodsType = @ID)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbGroup" msprop:Generator_TableClassName="tbGroupDataTable" msprop:Generator_TableVarName="tabletbGroup" msprop:Generator_RowChangedName="tbGroupRowChanged" msprop:Generator_TablePropName="tbGroup" msprop:Generator_RowDeletingName="tbGroupRowDeleting" msprop:Generator_RowChangingName="tbGroupRowChanging" msprop:Generator_RowEvHandlerName="tbGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="tbGroupRowDeleted" msprop:Generator_RowClassName="tbGroupRow" msprop:Generator_UserTableName="tbGroup" msprop:Generator_RowEvArgName="tbGroupRowChangeEvent">
+        <xs:element name="tbGroup" msprop:Generator_TableClassName="tbGroupDataTable" msprop:Generator_TableVarName="tabletbGroup" msprop:Generator_TablePropName="tbGroup" msprop:Generator_RowDeletingName="tbGroupRowDeleting" msprop:Generator_RowChangingName="tbGroupRowChanging" msprop:Generator_RowEvHandlerName="tbGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="tbGroupRowDeleted" msprop:Generator_UserTableName="tbGroup" msprop:Generator_RowChangedName="tbGroupRowChanged" msprop:Generator_RowEvArgName="tbGroupRowChangeEvent" msprop:Generator_RowClassName="tbGroupRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="groupID" msprop:Generator_ColumnVarNameInTable="columngroupID" msprop:Generator_ColumnPropNameInRow="groupID" msprop:Generator_ColumnPropNameInTable="groupIDColumn" msprop:Generator_UserColumnName="groupID">
@@ -1558,6 +1592,98 @@ WHERE        (goodsType = @ID)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dataReport01" msprop:Generator_TableClassName="dataReport01DataTable" msprop:Generator_TableVarName="tabledataReport01" msprop:Generator_TablePropName="dataReport01" msprop:Generator_RowDeletingName="dataReport01RowDeleting" msprop:Generator_RowChangingName="dataReport01RowChanging" msprop:Generator_RowEvHandlerName="dataReport01RowChangeEventHandler" msprop:Generator_RowDeletedName="dataReport01RowDeleted" msprop:Generator_UserTableName="dataReport01" msprop:Generator_RowChangedName="dataReport01RowChanged" msprop:Generator_RowEvArgName="dataReport01RowChangeEvent" msprop:Generator_RowClassName="dataReport01Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acquisitionDate" msprop:Generator_ColumnVarNameInTable="columnacquisitionDate" msprop:Generator_ColumnPropNameInRow="acquisitionDate" msprop:Generator_ColumnPropNameInTable="acquisitionDateColumn" msprop:Generator_UserColumnName="acquisitionDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="goodsID" msprop:Generator_ColumnVarNameInTable="columngoodsID" msprop:Generator_ColumnPropNameInRow="goodsID" msprop:Generator_ColumnPropNameInTable="goodsIDColumn" msprop:Generator_UserColumnName="goodsID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Spec" msprop:Generator_ColumnVarNameInTable="columnSpec" msprop:Generator_ColumnPropNameInRow="Spec" msprop:Generator_ColumnPropNameInTable="SpecColumn" msprop:Generator_UserColumnName="Spec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="serial" msprop:Generator_ColumnVarNameInTable="columnserial" msprop:Generator_ColumnPropNameInRow="serial" msprop:Generator_ColumnPropNameInTable="serialColumn" msprop:Generator_UserColumnName="serial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:float" minOccurs="0" />
+              <xs:element name="acquisition" msprop:Generator_ColumnVarNameInTable="columnacquisition" msprop:Generator_ColumnPropNameInRow="acquisition" msprop:Generator_ColumnPropNameInTable="acquisitionColumn" msprop:Generator_UserColumnName="acquisition" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="document" msprop:Generator_ColumnVarNameInTable="columndocument" msprop:Generator_ColumnPropNameInRow="document" msprop:Generator_ColumnPropNameInTable="documentColumn" msprop:Generator_UserColumnName="document" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="where" msprop:Generator_ColumnVarNameInTable="columnwhere" msprop:Generator_ColumnPropNameInRow="where" msprop:Generator_ColumnPropNameInTable="whereColumn" msprop:Generator_UserColumnName="where" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="organization" msprop:Generator_ColumnVarNameInTable="columnorganization" msprop:Generator_ColumnPropNameInRow="organization" msprop:Generator_ColumnPropNameInTable="organizationColumn" msprop:Generator_UserColumnName="organization" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="orgSector" msprop:Generator_ColumnVarNameInTable="columnorgSector" msprop:Generator_ColumnPropNameInRow="orgSector" msprop:Generator_ColumnPropNameInTable="orgSectorColumn" msprop:Generator_UserColumnName="orgSector" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="typeTitle" msprop:Generator_ColumnVarNameInTable="columntypeTitle" msprop:Generator_ColumnPropNameInRow="typeTitle" msprop:Generator_ColumnPropNameInTable="typeTitleColumn" msprop:Generator_UserColumnName="typeTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="groupID" msprop:Generator_ColumnVarNameInTable="columngroupID" msprop:Generator_ColumnPropNameInRow="groupID" msprop:Generator_ColumnPropNameInTable="groupIDColumn" msprop:Generator_UserColumnName="groupID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="groupTitle" msprop:Generator_ColumnVarNameInTable="columngroupTitle" msprop:Generator_ColumnPropNameInRow="groupTitle" msprop:Generator_ColumnPropNameInTable="groupTitleColumn" msprop:Generator_UserColumnName="groupTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1623,18 +1749,18 @@ WHERE        (goodsType = @ID)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="tbTypetbDescription" msdata:parent="tbType" msdata:child="tbDescription" msdata:parentkey="typeID" msdata:childkey="typeID" msprop:Generator_UserChildTable="tbDescription" msprop:Generator_ChildPropName="GettbDescriptionRows" msprop:Generator_UserRelationName="tbTypetbDescription" msprop:Generator_ParentPropName="tbTypeRow" msprop:Generator_RelationVarName="relationtbTypetbDescription" msprop:Generator_UserParentTable="tbType" />
-      <msdata:Relationship name="tbGoodstbFix" msdata:parent="tbGoods" msdata:child="tbFix" msdata:parentkey="goodsID" msdata:childkey="goodsID" msprop:Generator_UserChildTable="tbFix" msprop:Generator_ChildPropName="GettbFixRows" msprop:Generator_UserRelationName="tbGoodstbFix" msprop:Generator_ParentPropName="tbGoodsRow" msprop:Generator_RelationVarName="relationtbGoodstbFix" msprop:Generator_UserParentTable="tbGoods" />
-      <msdata:Relationship name="tbAcquisitiontbGoods" msdata:parent="tbAcquisition" msdata:child="tbGoods" msdata:parentkey="acquisitionID" msdata:childkey="acquisition" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbAcquisitiontbGoods" msprop:Generator_RelationVarName="relationtbAcquisitiontbGoods" msprop:Generator_UserParentTable="tbAcquisition" msprop:Generator_ParentPropName="tbAcquisitionRow" />
-      <msdata:Relationship name="tbBudgettbGoods" msdata:parent="tbBudget" msdata:child="tbGoods" msdata:parentkey="budgetID" msdata:childkey="budget" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbBudgettbGoods" msprop:Generator_RelationVarName="relationtbBudgettbGoods" msprop:Generator_UserParentTable="tbBudget" msprop:Generator_ParentPropName="tbBudgetRow" />
-      <msdata:Relationship name="tbDescriptiontbGoods" msdata:parent="tbDescription" msdata:child="tbGoods" msdata:parentkey="descID" msdata:childkey="descID" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbDescriptiontbGoods" msprop:Generator_RelationVarName="relationtbDescriptiontbGoods" msprop:Generator_UserParentTable="tbDescription" msprop:Generator_ParentPropName="tbDescriptionRow" />
-      <msdata:Relationship name="tbGoodsTypetbGoods" msdata:parent="tbGoodsType" msdata:child="tbGoods" msdata:parentkey="goodsTypeID" msdata:childkey="goodsType" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbGoodsTypetbGoods" msprop:Generator_ParentPropName="tbGoodsTypeRow" msprop:Generator_RelationVarName="relationtbGoodsTypetbGoods" msprop:Generator_UserParentTable="tbGoodsType" />
-      <msdata:Relationship name="tbSectiontbGoods" msdata:parent="tbSection" msdata:child="tbGoods" msdata:parentkey="sectionID" msdata:childkey="ownSection" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbSectiontbGoods" msprop:Generator_ParentPropName="tbSectionRow" msprop:Generator_RelationVarName="relationtbSectiontbGoods" msprop:Generator_UserParentTable="tbSection" />
-      <msdata:Relationship name="tbStatustbGoods" msdata:parent="tbStatus" msdata:child="tbGoods" msdata:parentkey="statusID" msdata:childkey="status" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbStatustbGoods" msprop:Generator_ParentPropName="tbStatusRow" msprop:Generator_RelationVarName="relationtbStatustbGoods" msprop:Generator_UserParentTable="tbStatus" />
-      <msdata:Relationship name="tbAssetTypetbType" msdata:parent="tbGoodsType" msdata:child="tbType" msdata:parentkey="goodsTypeID" msdata:childkey="goodsType" msprop:Generator_UserChildTable="tbType" msprop:Generator_ChildPropName="GettbTypeRows" msprop:Generator_UserRelationName="tbAssetTypetbType" msprop:Generator_RelationVarName="relationtbAssetTypetbType" msprop:Generator_UserParentTable="tbGoodsType" msprop:Generator_ParentPropName="tbGoodsTypeRow" />
-      <msdata:Relationship name="tbGoodstbSubGoods" msdata:parent="tbGoods" msdata:child="tbSubGoods" msdata:parentkey="goodsID" msdata:childkey="goodsID" msprop:Generator_UserChildTable="tbSubGoods" msprop:Generator_ChildPropName="GettbSubGoodsRows" msprop:Generator_UserRelationName="tbGoodstbSubGoods" msprop:Generator_ParentPropName="tbGoodsRow" msprop:Generator_RelationVarName="relationtbGoodstbSubGoods" msprop:Generator_UserParentTable="tbGoods" />
-      <msdata:Relationship name="tbGoodstbDepreciation" msdata:parent="tbGoods" msdata:child="tbDepreciation" msdata:parentkey="goodsID" msdata:childkey="goodsID" msprop:Generator_UserChildTable="tbDepreciation" msprop:Generator_ChildPropName="GettbDepreciationRows" msprop:Generator_UserRelationName="tbGoodstbDepreciation" msprop:Generator_RelationVarName="relationtbGoodstbDepreciation" msprop:Generator_UserParentTable="tbGoods" msprop:Generator_ParentPropName="tbGoodsRow" />
-      <msdata:Relationship name="tbGrouptbType" msdata:parent="tbGroup" msdata:child="tbType" msdata:parentkey="groupID" msdata:childkey="groupID" msprop:Generator_UserChildTable="tbType" msprop:Generator_ChildPropName="GettbTypeRows" msprop:Generator_UserRelationName="tbGrouptbType" msprop:Generator_ParentPropName="tbGroupRow" msprop:Generator_RelationVarName="relationtbGrouptbType" msprop:Generator_UserParentTable="tbGroup" />
+      <msdata:Relationship name="tbTypetbDescription" msdata:parent="tbType" msdata:child="tbDescription" msdata:parentkey="typeID" msdata:childkey="typeID" msprop:Generator_UserChildTable="tbDescription" msprop:Generator_ChildPropName="GettbDescriptionRows" msprop:Generator_UserRelationName="tbTypetbDescription" msprop:Generator_RelationVarName="relationtbTypetbDescription" msprop:Generator_UserParentTable="tbType" msprop:Generator_ParentPropName="tbTypeRow" />
+      <msdata:Relationship name="tbGoodstbFix" msdata:parent="tbGoods" msdata:child="tbFix" msdata:parentkey="goodsID" msdata:childkey="goodsID" msprop:Generator_UserChildTable="tbFix" msprop:Generator_ChildPropName="GettbFixRows" msprop:Generator_UserRelationName="tbGoodstbFix" msprop:Generator_RelationVarName="relationtbGoodstbFix" msprop:Generator_UserParentTable="tbGoods" msprop:Generator_ParentPropName="tbGoodsRow" />
+      <msdata:Relationship name="tbAcquisitiontbGoods" msdata:parent="tbAcquisition" msdata:child="tbGoods" msdata:parentkey="acquisitionID" msdata:childkey="acquisition" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbAcquisitiontbGoods" msprop:Generator_ParentPropName="tbAcquisitionRow" msprop:Generator_RelationVarName="relationtbAcquisitiontbGoods" msprop:Generator_UserParentTable="tbAcquisition" />
+      <msdata:Relationship name="tbBudgettbGoods" msdata:parent="tbBudget" msdata:child="tbGoods" msdata:parentkey="budgetID" msdata:childkey="budget" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbBudgettbGoods" msprop:Generator_ParentPropName="tbBudgetRow" msprop:Generator_RelationVarName="relationtbBudgettbGoods" msprop:Generator_UserParentTable="tbBudget" />
+      <msdata:Relationship name="tbDescriptiontbGoods" msdata:parent="tbDescription" msdata:child="tbGoods" msdata:parentkey="descID" msdata:childkey="descID" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbDescriptiontbGoods" msprop:Generator_ParentPropName="tbDescriptionRow" msprop:Generator_RelationVarName="relationtbDescriptiontbGoods" msprop:Generator_UserParentTable="tbDescription" />
+      <msdata:Relationship name="tbGoodsTypetbGoods" msdata:parent="tbGoodsType" msdata:child="tbGoods" msdata:parentkey="goodsTypeID" msdata:childkey="goodsType" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbGoodsTypetbGoods" msprop:Generator_RelationVarName="relationtbGoodsTypetbGoods" msprop:Generator_UserParentTable="tbGoodsType" msprop:Generator_ParentPropName="tbGoodsTypeRow" />
+      <msdata:Relationship name="tbSectiontbGoods" msdata:parent="tbSection" msdata:child="tbGoods" msdata:parentkey="sectionID" msdata:childkey="ownSection" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbSectiontbGoods" msprop:Generator_RelationVarName="relationtbSectiontbGoods" msprop:Generator_UserParentTable="tbSection" msprop:Generator_ParentPropName="tbSectionRow" />
+      <msdata:Relationship name="tbStatustbGoods" msdata:parent="tbStatus" msdata:child="tbGoods" msdata:parentkey="statusID" msdata:childkey="status" msprop:Generator_UserChildTable="tbGoods" msprop:Generator_ChildPropName="GettbGoodsRows" msprop:Generator_UserRelationName="tbStatustbGoods" msprop:Generator_RelationVarName="relationtbStatustbGoods" msprop:Generator_UserParentTable="tbStatus" msprop:Generator_ParentPropName="tbStatusRow" />
+      <msdata:Relationship name="tbAssetTypetbType" msdata:parent="tbGoodsType" msdata:child="tbType" msdata:parentkey="goodsTypeID" msdata:childkey="goodsType" msprop:Generator_UserChildTable="tbType" msprop:Generator_ChildPropName="GettbTypeRows" msprop:Generator_UserRelationName="tbAssetTypetbType" msprop:Generator_ParentPropName="tbGoodsTypeRow" msprop:Generator_RelationVarName="relationtbAssetTypetbType" msprop:Generator_UserParentTable="tbGoodsType" />
+      <msdata:Relationship name="tbGoodstbSubGoods" msdata:parent="tbGoods" msdata:child="tbSubGoods" msdata:parentkey="goodsID" msdata:childkey="goodsID" msprop:Generator_UserChildTable="tbSubGoods" msprop:Generator_ChildPropName="GettbSubGoodsRows" msprop:Generator_UserRelationName="tbGoodstbSubGoods" msprop:Generator_RelationVarName="relationtbGoodstbSubGoods" msprop:Generator_UserParentTable="tbGoods" msprop:Generator_ParentPropName="tbGoodsRow" />
+      <msdata:Relationship name="tbGoodstbDepreciation" msdata:parent="tbGoods" msdata:child="tbDepreciation" msdata:parentkey="goodsID" msdata:childkey="goodsID" msprop:Generator_UserChildTable="tbDepreciation" msprop:Generator_ChildPropName="GettbDepreciationRows" msprop:Generator_UserRelationName="tbGoodstbDepreciation" msprop:Generator_ParentPropName="tbGoodsRow" msprop:Generator_RelationVarName="relationtbGoodstbDepreciation" msprop:Generator_UserParentTable="tbGoods" />
+      <msdata:Relationship name="tbGrouptbType" msdata:parent="tbGroup" msdata:child="tbType" msdata:parentkey="groupID" msdata:childkey="groupID" msprop:Generator_UserChildTable="tbType" msprop:Generator_ChildPropName="GettbTypeRows" msprop:Generator_UserRelationName="tbGrouptbType" msprop:Generator_RelationVarName="relationtbGrouptbType" msprop:Generator_UserParentTable="tbGroup" msprop:Generator_ParentPropName="tbGroupRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
