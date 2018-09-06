@@ -67,6 +67,32 @@ namespace DurableGoodsMIS
             txtGoodsID.Clear();
             this.durableGoodsMISDataSet.tbType.Clear();
             this.durableGoodsMISDataSet.tbDescription.Clear();
+
+            //อ่านค่า อายุการใช้งาน กับอัตราค่าเสื่อมราคา
+            string strSql = "SELECT * FROM tbGoodsType";
+            strSql += " WHERE(goodsTypeID = '" + cbGoodsType.SelectedValue.ToString() + "')";
+
+            //MessageBox.Show(strSql);
+
+            if (Conn.State == ConnectionState.Open)
+                Conn.Close();
+
+            Conn.ConnectionString = strConn;
+            Conn.Open();
+
+            comm.Connection = Conn;
+            comm.CommandText = strSql;
+
+            dataReader = comm.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                txtUseful.Text = dataReader[3].ToString();  //อายุการใช้งานสูงสุด
+                txtDepreciationRate.Text = dataReader[4].ToString();  //อัตราค่าเสื่อมราคาต่ำสุด
+
+            }
+
+
         }
 
         private void cbGroupClass_SelectionChangeCommitted(object sender, EventArgs e)
