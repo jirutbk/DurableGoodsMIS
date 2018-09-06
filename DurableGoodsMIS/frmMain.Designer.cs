@@ -287,6 +287,7 @@
             this.cmdEdit.TabIndex = 53;
             this.cmdEdit.Text = "แก้ไข";
             this.cmdEdit.UseVisualStyleBackColor = true;
+            this.cmdEdit.Click += new System.EventHandler(this.cmdEdit_Click);
             // 
             // tabControl1
             // 
@@ -1260,6 +1261,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(23, 22);
             this.btnEdit.Text = "แก้ไขรายการครุภัณฑ์";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dataGridView1
             // 
@@ -1282,6 +1284,8 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(369, 396);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // goodsIDDataGridViewTextBoxColumn
             // 
@@ -1594,6 +1598,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ระบบบริหารจัดการครุภัณฑ์ - DurableGoodsMIS By Tanunnas BK";
+            this.Activated += new System.EventHandler(this.frmMain_Activated);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

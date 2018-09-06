@@ -11136,7 +11136,7 @@ namespace DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[5];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[6];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT       goodsID, goodsType, descID, numberYear, GFMIS, Spec, serial, [where], ownSection, seller, sellerPhone, sellerAddress, budget, acquisition, document, acquisitionDate, price, depreciationRate, 
@@ -11196,6 +11196,35 @@ WHERE        (typeID = @ID)";
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("own", global::System.Data.OleDb.OleDbType.WChar, 60, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "own", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("comment", global::System.Data.OleDb.OleDbType.WChar, 50, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comment", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("typeID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "typeID", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = @"UPDATE       tbGoods
+SET                numberYear = ?, GFMIS = ?, Spec = ?, serial = ?, [where] = ?, ownSection = ?, seller = ?, sellerPhone = ?, sellerAddress = ?, budget = ?, acquisition = ?, document = ?, acquisitionDate = ?, price = ?, depreciationRate = ?, 
+                         depreciationSum = ?, lastPrice = ?, usefulLife = ?, status = ?, own = ?, comment = ?
+WHERE        (goodsID = ?)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("numberYear", global::System.Data.OleDb.OleDbType.WChar, 6, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numberYear", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("GFMIS", global::System.Data.OleDb.OleDbType.WChar, 20, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "GFMIS", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Spec", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Spec", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("serial", global::System.Data.OleDb.OleDbType.WChar, 40, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "serial", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("where", global::System.Data.OleDb.OleDbType.WChar, 50, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "where", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ownSection", global::System.Data.OleDb.OleDbType.WChar, 1, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ownSection", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("seller", global::System.Data.OleDb.OleDbType.WChar, 50, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "seller", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("sellerPhone", global::System.Data.OleDb.OleDbType.WChar, 15, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sellerPhone", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("sellerAddress", global::System.Data.OleDb.OleDbType.WChar, 100, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "sellerAddress", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("budget", global::System.Data.OleDb.OleDbType.WChar, 1, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "budget", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("acquisition", global::System.Data.OleDb.OleDbType.WChar, 1, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "acquisition", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("document", global::System.Data.OleDb.OleDbType.WChar, 40, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "document", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("acquisitionDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "acquisitionDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(7)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("depreciationRate", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(7)), ((byte)(0)), "depreciationRate", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("depreciationSum", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(7)), ((byte)(0)), "depreciationSum", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lastPrice", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(7)), ((byte)(0)), "lastPrice", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("usefulLife", global::System.Data.OleDb.OleDbType.UnsignedTinyInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "usefulLife", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("status", global::System.Data.OleDb.OleDbType.WChar, 1, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "status", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("own", global::System.Data.OleDb.OleDbType.WChar, 60, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "own", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("comment", global::System.Data.OleDb.OleDbType.WChar, 50, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comment", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_goodsID", global::System.Data.OleDb.OleDbType.WChar, 25, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsID", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12404,6 +12433,183 @@ WHERE        (typeID = @ID)";
             }
             else {
                 command.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(
+                    string numberYear, 
+                    string GFMIS, 
+                    string Spec, 
+                    string serial, 
+                    string where, 
+                    string ownSection, 
+                    string seller, 
+                    string sellerPhone, 
+                    string sellerAddress, 
+                    string budget, 
+                    string acquisition, 
+                    string document, 
+                    global::System.Nullable<global::System.DateTime> acquisitionDate, 
+                    global::System.Nullable<decimal> price, 
+                    global::System.Nullable<decimal> depreciationRate, 
+                    global::System.Nullable<decimal> depreciationSum, 
+                    global::System.Nullable<decimal> lastPrice, 
+                    global::System.Nullable<byte> usefulLife, 
+                    string status, 
+                    string own, 
+                    string comment, 
+                    string Original_goodsID) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
+            if ((numberYear == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(numberYear));
+            }
+            if ((GFMIS == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(GFMIS));
+            }
+            if ((Spec == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Spec));
+            }
+            if ((serial == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(serial));
+            }
+            if ((where == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(where));
+            }
+            if ((ownSection == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(ownSection));
+            }
+            if ((seller == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(seller));
+            }
+            if ((sellerPhone == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(sellerPhone));
+            }
+            if ((sellerAddress == null)) {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[8].Value = ((string)(sellerAddress));
+            }
+            if ((budget == null)) {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[9].Value = ((string)(budget));
+            }
+            if ((acquisition == null)) {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[10].Value = ((string)(acquisition));
+            }
+            if ((document == null)) {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[11].Value = ((string)(document));
+            }
+            if ((acquisitionDate.HasValue == true)) {
+                command.Parameters[12].Value = ((System.DateTime)(acquisitionDate.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((price.HasValue == true)) {
+                command.Parameters[13].Value = ((decimal)(price.Value));
+            }
+            else {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((depreciationRate.HasValue == true)) {
+                command.Parameters[14].Value = ((decimal)(depreciationRate.Value));
+            }
+            else {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((depreciationSum.HasValue == true)) {
+                command.Parameters[15].Value = ((decimal)(depreciationSum.Value));
+            }
+            else {
+                command.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((lastPrice.HasValue == true)) {
+                command.Parameters[16].Value = ((decimal)(lastPrice.Value));
+            }
+            else {
+                command.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((usefulLife.HasValue == true)) {
+                command.Parameters[17].Value = ((byte)(usefulLife.Value));
+            }
+            else {
+                command.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((status == null)) {
+                command.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[18].Value = ((string)(status));
+            }
+            if ((own == null)) {
+                command.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[19].Value = ((string)(own));
+            }
+            if ((comment == null)) {
+                command.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[20].Value = ((string)(comment));
+            }
+            if ((Original_goodsID == null)) {
+                command.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[21].Value = ((string)(Original_goodsID));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -49,6 +49,8 @@ namespace DurableGoodsMIS
             comboBox3.SelectedIndex = -1;
             comboBox6.SelectedIndex = -1;
             comboBox7.SelectedIndex = -1;
+            cmdEdit.Enabled = false;
+            btnEdit.Enabled = false;
 
             dataGridView2.Columns[3].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
             dataGridView2.Columns[4].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
@@ -136,6 +138,38 @@ namespace DurableGoodsMIS
                 var date = DateTime.Parse(label40.Text);
                 label40.Text = date.ToString("dd/MM/yyyy");
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmEditGoods form = new frmEditGoods(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            form.ShowDialog();
+        }
+
+        private void cmdEdit_Click(object sender, EventArgs e)
+        {
+            frmEditGoods form = new frmEditGoods(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+            form.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+          
+                frmEditGoods form = new frmEditGoods(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+                form.ShowDialog();
+          
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cmdEdit.Enabled = true;
+            btnEdit.Enabled = true;
+        }
+
+        private void frmMain_Activated(object sender, EventArgs e)
+        {
+            //dataGridView1.Update();
+            //dataGridView1.Refresh();
         }
     }
 }
