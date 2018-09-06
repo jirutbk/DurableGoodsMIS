@@ -1599,6 +1599,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ระบบบริหารจัดการครุภัณฑ์ - DurableGoodsMIS By Tanunnas BK";
             this.Activated += new System.EventHandler(this.frmMain_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

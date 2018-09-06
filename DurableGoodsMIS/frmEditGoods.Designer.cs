@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtWhere = new System.Windows.Forms.TextBox();
+            this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.txtSerail = new System.Windows.Forms.TextBox();
             this.dtpAcquisitionDate = new System.Windows.Forms.DateTimePicker();
             this.txtGFMIS = new System.Windows.Forms.TextBox();
@@ -37,7 +39,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.tbAcquisitionTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbAcquisitionTableAdapter();
             this.tbStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
             this.tbAcquisitionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbBudgetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbSectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -106,9 +107,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbGoodsType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbGoodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBudgetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSectionBindingSource)).BeginInit();
@@ -118,7 +119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbGoodsTypeBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtWhere
@@ -130,6 +130,16 @@
             this.txtWhere.Name = "txtWhere";
             this.txtWhere.Size = new System.Drawing.Size(138, 22);
             this.txtWhere.TabIndex = 16;
+            // 
+            // tbGoodsBindingSource
+            // 
+            this.tbGoodsBindingSource.DataMember = "tbGoods";
+            this.tbGoodsBindingSource.DataSource = this.durableGoodsMISDataSet;
+            // 
+            // durableGoodsMISDataSet
+            // 
+            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
+            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtSerail
             // 
@@ -189,11 +199,6 @@
             // 
             this.tbStatusBindingSource.DataMember = "tbStatus";
             this.tbStatusBindingSource.DataSource = this.durableGoodsMISDataSet;
-            // 
-            // durableGoodsMISDataSet
-            // 
-            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
-            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbAcquisitionBindingSource
             // 
@@ -889,11 +894,6 @@
             this.label2.TabIndex = 108;
             this.label2.Text = "รหัสครุภัณฑ์";
             // 
-            // tbGoodsBindingSource
-            // 
-            this.tbGoodsBindingSource.DataMember = "tbGoods";
-            this.tbGoodsBindingSource.DataSource = this.durableGoodsMISDataSet;
-            // 
             // frmEditGoods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -905,9 +905,11 @@
             this.Name = "frmEditGoods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "แก้ไขรายการครุภัณฑ์";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEditGoods_FormClosed);
             this.Load += new System.EventHandler(this.frmEditGoods_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAcquisitionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbBudgetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSectionBindingSource)).EndInit();
@@ -919,7 +921,6 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbGoodsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -233,5 +233,10 @@ namespace DurableGoodsMIS
             if(txtGoodsID.Text.Length > 15)
                 txtNoYear.Text = txtGoodsID.Text.Substring(15);
         }
+
+        private void frmAddGoods_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Conn.Close();
+        }
     }
 }

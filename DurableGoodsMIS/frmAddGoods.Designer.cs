@@ -943,6 +943,7 @@
             this.Name = "frmAddGoods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "เพิ่มรายการครุภัณฑ์";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAddGoods_FormClosed);
             this.Load += new System.EventHandler(this.frmAddGoods_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

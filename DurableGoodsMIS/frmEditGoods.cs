@@ -66,5 +66,10 @@ namespace DurableGoodsMIS
             
             else MessageBox.Show("กรุณากรอกข้อมูลสำคัญให้ครบถ้วน!!");
         }
+
+        private void frmEditGoods_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

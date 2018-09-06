@@ -4778,8 +4778,6 @@ namespace DurableGoodsMIS {
             
             private global::System.Data.DataColumn columnYear;
             
-            private global::System.Data.DataColumn columnnumYear;
-            
             private global::System.Data.DataColumn columntimeRange;
             
             private global::System.Data.DataColumn columndepreciationPrice;
@@ -4787,6 +4785,12 @@ namespace DurableGoodsMIS {
             private global::System.Data.DataColumn columndepreciationSum;
             
             private global::System.Data.DataColumn columnlastPrice;
+            
+            private global::System.Data.DataColumn columngoodsIDlot;
+            
+            private global::System.Data.DataColumn columnrecordDate;
+            
+            private global::System.Data.DataColumn columndetail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4839,14 +4843,6 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn numYearColumn {
-                get {
-                    return this.columnnumYear;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn timeRangeColumn {
                 get {
                     return this.columntimeRange;
@@ -4874,6 +4870,30 @@ namespace DurableGoodsMIS {
             public global::System.Data.DataColumn lastPriceColumn {
                 get {
                     return this.columnlastPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn goodsIDlotColumn {
+                get {
+                    return this.columngoodsIDlot;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn recordDateColumn {
+                get {
+                    return this.columnrecordDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn detailColumn {
+                get {
+                    return this.columndetail;
                 }
             }
             
@@ -4914,16 +4934,18 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbDepreciationRow AddtbDepreciationRow(tbGoodsRow parenttbGoodsRowBytbGoodstbDepreciation, string Year, byte numYear, string timeRange, float depreciationPrice, float depreciationSum, float lastPrice) {
+            public tbDepreciationRow AddtbDepreciationRow(tbGoodsRow parenttbGoodsRowBytbGoodstbDepreciation, string Year, string timeRange, float depreciationPrice, float depreciationSum, float lastPrice, string goodsIDlot, System.DateTime recordDate, string detail) {
                 tbDepreciationRow rowtbDepreciationRow = ((tbDepreciationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Year,
-                        numYear,
                         timeRange,
                         depreciationPrice,
                         depreciationSum,
-                        lastPrice};
+                        lastPrice,
+                        goodsIDlot,
+                        recordDate,
+                        detail};
                 if ((parenttbGoodsRowBytbGoodstbDepreciation != null)) {
                     columnValuesArray[0] = parenttbGoodsRowBytbGoodstbDepreciation[0];
                 }
@@ -4959,11 +4981,13 @@ namespace DurableGoodsMIS {
             internal void InitVars() {
                 this.columngoodsID = base.Columns["goodsID"];
                 this.columnYear = base.Columns["Year"];
-                this.columnnumYear = base.Columns["numYear"];
                 this.columntimeRange = base.Columns["timeRange"];
                 this.columndepreciationPrice = base.Columns["depreciationPrice"];
                 this.columndepreciationSum = base.Columns["depreciationSum"];
                 this.columnlastPrice = base.Columns["lastPrice"];
+                this.columngoodsIDlot = base.Columns["goodsIDlot"];
+                this.columnrecordDate = base.Columns["recordDate"];
+                this.columndetail = base.Columns["detail"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4973,8 +4997,6 @@ namespace DurableGoodsMIS {
                 base.Columns.Add(this.columngoodsID);
                 this.columnYear = new global::System.Data.DataColumn("Year", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear);
-                this.columnnumYear = new global::System.Data.DataColumn("numYear", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnumYear);
                 this.columntimeRange = new global::System.Data.DataColumn("timeRange", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntimeRange);
                 this.columndepreciationPrice = new global::System.Data.DataColumn("depreciationPrice", typeof(float), null, global::System.Data.MappingType.Element);
@@ -4983,6 +5005,12 @@ namespace DurableGoodsMIS {
                 base.Columns.Add(this.columndepreciationSum);
                 this.columnlastPrice = new global::System.Data.DataColumn("lastPrice", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlastPrice);
+                this.columngoodsIDlot = new global::System.Data.DataColumn("goodsIDlot", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngoodsIDlot);
+                this.columnrecordDate = new global::System.Data.DataColumn("recordDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecordDate);
+                this.columndetail = new global::System.Data.DataColumn("detail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndetail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columngoodsID,
                                 this.columnYear}, true));
@@ -4991,6 +5019,8 @@ namespace DurableGoodsMIS {
                 this.columnYear.AllowDBNull = false;
                 this.columnYear.MaxLength = 4;
                 this.columntimeRange.MaxLength = 20;
+                this.columngoodsIDlot.MaxLength = 21;
+                this.columndetail.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7941,22 +7971,6 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte numYear {
-                get {
-                    try {
-                        return ((byte)(this[this.tabletbDepreciation.numYearColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'numYear\' in table \'tbDepreciation\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbDepreciation.numYearColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string timeRange {
                 get {
                     try {
@@ -8021,6 +8035,54 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string goodsIDlot {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbDepreciation.goodsIDlotColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'goodsIDlot\' in table \'tbDepreciation\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbDepreciation.goodsIDlotColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime recordDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletbDepreciation.recordDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'recordDate\' in table \'tbDepreciation\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbDepreciation.recordDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string detail {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbDepreciation.detailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'detail\' in table \'tbDepreciation\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbDepreciation.detailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbGoodsRow tbGoodsRow {
                 get {
                     return ((tbGoodsRow)(this.GetParentRow(this.Table.ParentRelations["tbGoodstbDepreciation"])));
@@ -8028,18 +8090,6 @@ namespace DurableGoodsMIS {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["tbGoodstbDepreciation"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnumYearNull() {
-                return this.IsNull(this.tabletbDepreciation.numYearColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnumYearNull() {
-                this[this.tabletbDepreciation.numYearColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8088,6 +8138,42 @@ namespace DurableGoodsMIS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetlastPriceNull() {
                 this[this.tabletbDepreciation.lastPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsgoodsIDlotNull() {
+                return this.IsNull(this.tabletbDepreciation.goodsIDlotColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetgoodsIDlotNull() {
+                this[this.tabletbDepreciation.goodsIDlotColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsrecordDateNull() {
+                return this.IsNull(this.tabletbDepreciation.recordDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetrecordDateNull() {
+                this[this.tabletbDepreciation.recordDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdetailNull() {
+                return this.IsNull(this.tabletbDepreciation.detailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdetailNull() {
+                this[this.tabletbDepreciation.detailColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15375,20 +15461,26 @@ WHERE        (goodsID = ?)";
             tableMapping.DataSetTable = "tbDepreciation";
             tableMapping.ColumnMappings.Add("goodsID", "goodsID");
             tableMapping.ColumnMappings.Add("Year", "Year");
-            tableMapping.ColumnMappings.Add("numYear", "numYear");
             tableMapping.ColumnMappings.Add("timeRange", "timeRange");
             tableMapping.ColumnMappings.Add("depreciationPrice", "depreciationPrice");
             tableMapping.ColumnMappings.Add("depreciationSum", "depreciationSum");
             tableMapping.ColumnMappings.Add("lastPrice", "lastPrice");
+            tableMapping.ColumnMappings.Add("goodsIDlot", "goodsIDlot");
+            tableMapping.ColumnMappings.Add("recordDate", "recordDate");
+            tableMapping.ColumnMappings.Add("detail", "detail");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tbDepreciation` WHERE ((`goodsID` = ?) AND (`Year` = ?) AND ((? = 1 AND `numYear` IS NULL) OR (`numYear` = ?)) AND ((? = 1 AND `timeRange` IS NULL) OR (`timeRange` = ?)) AND ((? = 1 AND `depreciationPrice` IS NULL) OR (`depreciationPrice` = ?)) AND ((? = 1 AND `depreciationSum` IS NULL) OR (`depreciationSum` = ?)) AND ((? = 1 AND `lastPrice` IS NULL) OR (`lastPrice` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tbDepreciation` WHERE ((`goodsID` = ?) AND (`Year` = ?) AND ((? = 1 AND `goodsIDlot` IS NULL) OR (`goodsIDlot` = ?)) AND ((? = 1 AND `recordDate` IS NULL) OR (`recordDate` = ?)) AND ((? = 1 AND `detail` IS NULL) OR (`detail` = ?)) AND ((? = 1 AND `timeRange` IS NULL) OR (`timeRange` = ?)) AND ((? = 1 AND `depreciationPrice` IS NULL) OR (`depreciationPrice` = ?)) AND ((? = 1 AND `depreciationSum` IS NULL) OR (`depreciationSum` = ?)) AND ((? = 1 AND `lastPrice` IS NULL) OR (`lastPrice` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_goodsID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Year", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Year", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_numYear", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numYear", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_numYear", global::System.Data.OleDb.OleDbType.UnsignedTinyInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numYear", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_goodsIDlot", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsIDlot", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_goodsIDlot", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsIDlot", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_recordDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "recordDate", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_recordDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "recordDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_detail", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "detail", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_detail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "detail", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_timeRange", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "timeRange", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_timeRange", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "timeRange", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_depreciationPrice", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "depreciationPrice", global::System.Data.DataRowVersion.Original, true, null));
@@ -15399,31 +15491,40 @@ WHERE        (goodsID = ?)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_lastPrice", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lastPrice", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `tbDepreciation` (`goodsID`, `Year`, `numYear`, `timeRange`, `depreci" +
-                "ationPrice`, `depreciationSum`, `lastPrice`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `tbDepreciation` (`goodsID`, `Year`, `goodsIDlot`, `recordDate`, `det" +
+                "ail`, `timeRange`, `depreciationPrice`, `depreciationSum`, `lastPrice`) VALUES (" +
+                "?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("goodsID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Year", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Year", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("numYear", global::System.Data.OleDb.OleDbType.UnsignedTinyInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numYear", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("goodsIDlot", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsIDlot", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("recordDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "recordDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("detail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "detail", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("timeRange", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "timeRange", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("depreciationPrice", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "depreciationPrice", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("depreciationSum", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "depreciationSum", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lastPrice", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lastPrice", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tbDepreciation` SET `goodsID` = ?, `Year` = ?, `numYear` = ?, `timeRange` = ?, `depreciationPrice` = ?, `depreciationSum` = ?, `lastPrice` = ? WHERE ((`goodsID` = ?) AND (`Year` = ?) AND ((? = 1 AND `numYear` IS NULL) OR (`numYear` = ?)) AND ((? = 1 AND `timeRange` IS NULL) OR (`timeRange` = ?)) AND ((? = 1 AND `depreciationPrice` IS NULL) OR (`depreciationPrice` = ?)) AND ((? = 1 AND `depreciationSum` IS NULL) OR (`depreciationSum` = ?)) AND ((? = 1 AND `lastPrice` IS NULL) OR (`lastPrice` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tbDepreciation` SET `goodsID` = ?, `Year` = ?, `goodsIDlot` = ?, `recordDate` = ?, `detail` = ?, `timeRange` = ?, `depreciationPrice` = ?, `depreciationSum` = ?, `lastPrice` = ? WHERE ((`goodsID` = ?) AND (`Year` = ?) AND ((? = 1 AND `goodsIDlot` IS NULL) OR (`goodsIDlot` = ?)) AND ((? = 1 AND `recordDate` IS NULL) OR (`recordDate` = ?)) AND ((? = 1 AND `detail` IS NULL) OR (`detail` = ?)) AND ((? = 1 AND `timeRange` IS NULL) OR (`timeRange` = ?)) AND ((? = 1 AND `depreciationPrice` IS NULL) OR (`depreciationPrice` = ?)) AND ((? = 1 AND `depreciationSum` IS NULL) OR (`depreciationSum` = ?)) AND ((? = 1 AND `lastPrice` IS NULL) OR (`lastPrice` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("goodsID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Year", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Year", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("numYear", global::System.Data.OleDb.OleDbType.UnsignedTinyInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numYear", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("goodsIDlot", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsIDlot", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("recordDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "recordDate", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("detail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "detail", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("timeRange", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "timeRange", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("depreciationPrice", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "depreciationPrice", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("depreciationSum", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "depreciationSum", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("lastPrice", global::System.Data.OleDb.OleDbType.Single, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "lastPrice", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_goodsID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Year", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Year", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_numYear", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numYear", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_numYear", global::System.Data.OleDb.OleDbType.UnsignedTinyInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numYear", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_goodsIDlot", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsIDlot", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_goodsIDlot", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "goodsIDlot", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_recordDate", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "recordDate", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_recordDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "recordDate", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_detail", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "detail", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_detail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "detail", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_timeRange", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "timeRange", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_timeRange", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "timeRange", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_depreciationPrice", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "depreciationPrice", global::System.Data.DataRowVersion.Original, true, null));
@@ -15447,8 +15548,7 @@ WHERE        (goodsID = ?)";
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT       goodsID, [Year], numYear, timeRange, depreciationPrice, depreciation" +
-                "Sum, lastPrice\r\nFROM            tbDepreciation";
+            this._commandCollection[0].CommandText = "SELECT       tbDepreciation.*\r\nFROM            tbDepreciation";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15509,7 +15609,7 @@ WHERE        (goodsID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_goodsID, string Original_Year, global::System.Nullable<byte> Original_numYear, string Original_timeRange, global::System.Nullable<float> Original_depreciationPrice, global::System.Nullable<float> Original_depreciationSum, global::System.Nullable<float> Original_lastPrice) {
+        public virtual int Delete(string Original_goodsID, string Original_Year, string Original_goodsIDlot, global::System.Nullable<global::System.DateTime> Original_recordDate, string Original_detail, string Original_timeRange, global::System.Nullable<float> Original_depreciationPrice, global::System.Nullable<float> Original_depreciationSum, global::System.Nullable<float> Original_lastPrice) {
             if ((Original_goodsID == null)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15522,45 +15622,61 @@ WHERE        (goodsID = ?)";
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Year));
             }
-            if ((Original_numYear.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((byte)(Original_numYear.Value));
-            }
-            else {
+            if ((Original_goodsIDlot == null)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Original_timeRange == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_goodsIDlot));
+            }
+            if ((Original_recordDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_recordDate.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_timeRange));
-            }
-            if ((Original_depreciationPrice.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((float)(Original_depreciationPrice.Value));
-            }
-            else {
+            if ((Original_detail == null)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_depreciationSum.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((float)(Original_depreciationSum.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_detail));
+            }
+            if ((Original_timeRange == null)) {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_lastPrice.HasValue == true)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_timeRange));
+            }
+            if ((Original_depreciationPrice.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((float)(Original_lastPrice.Value));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((float)(Original_depreciationPrice.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_depreciationSum.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((float)(Original_depreciationSum.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_lastPrice.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((float)(Original_lastPrice.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15582,7 +15698,7 @@ WHERE        (goodsID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string goodsID, string Year, global::System.Nullable<byte> numYear, string timeRange, global::System.Nullable<float> depreciationPrice, global::System.Nullable<float> depreciationSum, global::System.Nullable<float> lastPrice) {
+        public virtual int Insert(string goodsID, string Year, string goodsIDlot, global::System.Nullable<global::System.DateTime> recordDate, string detail, string timeRange, global::System.Nullable<float> depreciationPrice, global::System.Nullable<float> depreciationSum, global::System.Nullable<float> lastPrice) {
             if ((goodsID == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15595,35 +15711,47 @@ WHERE        (goodsID = ?)";
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Year));
             }
-            if ((numYear.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(numYear.Value));
-            }
-            else {
+            if ((goodsIDlot == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((timeRange == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(goodsIDlot));
+            }
+            if ((recordDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(recordDate.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(timeRange));
-            }
-            if ((depreciationPrice.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((float)(depreciationPrice.Value));
-            }
-            else {
+            if ((detail == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((depreciationSum.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((float)(depreciationSum.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(detail));
+            }
+            if ((timeRange == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((lastPrice.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((float)(lastPrice.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(timeRange));
+            }
+            if ((depreciationPrice.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((float)(depreciationPrice.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((depreciationSum.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((float)(depreciationSum.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((lastPrice.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((float)(lastPrice.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15645,7 +15773,25 @@ WHERE        (goodsID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string goodsID, string Year, global::System.Nullable<byte> numYear, string timeRange, global::System.Nullable<float> depreciationPrice, global::System.Nullable<float> depreciationSum, global::System.Nullable<float> lastPrice, string Original_goodsID, string Original_Year, global::System.Nullable<byte> Original_numYear, string Original_timeRange, global::System.Nullable<float> Original_depreciationPrice, global::System.Nullable<float> Original_depreciationSum, global::System.Nullable<float> Original_lastPrice) {
+        public virtual int Update(
+                    string goodsID, 
+                    string Year, 
+                    string goodsIDlot, 
+                    global::System.Nullable<global::System.DateTime> recordDate, 
+                    string detail, 
+                    string timeRange, 
+                    global::System.Nullable<float> depreciationPrice, 
+                    global::System.Nullable<float> depreciationSum, 
+                    global::System.Nullable<float> lastPrice, 
+                    string Original_goodsID, 
+                    string Original_Year, 
+                    string Original_goodsIDlot, 
+                    global::System.Nullable<global::System.DateTime> Original_recordDate, 
+                    string Original_detail, 
+                    string Original_timeRange, 
+                    global::System.Nullable<float> Original_depreciationPrice, 
+                    global::System.Nullable<float> Original_depreciationSum, 
+                    global::System.Nullable<float> Original_lastPrice) {
             if ((goodsID == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15658,87 +15804,115 @@ WHERE        (goodsID = ?)";
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Year));
             }
-            if ((numYear.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(numYear.Value));
-            }
-            else {
+            if ((goodsIDlot == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((timeRange == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(goodsIDlot));
+            }
+            if ((recordDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(recordDate.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(timeRange));
-            }
-            if ((depreciationPrice.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((float)(depreciationPrice.Value));
-            }
-            else {
+            if ((detail == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((depreciationSum.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((float)(depreciationSum.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(detail));
+            }
+            if ((timeRange == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((lastPrice.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((float)(lastPrice.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(timeRange));
+            }
+            if ((depreciationPrice.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((float)(depreciationPrice.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_goodsID == null)) {
+            if ((depreciationSum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((float)(depreciationSum.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_goodsID));
+            if ((lastPrice.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((float)(lastPrice.Value));
             }
-            if ((Original_Year == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Year));
-            }
-            if ((Original_numYear.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((byte)(Original_numYear.Value));
+            if ((Original_goodsID == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_goodsID));
+            }
+            if ((Original_Year == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_timeRange == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Year));
+            }
+            if ((Original_goodsIDlot == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_timeRange));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_goodsIDlot));
             }
-            if ((Original_depreciationPrice.HasValue == true)) {
+            if ((Original_recordDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((float)(Original_depreciationPrice.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_recordDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_depreciationSum.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((float)(Original_depreciationSum.Value));
-            }
-            else {
+            if ((Original_detail == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_lastPrice.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((float)(Original_lastPrice.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_detail));
+            }
+            if ((Original_timeRange == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_timeRange));
+            }
+            if ((Original_depreciationPrice.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((float)(Original_depreciationPrice.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_depreciationSum.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((float)(Original_depreciationSum.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Original_lastPrice.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((float)(Original_lastPrice.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15760,8 +15934,24 @@ WHERE        (goodsID = ?)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> numYear, string timeRange, global::System.Nullable<float> depreciationPrice, global::System.Nullable<float> depreciationSum, global::System.Nullable<float> lastPrice, string Original_goodsID, string Original_Year, global::System.Nullable<byte> Original_numYear, string Original_timeRange, global::System.Nullable<float> Original_depreciationPrice, global::System.Nullable<float> Original_depreciationSum, global::System.Nullable<float> Original_lastPrice) {
-            return this.Update(Original_goodsID, Original_Year, numYear, timeRange, depreciationPrice, depreciationSum, lastPrice, Original_goodsID, Original_Year, Original_numYear, Original_timeRange, Original_depreciationPrice, Original_depreciationSum, Original_lastPrice);
+        public virtual int Update(
+                    string goodsIDlot, 
+                    global::System.Nullable<global::System.DateTime> recordDate, 
+                    string detail, 
+                    string timeRange, 
+                    global::System.Nullable<float> depreciationPrice, 
+                    global::System.Nullable<float> depreciationSum, 
+                    global::System.Nullable<float> lastPrice, 
+                    string Original_goodsID, 
+                    string Original_Year, 
+                    string Original_goodsIDlot, 
+                    global::System.Nullable<global::System.DateTime> Original_recordDate, 
+                    string Original_detail, 
+                    string Original_timeRange, 
+                    global::System.Nullable<float> Original_depreciationPrice, 
+                    global::System.Nullable<float> Original_depreciationSum, 
+                    global::System.Nullable<float> Original_lastPrice) {
+            return this.Update(Original_goodsID, Original_Year, goodsIDlot, recordDate, detail, timeRange, depreciationPrice, depreciationSum, lastPrice, Original_goodsID, Original_Year, Original_goodsIDlot, Original_recordDate, Original_detail, Original_timeRange, Original_depreciationPrice, Original_depreciationSum, Original_lastPrice);
         }
     }
     

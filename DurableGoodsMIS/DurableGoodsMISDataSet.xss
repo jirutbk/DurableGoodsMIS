@@ -8,19 +8,19 @@
   <Shapes>
     <Shape ID="DesignTable:tbAcquisition" ZOrder="27" X="334" Y="630" Height="115" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:tbBudget" ZOrder="26" X="334" Y="815" Height="115" Width="199" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:tbDescription" ZOrder="4" X="334" Y="1000" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:tbFix" ZOrder="5" X="419" Y="265" Height="191" Width="174" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:tbGoods" ZOrder="1" X="70" Y="70" Height="419" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="256" />
+    <Shape ID="DesignTable:tbDescription" ZOrder="5" X="334" Y="1000" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
+    <Shape ID="DesignTable:tbFix" ZOrder="6" X="418" Y="317" Height="191" Width="174" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:tbGoods" ZOrder="2" X="70" Y="70" Height="419" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="256" />
     <Shape ID="DesignTable:tbGoodsType" ZOrder="25" X="334" Y="1261" Height="191" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:tbParcel" ZOrder="24" X="1145" Y="70" Height="115" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:tbSection" ZOrder="23" X="334" Y="1522" Height="115" Width="200" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:tbStatus" ZOrder="22" X="334" Y="1707" Height="115" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:tbType" ZOrder="3" X="790" Y="964" Height="191" Width="185" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:tbType" ZOrder="4" X="790" Y="964" Height="191" Width="185" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:tbUnit" ZOrder="21" X="1407" Y="70" Height="115" Width="182" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:tbSubGoods" ZOrder="10" X="648" Y="307" Height="172" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:tbDepreciation" ZOrder="8" X="388" Y="9" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:tbGroup" ZOrder="6" X="1033" Y="959" Height="153" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:dataReport01" ZOrder="2" X="884" Y="83" Height="423" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="355" />
+    <Shape ID="DesignTable:tbDepreciation" ZOrder="1" X="390" Y="5" Height="267" Width="231" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
+    <Shape ID="DesignTable:tbGroup" ZOrder="7" X="1033" Y="959" Height="153" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:dataReport01" ZOrder="3" X="884" Y="83" Height="423" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="355" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:tbTypetbDescription" ZOrder="20" LineWidth="11">
@@ -47,11 +47,11 @@
       <RoutePoints>
         <Point>
           <X>370</X>
-          <Y>345</Y>
+          <Y>397</Y>
         </Point>
         <Point>
-          <X>419</X>
-          <Y>345</Y>
+          <X>418</X>
+          <Y>397</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -179,15 +179,15 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:tbGoodstbDepreciation" ZOrder="7" LineWidth="11">
+    <Connector ID="DesignRelation:tbGoodstbDepreciation" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>370</X>
-          <Y>84</Y>
+          <Y>80</Y>
         </Point>
         <Point>
-          <X>388</X>
-          <Y>84</Y>
+          <X>390</X>
+          <Y>80</Y>
         </Point>
       </RoutePoints>
     </Connector>
