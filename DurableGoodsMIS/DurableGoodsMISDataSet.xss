@@ -20,7 +20,7 @@
     <Shape ID="DesignTable:tbSubGoods" ZOrder="9" X="648" Y="307" Height="172" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:tbDepreciation" ZOrder="7" X="388" Y="9" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:tbGroup" ZOrder="5" X="1033" Y="959" Height="153" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:dataReport01" ZOrder="1" X="884" Y="83" Height="362" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="311" />
+    <Shape ID="DesignTable:dataReport01" ZOrder="1" X="884" Y="83" Height="423" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="355" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:tbTypetbDescription" ZOrder="20" LineWidth="11">

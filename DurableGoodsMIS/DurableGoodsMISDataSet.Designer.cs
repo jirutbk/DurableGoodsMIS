@@ -5441,6 +5441,10 @@ namespace DurableGoodsMIS {
             
             private global::System.Data.DataColumn columngroupTitle;
             
+            private global::System.Data.DataColumn columnbudget;
+            
+            private global::System.Data.DataColumn columngoodsType;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dataReport01DataTable() {
@@ -5588,6 +5592,22 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn budgetColumn {
+                get {
+                    return this.columnbudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn goodsTypeColumn {
+                get {
+                    return this.columngoodsType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5623,7 +5643,23 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dataReport01Row AdddataReport01Row(System.DateTime acquisitionDate, string goodsID, string Spec, string serial, float price, string acquisition, string document, string where, string organization, string orgSector, string type, string typeTitle, string groupID, string groupTitle) {
+            public dataReport01Row AdddataReport01Row(
+                        System.DateTime acquisitionDate, 
+                        string goodsID, 
+                        string Spec, 
+                        string serial, 
+                        float price, 
+                        string acquisition, 
+                        string document, 
+                        string where, 
+                        string organization, 
+                        string orgSector, 
+                        string type, 
+                        string typeTitle, 
+                        string groupID, 
+                        string groupTitle, 
+                        string budget, 
+                        string goodsType) {
                 dataReport01Row rowdataReport01Row = ((dataReport01Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         acquisitionDate,
@@ -5639,7 +5675,9 @@ namespace DurableGoodsMIS {
                         type,
                         typeTitle,
                         groupID,
-                        groupTitle};
+                        groupTitle,
+                        budget,
+                        goodsType};
                 rowdataReport01Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdataReport01Row);
                 return rowdataReport01Row;
@@ -5676,6 +5714,8 @@ namespace DurableGoodsMIS {
                 this.columntypeTitle = base.Columns["typeTitle"];
                 this.columngroupID = base.Columns["groupID"];
                 this.columngroupTitle = base.Columns["groupTitle"];
+                this.columnbudget = base.Columns["budget"];
+                this.columngoodsType = base.Columns["goodsType"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5709,6 +5749,10 @@ namespace DurableGoodsMIS {
                 base.Columns.Add(this.columngroupID);
                 this.columngroupTitle = new global::System.Data.DataColumn("groupTitle", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngroupTitle);
+                this.columnbudget = new global::System.Data.DataColumn("budget", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbudget);
+                this.columngoodsType = new global::System.Data.DataColumn("goodsType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngoodsType);
                 this.columngoodsID.MaxLength = 25;
                 this.columnSpec.MaxLength = 255;
                 this.columnserial.MaxLength = 40;
@@ -5721,6 +5765,8 @@ namespace DurableGoodsMIS {
                 this.columntypeTitle.MaxLength = 255;
                 this.columngroupID.MaxLength = 2;
                 this.columngroupTitle.MaxLength = 255;
+                this.columnbudget.MaxLength = 25;
+                this.columngoodsType.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8378,6 +8424,38 @@ namespace DurableGoodsMIS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string budget {
+                get {
+                    try {
+                        return ((string)(this[this.tabledataReport01.budgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'budget\' in table \'dataReport01\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledataReport01.budgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string goodsType {
+                get {
+                    try {
+                        return ((string)(this[this.tabledataReport01.goodsTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'goodsType\' in table \'dataReport01\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledataReport01.goodsTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsacquisitionDateNull() {
                 return this.IsNull(this.tabledataReport01.acquisitionDateColumn);
             }
@@ -8542,6 +8620,30 @@ namespace DurableGoodsMIS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetgroupTitleNull() {
                 this[this.tabledataReport01.groupTitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsbudgetNull() {
+                return this.IsNull(this.tabledataReport01.budgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetbudgetNull() {
+                this[this.tabledataReport01.budgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsgoodsTypeNull() {
+                return this.IsNull(this.tabledataReport01.goodsTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetgoodsTypeNull() {
+                this[this.tabledataReport01.goodsTypeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15996,6 +16098,8 @@ WHERE        (typeID = @ID)";
             tableMapping.ColumnMappings.Add("typeTitle", "typeTitle");
             tableMapping.ColumnMappings.Add("groupID", "groupID");
             tableMapping.ColumnMappings.Add("groupTitle", "groupTitle");
+            tableMapping.ColumnMappings.Add("budget", "budget");
+            tableMapping.ColumnMappings.Add("goodsType", "goodsType");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -16013,11 +16117,13 @@ WHERE        (typeID = @ID)";
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        tbGoods.acquisitionDate, tbGoods.goodsID, tbGoods.Spec, tbGoods.serial, tbGoods.price, tbAcquisition.acquisition, tbGoods.document, tbGoods.[where], tbOrganization.organization, tbOrganization.orgSector, tbType.type, 
-                         tbType.typeTitle, tbGroup.groupID, tbGroup.groupTitle
-FROM            (((tbGoods INNER JOIN
+                         tbType.typeTitle, tbGroup.groupID, tbGroup.groupTitle, tbBudget.budget, tbGoodsType.goodsType
+FROM            (((((tbGoods INNER JOIN
                          tbType ON tbGoods.typeID = tbType.typeID) INNER JOIN
                          tbAcquisition ON tbGoods.acquisition = tbAcquisition.acquisitionID) INNER JOIN
-                         tbGroup ON tbType.groupID = tbGroup.groupID), tbOrganization";
+                         tbGroup ON tbType.groupID = tbGroup.groupID) INNER JOIN
+                         tbGoodsType ON tbGroup.goodsType = tbGoodsType.goodsTypeID) INNER JOIN
+                         tbBudget ON tbGoods.budget = tbBudget.budgetID), tbOrganization";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
