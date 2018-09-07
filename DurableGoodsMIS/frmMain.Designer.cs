@@ -38,7 +38,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.numYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeRangeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depreciationPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -322,7 +321,6 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numYearDataGridViewTextBoxColumn,
             this.Year,
             this.timeRangeDataGridViewTextBoxColumn,
             this.depreciationPriceDataGridViewTextBoxColumn,
@@ -337,13 +335,6 @@
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Size = new System.Drawing.Size(694, 182);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // numYearDataGridViewTextBoxColumn
-            // 
-            this.numYearDataGridViewTextBoxColumn.DataPropertyName = "numYear";
-            this.numYearDataGridViewTextBoxColumn.HeaderText = "ปีที่";
-            this.numYearDataGridViewTextBoxColumn.Name = "numYearDataGridViewTextBoxColumn";
-            this.numYearDataGridViewTextBoxColumn.Width = 40;
             // 
             // Year
             // 
@@ -1501,6 +1492,7 @@
             this.report03ToolStripMenuItem.Name = "report03ToolStripMenuItem";
             this.report03ToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.report03ToolStripMenuItem.Text = "บัญชีครุภัณฑ์แยกตามประเภท";
+            this.report03ToolStripMenuItem.Click += new System.EventHandler(this.report03ToolStripMenuItem_Click);
             // 
             // report04ToolStripMenuItem
             // 

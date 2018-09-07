@@ -54,7 +54,7 @@ namespace DurableGoodsMIS
 
             dataGridView2.Columns[3].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
             dataGridView2.Columns[4].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
-            dataGridView2.Columns[5].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
+           // dataGridView2.Columns[5].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
 
             dataGridView3.Columns[3].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
             dataGridView4.Columns[2].DefaultCellStyle.Format = "c";  //เซต cell format เป็นแบบ currency
@@ -96,8 +96,8 @@ namespace DurableGoodsMIS
 
         private void report02ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReport0 form2 = new frmReport0();
-            form2.ShowDialog();
+            frmReport02 form = new frmReport02();
+            form.ShowDialog();
         }
 
         private void addGoodsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -175,6 +175,12 @@ namespace DurableGoodsMIS
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             
+        }
+
+        private void report03ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReport0 form = new frmReport0();
+            form.ShowDialog();
         }
     }
 }
