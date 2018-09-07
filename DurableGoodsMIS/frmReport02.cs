@@ -20,11 +20,11 @@ namespace DurableGoodsMIS
         private void frmReport02_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.dataReport01' table. You can move, or remove it, as needed.
-            //this.dataReport02TableAdapter.Fill(this.durableGoodsMISDataSet.dataReport02);
+            this.dataReport02TableAdapter.Fill(this.durableGoodsMISDataSet.dataReport02);
 
 
-            //CrystalReport011.SetDataSource(durableGoodsMISDataSet);
-            //crystalReportViewer1.RefreshReport();
+            CrystalReport021.SetDataSource(durableGoodsMISDataSet);
+            crystalReportViewer1.RefreshReport();
         }
     }
 }

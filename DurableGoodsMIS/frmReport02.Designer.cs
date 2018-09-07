@@ -30,6 +30,9 @@
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.CrystalReport021 = new DurableGoodsMIS.CrystalReport02();
+            this.durableGoodsMISDataSet = new DurableGoodsMIS.DurableGoodsMISDataSet();
+            this.dataReport02TableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.dataReport02TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -44,6 +47,15 @@
             this.crystalReportViewer1.Size = new System.Drawing.Size(917, 431);
             this.crystalReportViewer1.TabIndex = 0;
             // 
+            // durableGoodsMISDataSet
+            // 
+            this.durableGoodsMISDataSet.DataSetName = "DurableGoodsMISDataSet";
+            this.durableGoodsMISDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataReport02TableAdapter
+            // 
+            this.dataReport02TableAdapter.ClearBeforeFill = true;
+            // 
             // frmReport02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -54,6 +66,7 @@
             this.Text = "พิมพ์ทะเบียนคุมทรัพย์สิน";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReport02_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.durableGoodsMISDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -62,5 +75,7 @@
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private CrystalReport02 CrystalReport021;
+        private DurableGoodsMISDataSet durableGoodsMISDataSet;
+        private DurableGoodsMISDataSetTableAdapters.dataReport02TableAdapter dataReport02TableAdapter;
     }
 }
