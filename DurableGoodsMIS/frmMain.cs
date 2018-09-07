@@ -18,15 +18,11 @@ namespace DurableGoodsMIS
         }
 
         private void frmMain_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbDepreciation' table. You can move, or remove it, as needed.
-            this.tbDepreciationTableAdapter.Fill(this.durableGoodsMISDataSet.tbDepreciation);
-            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbSubGoods' table. You can move, or remove it, as needed.
+        {          
+          
             this.tbSubGoodsTableAdapter.Fill(this.durableGoodsMISDataSet.tbSubGoods);
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbFix' table. You can move, or remove it, as needed.
             this.tbFixTableAdapter.Fill(this.durableGoodsMISDataSet.tbFix);
-            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbDepreciation' table. You can move, or remove it, as needed.
-            this.tbDepreciationTableAdapter.Fill(this.durableGoodsMISDataSet.tbDepreciation);
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbDescription' table. You can move, or remove it, as needed.
             this.tbDescriptionTableAdapter.Fill(this.durableGoodsMISDataSet.tbDescription);
             // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbAcquisition' table. You can move, or remove it, as needed.
@@ -138,6 +134,8 @@ namespace DurableGoodsMIS
                 var date = DateTime.Parse(label40.Text);
                 label40.Text = date.ToString("dd/MM/yyyy");
             }
+                                              
+           
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -182,5 +180,20 @@ namespace DurableGoodsMIS
             frmReport0 form = new frmReport0();
             form.ShowDialog();
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frmDepreciation form = new frmDepreciation();
+            form.ShowDialog();
+        }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            // TODO: This line of code loads data into the 'durableGoodsMISDataSet.tbDepreciation' table. You can move, or remove it, as needed.
+            this.tbDepreciationTableAdapter.FillByGoodsID(this.durableGoodsMISDataSet.tbDepreciation, dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+                       
+        }
+
+       
     }
 }

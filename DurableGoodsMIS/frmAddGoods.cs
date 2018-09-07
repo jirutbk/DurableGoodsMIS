@@ -252,6 +252,7 @@ namespace DurableGoodsMIS
         private void cmdCancle_Click(object sender, EventArgs e)
         {
             this.Close();
+            Conn.Close();
         }
 
         private void txtGoodsID_Leave(object sender, EventArgs e)

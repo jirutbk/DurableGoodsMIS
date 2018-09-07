@@ -513,7 +513,7 @@
             // 
             // comboBox7
             // 
-            this.comboBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.comboBox7.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tbGoodsBindingSource, "descID", true));
             this.comboBox7.DataSource = this.tbDescriptionBindingSource;
             this.comboBox7.DisplayMember = "descriptionTitle";
@@ -1276,6 +1276,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(369, 396);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);         
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // goodsIDDataGridViewTextBoxColumn
@@ -1366,6 +1367,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.comboBox1.DataSource = this.tbGoodsTypeBindingSource;
             this.comboBox1.DisplayMember = "goodsType";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1440,6 +1442,7 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(205, 22);
             this.toolStripMenuItem4.Text = "คำนวนณค่าเสื่อมราคา";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem3
             // 
