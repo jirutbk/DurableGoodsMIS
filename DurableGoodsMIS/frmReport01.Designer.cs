@@ -47,7 +47,7 @@
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.CrystalReport011;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(690, 384);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(854, 411);
             this.crystalReportViewer1.TabIndex = 0;
             // 
             // durableGoodsMISDataSet
@@ -64,13 +64,13 @@
             // 
             this.dataReport01TableAdapter.ClearBeforeFill = true;
             // 
-            // frmReport02
+            // frmReport01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 384);
+            this.ClientSize = new System.Drawing.Size(854, 411);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "frmReport02";
+            this.Name = "frmReport01";
             this.Text = "พิมพ์ทะเบียนคุมครุภัณฑ์";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReport02_Load);

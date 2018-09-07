@@ -24,7 +24,7 @@ namespace DurableGoodsMIS
 
                                    
             CrystalReport011.SetDataSource(durableGoodsMISDataSet); 
-            //crystalReportViewer1.RefreshReport();
+            crystalReportViewer1.RefreshReport();
 
 
         }
