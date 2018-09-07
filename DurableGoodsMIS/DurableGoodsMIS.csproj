@@ -112,6 +112,12 @@
     <Compile Include="frmAddGoods.Designer.cs">
       <DependentUpon>frmAddGoods.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDataSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataSettings.Designer.cs">
+      <DependentUpon>frmDataSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDepreciation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddGoods.resx">
       <DependentUpon>frmAddGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataSettings.resx">
+      <DependentUpon>frmDataSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepreciation.resx">
       <DependentUpon>frmDepreciation.cs</DependentUpon>
@@ -222,10 +231,7 @@
     <Content Include="DurableGoodsMIS.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="icon-new.ico" />
-    <Content Include="icon.ico" />
     <Content Include="my_icon.ico" />
-    <Content Include="school.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

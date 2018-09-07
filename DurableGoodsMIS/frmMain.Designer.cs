@@ -161,8 +161,8 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.report06ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ตงคาหนวยงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.เกยวกบโปรแกรมToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ORGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tbGoodsTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTypeTableAdapter();
             this.tbTypeTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbTypeTableAdapter();
             this.tbGoodsTableAdapter = new DurableGoodsMIS.DurableGoodsMISDataSetTableAdapters.tbGoodsTableAdapter();
@@ -346,7 +346,7 @@
             // timeRangeDataGridViewTextBoxColumn
             // 
             this.timeRangeDataGridViewTextBoxColumn.DataPropertyName = "timeRange";
-            this.timeRangeDataGridViewTextBoxColumn.HeaderText = "ระยะเวลา";
+            this.timeRangeDataGridViewTextBoxColumn.HeaderText = "อายุใช้งาน";
             this.timeRangeDataGridViewTextBoxColumn.Name = "timeRangeDataGridViewTextBoxColumn";
             // 
             // depreciationPriceDataGridViewTextBoxColumn
@@ -1517,24 +1517,25 @@
             // เกยวกบโปรแกรมToolStripMenuItem
             // 
             this.เกยวกบโปรแกรมToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ตงคาหนวยงานToolStripMenuItem,
-            this.เกยวกบโปรแกรมToolStripMenuItem1});
+            this.ORGToolStripMenuItem,
+            this.aboutToolStripMenuItem1});
             this.เกยวกบโปรแกรมToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.เกยวกบโปรแกรมToolStripMenuItem.Name = "เกยวกบโปรแกรมToolStripMenuItem";
             this.เกยวกบโปรแกรมToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.เกยวกบโปรแกรมToolStripMenuItem.Text = "อื่นๆ";
             // 
-            // ตงคาหนวยงานToolStripMenuItem
+            // ORGToolStripMenuItem
             // 
-            this.ตงคาหนวยงานToolStripMenuItem.Name = "ตงคาหนวยงานToolStripMenuItem";
-            this.ตงคาหนวยงานToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.ตงคาหนวยงานToolStripMenuItem.Text = "ตั้งค่าหน่วยงาน";
+            this.ORGToolStripMenuItem.Name = "ORGToolStripMenuItem";
+            this.ORGToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.ORGToolStripMenuItem.Text = "ตั้งค่าหน่วยงาน";
+            this.ORGToolStripMenuItem.Click += new System.EventHandler(this.ORGToolStripMenuItem_Click);
             // 
-            // เกยวกบโปรแกรมToolStripMenuItem1
+            // aboutToolStripMenuItem1
             // 
-            this.เกยวกบโปรแกรมToolStripMenuItem1.Name = "เกยวกบโปรแกรมToolStripMenuItem1";
-            this.เกยวกบโปรแกรมToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.เกยวกบโปรแกรมToolStripMenuItem1.Text = "เกี่ยวกับโปรแกรม";
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.aboutToolStripMenuItem1.Text = "เกี่ยวกับโปรแกรม";
             // 
             // tbGoodsTypeTableAdapter
             // 
@@ -1730,8 +1731,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem ตงคาหนวยงานToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem เกยวกบโปรแกรมToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ORGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -1765,16 +1766,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn specDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numYearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeRangeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn depreciationPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn depreciationSumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fixDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn documentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fixDetailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeRangeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depreciationPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depreciationSumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastPriceDataGridViewTextBoxColumn;
     }
 }
 

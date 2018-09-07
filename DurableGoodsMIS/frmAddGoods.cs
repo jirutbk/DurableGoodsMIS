@@ -48,7 +48,7 @@ namespace DurableGoodsMIS
             cbSection.SelectedIndex = -1;
             cbStatus.SelectedIndex = 1;
             cbSection.SelectedIndex = 1;
-            txtPrice.Text = "1";
+            txtPrice.Text = "0";
             txtLastPrice.Text = "1";
             txtDepreciationSum.Text = "0";
             txtDepreciationRate.Text = "0";

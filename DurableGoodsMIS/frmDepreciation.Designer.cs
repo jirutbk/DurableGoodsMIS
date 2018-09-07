@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +46,16 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Location = new System.Drawing.Point(12, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(291, 156);
+            this.groupBox1.Size = new System.Drawing.Size(333, 156);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(19, 75);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(297, 18);
+            this.progressBar1.TabIndex = 8;
             // 
             // label1
             // 
@@ -61,7 +68,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(213, 110);
+            this.button2.Location = new System.Drawing.Point(226, 110);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 29);
             this.button2.TabIndex = 6;
@@ -71,7 +78,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 110);
+            this.button1.Location = new System.Drawing.Point(149, 110);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(61, 29);
             this.button1.TabIndex = 5;
@@ -85,24 +92,17 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(146, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(19, 75);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(255, 18);
-            this.progressBar1.TabIndex = 8;
-            // 
             // frmDepreciation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 176);
+            this.ClientSize = new System.Drawing.Size(357, 176);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmDepreciation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "คำนวณค่าเสื่อมราคาครุภัณฑ์";
+            this.Text = "คำนวณค่าเสื่อมราคาครุภัณฑ์ประจำปี";
             this.Load += new System.EventHandler(this.frmDepreciation_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
